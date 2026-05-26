@@ -1,0 +1,143 @@
+# depslib dependency file v1.0
+1779311777 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\main.cpp
+	<iostream>
+
+1779317718 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\fecha.cpp
+	"Fecha.h"
+	<iostream>
+	<chrono>
+
+1779317718 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\fecha.h
+	<iostream>
+
+1779311631 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\hora.cpp
+	"Hora.h"
+
+1779311730 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\hora.h
+	<iostream>
+
+1779317725 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\persona.cpp
+	"Persona.h"
+	<cstring>
+
+1779315971 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\persona.h
+	"Fecha.h"
+
+1779317668 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\paciente.cpp
+	"Paciente.h"
+	<cstring>
+
+1779317668 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\paciente.h
+	"Persona.h"
+
+1779320525 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\medico.cpp
+	"Medico.h"
+	"Persona.h"
+	"Fecha.h"
+	<cstring>
+
+1779319393 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\medico.h
+	"Persona.h"
+	"Fecha.h"
+
+1779393606 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\puestos.cpp
+	"Puestos.h"
+
+1779323104 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\puestos.h
+
+1779394051 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\especialidades.cpp
+	"Especialidades.h"
+	<cstring>
+
+1779394077 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\especialidades.h
+
+1779394462 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\obrasociales.cpp
+	"ObraSociales.h"
+	<cstring>
+
+1779394565 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\obrasociales.h
+
+1779394843 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\consultorios.cpp
+	"Consultorios.h"
+
+1779394712 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\consultorios.h
+
+1779395285 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\turnos.cpp
+	"Turnos.h"
+	<cstring>
+
+1779395272 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\turnos.h
+
+1779395938 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\agendamedico.cpp
+	"AgendaMedico.h"
+
+1779395958 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\agendamedico.h
+	"Hora.h"
+	"Fecha.h"
+
+1779396365 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\historiaclinica.cpp
+	"HistoriaClinica.h"
+	<cstring>
+
+1779396336 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\historiaclinica.h
+
+1779396677 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\factura.cpp
+	"Factura.h"
+
+1779396628 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\factura.h
+	"Fecha.h"
+
+1779396861 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\archivopaciente.cpp
+	"ArchivoPaciente.h"
+
+1779400183 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\archivopaciente.h
+	"Paciente.h"
+
+1779400384 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\archivomedicos.cpp
+	"ArchivoMedicos.h"
+
+1779400384 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\archivomedicos.h
+	"Medico.h"
+
+1779400509 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\archivopuestos.cpp
+	"ArchivoPuestos.h"
+
+1779400509 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\archivopuestos.h
+	"Puestos.h"
+
+1779400693 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\archivoespecialidades.cpp
+	"ArchivoEspecialidades.h"
+
+1779400693 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\archivoespecialidades.h
+	"Especialidades.h"
+
+1779400933 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\archivoobrasociales.cpp
+	"ArchivoObraSociales.h"
+
+1779400922 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\archivoobrasociales.h
+	"ObraSociales.h"
+
+1779401113 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\archivoconsultorios.cpp
+	"ArchivoConsultorios.h"
+
+1779401046 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\archivoconsultorios.h
+	"Consultorios.h"
+
+1779401314 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\archivoturnos.cpp
+	"ArchivoTurnos.h"
+
+1779401314 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\archivoturnos.h
+	"Turnos.h"
+
+1779401531 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\archivoagendamedico.cpp
+	"ArchivoAgendaMedico.h"
+
+1779401531 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\archivoagendamedico.h
+	"AgendaMedico.h"
+
+1779401690 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\archivohistoriaclinica.cpp
+	"ArchivoHistoriaClinica.h"
+
+1779401690 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\archivohistoriaclinica.h
+	"HistoriaClinica.h"
+

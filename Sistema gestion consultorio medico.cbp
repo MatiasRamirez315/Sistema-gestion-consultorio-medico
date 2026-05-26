@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Sistema gestion consultorio medico" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Sistema gestion consultorio medico" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Sistema gestion consultorio medico" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="AgendaMedico.cpp" />
+		<Unit filename="AgendaMedico.h" />
+		<Unit filename="ArchivoAgendaMedico.cpp" />
+		<Unit filename="ArchivoAgendaMedico.h" />
+		<Unit filename="ArchivoConsultorios.cpp" />
+		<Unit filename="ArchivoConsultorios.h" />
+		<Unit filename="ArchivoEspecialidades.cpp" />
+		<Unit filename="ArchivoEspecialidades.h" />
+		<Unit filename="ArchivoFacturas.cpp" />
+		<Unit filename="ArchivoFacturas.h" />
+		<Unit filename="ArchivoHistoriaClinica.cpp" />
+		<Unit filename="ArchivoHistoriaClinica.h" />
+		<Unit filename="ArchivoMedicos.cpp" />
+		<Unit filename="ArchivoMedicos.h" />
+		<Unit filename="ArchivoObraSociales.cpp" />
+		<Unit filename="ArchivoObraSociales.h" />
+		<Unit filename="ArchivoPaciente.cpp" />
+		<Unit filename="ArchivoPaciente.h" />
+		<Unit filename="ArchivoPuestos.cpp" />
+		<Unit filename="ArchivoPuestos.h" />
+		<Unit filename="ArchivoTurnos.cpp" />
+		<Unit filename="ArchivoTurnos.h" />
+		<Unit filename="Consultorios.cpp" />
+		<Unit filename="Consultorios.h" />
+		<Unit filename="Especialidades.cpp" />
+		<Unit filename="Especialidades.h" />
+		<Unit filename="Factura.cpp" />
+		<Unit filename="Factura.h" />
+		<Unit filename="Fecha.cpp" />
+		<Unit filename="Fecha.h" />
+		<Unit filename="HistoriaClinica.cpp" />
+		<Unit filename="HistoriaClinica.h" />
+		<Unit filename="Hora.cpp" />
+		<Unit filename="Hora.h" />
+		<Unit filename="Medico.cpp" />
+		<Unit filename="Medico.h" />
+		<Unit filename="ObraSociales.cpp" />
+		<Unit filename="ObraSociales.h" />
+		<Unit filename="Paciente.cpp" />
+		<Unit filename="Paciente.h" />
+		<Unit filename="Persona.cpp" />
+		<Unit filename="Persona.h" />
+		<Unit filename="Puestos.cpp" />
+		<Unit filename="Puestos.h" />
+		<Unit filename="Turnos.cpp" />
+		<Unit filename="Turnos.h" />
+		<Unit filename="main.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
