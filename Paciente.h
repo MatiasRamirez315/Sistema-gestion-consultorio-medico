@@ -8,7 +8,9 @@ private:
 	char _email [30] ;
 	char _genero;
 	int _idObraSocial;
+	Fecha _fechaNacimiento;
 	bool _estado;
+
 public:
 
 	void setIdPaciente(int ID);
@@ -16,6 +18,7 @@ public:
 	void setEmail(const char* mail);
 	void setGenero(char g);
 	void setIdObraSocial(int id);
+	void setFechaNacimiento(Fecha fechaNac);
 	void setEstado(bool estado);
 
 	int getIdPaciente();
@@ -23,6 +26,7 @@ public:
 	const char* getEmail();
 	char getGenero();
 	int getIdObraSocial();
+	Fecha getFechaNac();
 	bool getEstado();
 
 	void CargarPaciente();

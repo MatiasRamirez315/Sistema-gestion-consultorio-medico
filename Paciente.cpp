@@ -21,6 +21,11 @@ void Paciente::setIdObraSocial(int id){
 _idObraSocial = id;
 };
 
+void Paciente::setFechaNacimiento(Fecha fechaNac){
+_fechaNacimiento = fechaNac;
+};
+
+
 void Paciente::setEstado(bool estado){
 _estado = estado;
 };
@@ -44,6 +49,10 @@ return _genero;
 int  Paciente::getIdObraSocial(){
 return _idObraSocial;
 };
+
+Fecha Paciente::getFechaNac(){
+    return _fechaNacimiento;
+    };
 
 bool  Paciente::getEstado(){
 return _estado;

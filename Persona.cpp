@@ -11,9 +11,6 @@ strcpy(_apellido, apellido);
 void Persona::setDNI(int dni){
 _dni = dni;
 };
-void Persona::setFechaNacimiento(Fecha fechaNac){
-_fechaNacimiento = fechaNac;
-};
 
 const char* Persona::getNombre(){
     return _nombre;
@@ -25,9 +22,7 @@ int Persona::getDNI(){
     return _dni;
     };
 
-Fecha Persona::getFechaNac(){
-    return _fechaNacimiento;
-    };
+
 
 void Persona::Cargar(){
     cout << "ingrese el nombre : ";
@@ -36,12 +31,10 @@ void Persona::Cargar(){
     cin >> _apellido;
     cout << "ingrese su dni: ";
     cin >> _dni;
-    _fechaNacimiento.CargarFecha();
 
 };
 void Persona::Mostrar(){
     cout << "Nombre: " << _nombre;
     cout << "Apellido: " << _apellido;
     cout << "DNI: " << _dni;
-    _fechaNacimiento.toString();
 };

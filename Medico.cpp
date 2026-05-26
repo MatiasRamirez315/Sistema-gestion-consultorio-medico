@@ -78,7 +78,7 @@ void Medico::Mostrar(){
     cout << "Nombre: " << p.getNombre();
     cout << "Apellido: " << p.getApellido();
     cout << "DNI: " << p.getDNI();
-    cout << "Fecha de nacimiento: " << p.getFechaNac().toString();
+   // cout << "Fecha de nacimiento: " << p.getFechaNac().toString();
     cout << "ID del medico :"  << _idMedico << endl;
     cout << "ID del puesto: " << _idPuesto << endl;
     cout << "ID de la especialidad: " << _idEspecialidad << endl;
