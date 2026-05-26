@@ -1,6 +1,45 @@
 //Alumno: Matias Hernan Ramirez
 #include "ArchivoConsultorios.h"
 
-bool ArchivoConsultorios::guardar(Consultorios obj){};
-Consultorios ArchivoConsultorios::leer(int pos){};
-int ArchivoConsultorios::contarRegistros(){};
+bool ArchivoConsultorios::guardar(Consultorios obj){
+
+  FILE *p = fopen(_nombre, "ab");
+
+  if (p == NULL)
+  {
+    return false;
+  }
+
+  bool pudoEscribir = fwrite(&obj, sizeof(Consultorios), 1, p);
+  fclose(p);
+  return pudoEscribir;
+
+};
+
+Consultorios ArchivoConsultorios::leer(int pos){
+
+
+  Consultorios aux;
+  FILE *p = fopen(_nombre, "rb");
+  if (p == NULL)
+  {
+    return aux;
+  }
+
+  fseek(p, pos * sizeof(Consultorios), SEEK_SET);
+  fread(&aux, sizeof(Consultorios), 1, p);
+  fclose(p);
+  return aux;
+
+};
+int ArchivoConsultorios::contarRegistros(){
+
+ FILE *p = fopen(_nombre, "rb");
+
+  if (p == NULL)
+  {
+    return 0;
+ }
+
+
+};

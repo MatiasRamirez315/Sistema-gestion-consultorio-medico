@@ -1,7 +1,42 @@
-//Alumno: Matias Hernan Ramirez
+ //Alumno: Matias Hernan Ramirez
 #include "ArchivoMedicos.h"
 
 
-bool ArchivoMedicos::guardar(Medico obj){};
-Medico ArchivoMedicos::leer(int pos){};
-int ArchivoMedicos::contarRegistros(){};
+bool ArchivoMedicos::guardar(Medico obj){
+
+  FILE *p = fopen(_nombre, "ab");
+
+  if (p == NULL)
+  {
+    return false;
+  }
+
+  bool pudoEscribir = fwrite(&obj, sizeof(Medico), 1, p);
+  fclose(p);
+  return pudoEscribir;
+};
+
+Medico ArchivoMedicos::leer(int pos){
+
+  Medico aux;
+  FILE *p = fopen(_nombre, "rb");
+  if (p == NULL)
+  {
+    return aux;
+  }
+
+  fseek(p, pos * sizeof(Medico), SEEK_SET);
+  fread(&aux, sizeof(Medico), 1, p);
+  fclose(p);
+  return aux;
+};
+int ArchivoMedicos::contarRegistros(){
+
+ FILE *p = fopen(_nombre, "rb");
+
+  if (p == NULL)
+  {
+    return 0;
+ }
+
+};
