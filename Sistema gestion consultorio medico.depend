@@ -229,7 +229,8 @@
 	"Puestos.h"
 	<cstdio>
 
-1779323104 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\puestos.h
+1779834966 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\puestos.h
+	<cstring>
 
 1779832165 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\archivoturnos.cpp
 	"ArchivoTurnos.h"
@@ -280,7 +281,7 @@
 	"Persona.h"
 	<cstring>
 
-1779393606 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\puestos.cpp
+1779834946 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\puestos.cpp
 	"Puestos.h"
 
 1779395284 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\turnos.cpp
