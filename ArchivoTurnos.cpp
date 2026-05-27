@@ -1,4 +1,3 @@
-//Alumno: Matias Hernan Ramirez
 #include "ArchivoTurnos.h"
 
 bool ArchivoTurnos::guardar(Turnos obj){
@@ -13,7 +12,7 @@ bool ArchivoTurnos::guardar(Turnos obj){
   bool pudoEscribir = fwrite(&obj, sizeof(Turnos), 1, p);
   fclose(p);
   return pudoEscribir;
-};
+}
 Turnos ArchivoTurnos::leer(int pos){
 
   Turnos aux;
@@ -28,7 +27,7 @@ Turnos ArchivoTurnos::leer(int pos){
   fclose(p);
   return aux;
 
-};
+}
 int ArchivoTurnos::contarRegistros(){
 
  FILE *p = fopen(_nombre, "rb");
@@ -38,4 +37,4 @@ int ArchivoTurnos::contarRegistros(){
     return 0;
  }
 
-};
+}

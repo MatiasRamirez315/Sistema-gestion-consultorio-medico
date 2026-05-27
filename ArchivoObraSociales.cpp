@@ -1,4 +1,3 @@
-//Alumno: Matias Hernan Ramirez
 #include "ArchivoObraSociales.h"
 
 bool ArchivoObraSociales::guardar(ObraSociales obj){
@@ -14,7 +13,7 @@ bool ArchivoObraSociales::guardar(ObraSociales obj){
   return pudoEscribir;
 
 
-};
+}
 ObraSociales ArchivoObraSociales::leer(int pos){
 
   ObraSociales aux;
@@ -29,7 +28,7 @@ ObraSociales ArchivoObraSociales::leer(int pos){
   fclose(p);
   return aux;
 
-};
+}
 
 int ArchivoObraSociales::contarRegistros(){
 
@@ -40,4 +39,4 @@ int ArchivoObraSociales::contarRegistros(){
   {
     return 0;
  }
-};
+}

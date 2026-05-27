@@ -1,4 +1,3 @@
-//Alumno: Matias Hernan Ramirez
 #include "ArchivoPuestos.h"
 
 bool ArchivoPuestos::guardar(Puestos obj){
@@ -13,7 +12,7 @@ bool ArchivoPuestos::guardar(Puestos obj){
   bool pudoEscribir = fwrite(&obj, sizeof(Puestos), 1, p);
   fclose(p);
   return pudoEscribir;
-};
+}
 Puestos ArchivoPuestos::leer(int pos){
 
   Puestos aux;
@@ -28,7 +27,7 @@ Puestos ArchivoPuestos::leer(int pos){
   fclose(p);
   return aux;
 
-};
+}
 int ArchivoPuestos::contarRegistros(){
 
 
@@ -38,4 +37,4 @@ int ArchivoPuestos::contarRegistros(){
   {
     return 0;
  }
-};
+}

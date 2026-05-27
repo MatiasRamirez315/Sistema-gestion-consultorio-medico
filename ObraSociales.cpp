@@ -3,19 +3,19 @@
 
 void ObraSociales::setIdObraSocial(int id){
 _idObraSocial = id;
-};
+}
 void ObraSociales::setNombre(const char* nombre){
 strcpy(_nombre,nombre);
-};
+}
 void ObraSociales::setPlan(const char* plan){
 strcpy(_plan,plan);
-};
+}
 void ObraSociales::setTipoCobertura(int tipo){
 _tipoCobertura = tipo;
-};
+}
 
 void ObraSociales::setEstado(bool estado){
-_estado = estado;};
+_estado = estado;}
 
 // GETTERS
 int ObraSociales::getIdObraSocial() {

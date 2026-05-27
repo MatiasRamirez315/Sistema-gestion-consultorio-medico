@@ -1,4 +1,3 @@
-//Alumno: Matias Hernan Ramirez
 #include "ArchivoHistoriaClinica.h"
 
 bool ArchivoHistoriaClinica::guardar(HistoriaClinica obj){
@@ -15,7 +14,7 @@ bool ArchivoHistoriaClinica::guardar(HistoriaClinica obj){
   fclose(p);
   return pudoEscribir;
 
-};
+}
 HistoriaClinica ArchivoHistoriaClinica::leer(int pos){
  HistoriaClinica aux;
   FILE *p = fopen(_nombre, "rb");
@@ -29,7 +28,7 @@ HistoriaClinica ArchivoHistoriaClinica::leer(int pos){
   fclose(p);
   return aux;
 
-};
+}
 int ArchivoHistoriaClinica::contarRegistros(){
 
  FILE *p = fopen(_nombre, "rb");
@@ -38,4 +37,4 @@ int ArchivoHistoriaClinica::contarRegistros(){
   {
     return 0;
  }
-};
+}

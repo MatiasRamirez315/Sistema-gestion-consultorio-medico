@@ -1,4 +1,3 @@
-//Alumno: Matias Hernan Ramirez
 #include "ArchivoConsultorios.h"
 
 bool ArchivoConsultorios::guardar(Consultorios obj){
@@ -14,7 +13,7 @@ bool ArchivoConsultorios::guardar(Consultorios obj){
   fclose(p);
   return pudoEscribir;
 
-};
+}
 
 Consultorios ArchivoConsultorios::leer(int pos){
 
@@ -31,7 +30,7 @@ Consultorios ArchivoConsultorios::leer(int pos){
   fclose(p);
   return aux;
 
-};
+}
 int ArchivoConsultorios::contarRegistros(){
 
  FILE *p = fopen(_nombre, "rb");
@@ -42,4 +41,4 @@ int ArchivoConsultorios::contarRegistros(){
  }
 
 
-};
+}

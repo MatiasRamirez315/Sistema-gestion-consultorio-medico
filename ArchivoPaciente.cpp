@@ -11,7 +11,7 @@ bool ArchivoPaciente::guardar(Paciente obj){
   bool pudoEscribir = fwrite(&obj, sizeof(Paciente), 1, p);
   fclose(p);
   return pudoEscribir;
-};
+}
 
 Paciente ArchivoPaciente::leer(int pos){
 
@@ -27,7 +27,7 @@ Paciente ArchivoPaciente::leer(int pos){
   fclose(p);
   return aux;
 
-};
+}
 int ArchivoPaciente::contarRegistros(){
 
  FILE *p = fopen(_nombre, "rb");
@@ -39,4 +39,4 @@ int ArchivoPaciente::contarRegistros(){
 
 
 
-};
+}

@@ -301,3 +301,164 @@
 1779826963 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\main.cpp
 	<iostream>
 
+1779902079 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\agendamedico.cpp
+	"AgendaMedico.h"
+
+1779828459 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\agendamedico.h
+	"Hora.h"
+	"Fecha.h"
+
+1779828459 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\hora.h
+	<iostream>
+
+1779828459 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\fecha.h
+	<iostream>
+
+1779902016 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoagendamedico.cpp
+	"ArchivoAgendaMedico.h"
+
+1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoagendamedico.h
+	"AgendaMedico.h"
+	<cstdio>
+
+1779901902 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoconsultorios.cpp
+	"ArchivoConsultorios.h"
+
+1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoconsultorios.h
+	"Consultorios.h"
+	<cstdio>
+
+1779828459 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\consultorios.h
+
+1779901889 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoespecialidades.cpp
+	"ArchivoEspecialidades.h"
+
+1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoespecialidades.h
+	"Especialidades.h"
+	<cstdio>
+
+1779828459 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\especialidades.h
+
+1779902091 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivofacturas.cpp
+	"ArchivoFacturas.h"
+
+1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivofacturas.h
+	"Factura.h"
+	<cstdio>
+
+1779828459 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\factura.h
+	"Fecha.h"
+
+1779901915 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivohistoriaclinica.cpp
+	"ArchivoHistoriaClinica.h"
+
+1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivohistoriaclinica.h
+	"HistoriaClinica.h"
+	<cstdio>
+
+1779828459 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\historiaclinica.h
+
+1779902112 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivomedicos.cpp
+	"ArchivoMedicos.h"
+
+1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivomedicos.h
+	"Medico.h"
+	<cstdio>
+
+1779828459 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\medico.h
+	"Persona.h"
+	"Fecha.h"
+
+1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\persona.h
+	"Fecha.h"
+
+1779901927 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoobrasociales.cpp
+	"ArchivoObraSociales.h"
+
+1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoobrasociales.h
+	"ObraSociales.h"
+	<cstdio>
+
+1779828459 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\obrasociales.h
+
+1779902101 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivopaciente.cpp
+	"ArchivoPaciente.h"
+
+1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivopaciente.h
+	"Paciente.h"
+	<cstdio>
+
+1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\paciente.h
+	"Persona.h"
+
+1779901948 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivopuestos.cpp
+	"ArchivoPuestos.h"
+
+1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivopuestos.h
+	"Puestos.h"
+	<cstdio>
+
+1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\puestos.h
+	<cstring>
+
+1779901937 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoturnos.cpp
+	"ArchivoTurnos.h"
+
+1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoturnos.h
+	"Turnos.h"
+	<cstdio>
+
+1779828459 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\turnos.h
+
+1779901959 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\consultorios.cpp
+	"Consultorios.h"
+
+1779901971 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\especialidades.cpp
+	"Especialidades.h"
+	<cstring>
+
+1779828459 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\factura.cpp
+	"Factura.h"
+
+1779902005 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\historiaclinica.cpp
+	"HistoriaClinica.h"
+	<cstring>
+
+1779902035 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\obrasociales.cpp
+	"ObraSociales.h"
+	<cstring>
+
+1779902049 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\puestos.cpp
+	"Puestos.h"
+
+1779902069 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\turnos.cpp
+	"Turnos.h"
+	<cstring>
+
+1779901528 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\fecha.cpp
+	"Fecha.h"
+	<iostream>
+	<chrono>
+
+1779839472 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\main.cpp
+	<iostream>
+
+1779901737 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\hora.cpp
+	"Hora.h"
+
+1779901613 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\medico.cpp
+	"Medico.h"
+	"Persona.h"
+	"Fecha.h"
+	<cstring>
+
+1779901737 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\persona.cpp
+	"Persona.h"
+	<cstring>
+
+1779901648 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\paciente.cpp
+	"Paciente.h"
+	"Persona.h"
+	"Fecha.h"
+	<cstring>
+

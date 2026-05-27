@@ -1,4 +1,3 @@
-//Alumno: Matias Hernan Ramirez
 #include "ArchivoFacturas.h"
 
 bool ArchivoFacturas::guardar(Facturas obj){
@@ -13,7 +12,7 @@ bool ArchivoFacturas::guardar(Facturas obj){
   bool pudoEscribir = fwrite(&obj, sizeof(Facturas), 1, p);
   fclose(p);
   return pudoEscribir;
-};
+}
 Facturas ArchivoFacturas::leer(int pos){
 
   Facturas aux;
@@ -28,7 +27,7 @@ Facturas ArchivoFacturas::leer(int pos){
   fclose(p);
   return aux;
 
-};
+}
 int ArchivoFacturas::contarRegistros(){
 
  FILE *p = fopen(_nombre, "rb");
@@ -39,4 +38,4 @@ int ArchivoFacturas::contarRegistros(){
  }
 
 
-};
+}

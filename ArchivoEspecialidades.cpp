@@ -1,4 +1,3 @@
-//Alumno: Matias Hernan Ramirez
 #include "ArchivoEspecialidades.h"
 
 bool ArchivoEspecialidades::guardar(Especialidades obj){
@@ -14,7 +13,7 @@ bool ArchivoEspecialidades::guardar(Especialidades obj){
   fclose(p);
   return pudoEscribir;
 
-};
+}
 Especialidades ArchivoEspecialidades::leer(int pos){
   Especialidades aux;
   FILE *p = fopen(_nombre, "rb");
@@ -28,7 +27,7 @@ Especialidades ArchivoEspecialidades::leer(int pos){
   fclose(p);
   return aux;
 
-};
+}
 int ArchivoEspecialidades::contarRegistros(){
 
 FILE *p = fopen(_nombre, "rb");
@@ -37,4 +36,4 @@ FILE *p = fopen(_nombre, "rb");
   {
     return 0;
  }
-};
+}

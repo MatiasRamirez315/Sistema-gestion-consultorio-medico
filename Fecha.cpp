@@ -53,17 +53,16 @@ void Fecha::setAnio(int anio){
 }
 
 string Fecha::toString(string formatoFecha){
-    return to_string(_dia) + "/" + to_string(_mes) + "/" +to_string(_anio);
+    return to_string(_dia) + "/" + to_string(_mes) + "/" + to_string(_anio);
 }
 
 void Fecha::CargarFecha(){
     int d,m,a;
-    cout << "ingrese la fecha  " << endl ;
-    cout << "dia : ";
+    cout << "Ingrese la fecha" << endl ;
+    cout << "Dia: ";
     cin >> d;
-    cout << "mes : " ;
-    cin >>m;
-    cout << "anio: ";
+    cout << "Mes: " ;
+    cin >> m;
+    cout << "Anio: ";
     cin >> a;
-
 }

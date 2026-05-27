@@ -1,4 +1,3 @@
- //Alumno: Matias Hernan Ramirez
 #include "ArchivoMedicos.h"
 
 
@@ -14,7 +13,7 @@ bool ArchivoMedicos::guardar(Medico obj){
   bool pudoEscribir = fwrite(&obj, sizeof(Medico), 1, p);
   fclose(p);
   return pudoEscribir;
-};
+}
 
 Medico ArchivoMedicos::leer(int pos){
 
@@ -29,7 +28,7 @@ Medico ArchivoMedicos::leer(int pos){
   fread(&aux, sizeof(Medico), 1, p);
   fclose(p);
   return aux;
-};
+}
 int ArchivoMedicos::contarRegistros(){
 
  FILE *p = fopen(_nombre, "rb");
@@ -39,4 +38,4 @@ int ArchivoMedicos::contarRegistros(){
     return 0;
  }
 
-};
+}
