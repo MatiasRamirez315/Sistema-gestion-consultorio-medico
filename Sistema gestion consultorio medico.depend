@@ -321,7 +321,7 @@
 	"AgendaMedico.h"
 	<cstdio>
 
-1779901902 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoconsultorios.cpp
+1779902171 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoconsultorios.cpp
 	"ArchivoConsultorios.h"
 
 1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoconsultorios.h
@@ -330,7 +330,7 @@
 
 1779828459 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\consultorios.h
 
-1779901889 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoespecialidades.cpp
+1779902173 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoespecialidades.cpp
 	"ArchivoEspecialidades.h"
 
 1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoespecialidades.h
@@ -339,7 +339,7 @@
 
 1779828459 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\especialidades.h
 
-1779902091 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivofacturas.cpp
+1779902250 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivofacturas.cpp
 	"ArchivoFacturas.h"
 
 1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivofacturas.h
@@ -349,7 +349,7 @@
 1779828459 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\factura.h
 	"Fecha.h"
 
-1779901915 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivohistoriaclinica.cpp
+1779902250 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivohistoriaclinica.cpp
 	"ArchivoHistoriaClinica.h"
 
 1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivohistoriaclinica.h
@@ -358,7 +358,7 @@
 
 1779828459 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\historiaclinica.h
 
-1779902112 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivomedicos.cpp
+1779902250 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivomedicos.cpp
 	"ArchivoMedicos.h"
 
 1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivomedicos.h
@@ -372,7 +372,7 @@
 1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\persona.h
 	"Fecha.h"
 
-1779901927 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoobrasociales.cpp
+1779902250 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoobrasociales.cpp
 	"ArchivoObraSociales.h"
 
 1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoobrasociales.h
@@ -391,7 +391,7 @@
 1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\paciente.h
 	"Persona.h"
 
-1779901948 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivopuestos.cpp
+1779902250 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivopuestos.cpp
 	"ArchivoPuestos.h"
 
 1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivopuestos.h
@@ -401,7 +401,7 @@
 1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\puestos.h
 	<cstring>
 
-1779901937 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoturnos.cpp
+1779902250 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoturnos.cpp
 	"ArchivoTurnos.h"
 
 1779839472 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoturnos.h
@@ -417,7 +417,7 @@
 	"Especialidades.h"
 	<cstring>
 
-1779828459 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\factura.cpp
+1779902133 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\factura.cpp
 	"Factura.h"
 
 1779902005 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\historiaclinica.cpp
