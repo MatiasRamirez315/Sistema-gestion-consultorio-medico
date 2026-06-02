@@ -6,7 +6,7 @@ int main()
 {
     Menu m;
 
-    m.MenuPrincipal();
+    m.menuPrincipal();
 
     return 0;
 }

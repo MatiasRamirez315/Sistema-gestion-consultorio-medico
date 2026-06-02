@@ -70,6 +70,12 @@
 		<Unit filename="Medico.h" />
 		<Unit filename="Menu.cpp" />
 		<Unit filename="Menu.h" />
+		<Unit filename="MenuMedico.cpp" />
+		<Unit filename="MenuMedico.h" />
+		<Unit filename="MenuObrasSociales.cpp" />
+		<Unit filename="MenuObrasSociales.h" />
+		<Unit filename="MenuPaciente.cpp" />
+		<Unit filename="MenuPaciente.h" />
 		<Unit filename="ObraSociales.cpp" />
 		<Unit filename="ObraSociales.h" />
 		<Unit filename="Paciente.cpp" />
@@ -81,6 +87,9 @@
 		<Unit filename="Turnos.cpp" />
 		<Unit filename="Turnos.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="rlutil.h" />
+		<Unit filename="showItem.cpp" />
+		<Unit filename="showItem.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
