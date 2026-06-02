@@ -29,11 +29,13 @@ Especialidades ArchivoEspecialidades::leer(int pos){
 
 }
 int ArchivoEspecialidades::contarRegistros(){
+    FILE*p=fopen(_nombre,"rb");
+    if(p==NULL){
+return 0;
+    }
 
-FILE *p = fopen(_nombre, "rb");
-
-  if (p == NULL)
-  {
-    return 0;
- }
+    fseek(p,0,SEEK_END);
+    int cantidad=ftell(p)/sizeof(Especialidades);
+    fclose(p);
+return cantidad;
 }

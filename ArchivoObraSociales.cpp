@@ -31,12 +31,13 @@ ObraSociales ArchivoObraSociales::leer(int pos){
 }
 
 int ArchivoObraSociales::contarRegistros(){
+    FILE*p=fopen(_nombre,"rb");
+    if(p==NULL){
+return 0;
+    }
 
-
- FILE *p = fopen(_nombre, "rb");
-
-  if (p == NULL)
-  {
-    return 0;
- }
+    fseek(p,0,SEEK_END);
+    int cantidad=ftell(p)/sizeof(ObraSociales);
+    fclose(p);
+return cantidad;
 }

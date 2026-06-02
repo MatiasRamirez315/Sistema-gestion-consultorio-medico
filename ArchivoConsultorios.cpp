@@ -32,13 +32,13 @@ Consultorios ArchivoConsultorios::leer(int pos){
 
 }
 int ArchivoConsultorios::contarRegistros(){
+    FILE*p=fopen(_nombre,"rb");
+    if(p==NULL){
+return 0;
+    }
 
- FILE *p = fopen(_nombre, "rb");
-
-  if (p == NULL)
-  {
-    return 0;
- }
-
-
+    fseek(p,0,SEEK_END);
+    int cantidad=ftell(p)/sizeof(Consultorios);
+    fclose(p);
+return cantidad;
 }

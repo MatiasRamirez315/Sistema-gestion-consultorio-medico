@@ -29,12 +29,13 @@ Turnos ArchivoTurnos::leer(int pos){
 
 }
 int ArchivoTurnos::contarRegistros(){
+    FILE*p=fopen(_nombre,"rb");
+    if(p==NULL){
+return 0;
+    }
 
- FILE *p = fopen(_nombre, "rb");
-
-  if (p == NULL)
-  {
-    return 0;
- }
-
+    fseek(p,0,SEEK_END);
+    int cantidad=ftell(p)/sizeof(Turnos);
+    fclose(p);
+return cantidad;
 }

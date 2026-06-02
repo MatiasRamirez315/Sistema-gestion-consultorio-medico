@@ -29,13 +29,14 @@ Facturas ArchivoFacturas::leer(int pos){
 
 }
 int ArchivoFacturas::contarRegistros(){
+    FILE*p=fopen(_nombre,"rb");
+    if(p==NULL){
+return 0;
+    }
 
- FILE *p = fopen(_nombre, "rb");
-
-  if (p == NULL)
-  {
-    return 0;
- }
-
-
+    fseek(p,0,SEEK_END);
+    int cantidad=ftell(p)/sizeof(Facturas);
+    fclose(p);
+return cantidad;
 }
+

@@ -30,12 +30,13 @@ AgendaMedicos ArchivoAgendaMedicos::leer(int pos){
 }
 
 int ArchivoAgendaMedicos::getCantRegistros(){
+    FILE*p=fopen(_nombre,"rb");
+    if(p==NULL){
+return 0;
+    }
 
- FILE *p = fopen(_nombre, "rb");
-
-  if (p == NULL)
-  {
-    return 0;
- }
-
- }
+    fseek(p,0,SEEK_END);
+    int cantidad=ftell(p)/sizeof(AgendaMedicos);
+    fclose(p);
+return cantidad;
+}
