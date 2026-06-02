@@ -60,8 +60,10 @@ void Medico::Cargar(){
     cin >> _idMedico;
     cout << "Ingrese el ID del puesto: ";
     cin >> _idPuesto;
+    //agregar opciones de tipos de puesto ej: 1---- odontologo.
     cout << "Ingrese el ID de la especialidad: ";
     cin >> _idEspecialidad;
+     //agregar opciones de tipos de puesto ej: 1---- odontologo     redundante ????????.
     cout << "Ingrese la matricula: ";
     cin.ignore();
     cin.getline(_matriculaProfesional,12);
