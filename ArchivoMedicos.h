@@ -10,6 +10,7 @@ public:
 	ArchivoMedicos(const char* _nombre = "Medicos.dat");
 
 	bool guardar(Medico obj);
+
 	Medico leer(int pos);
 	int contarRegistros();
 };

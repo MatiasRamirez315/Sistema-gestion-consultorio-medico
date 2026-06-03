@@ -2,9 +2,10 @@
 #include "rlutil.h"
 #include "showItem.h"
 #include "MenuMedico.h"
+#include "Medico.h"
 
 void MenuMedico::menuMedico(){
-
+    Medico medico;
     int op = 1, y = 0;
 
     do
@@ -61,7 +62,7 @@ void MenuMedico::menuMedico(){
             {
             case 0:
                 system("cls");
-                /// LLAMADO FUNC CARGAR MED
+                medico.Cargar(); /// LLAMADO FUNC CARGAR MED
                 system("pause");
                 system("cls");
                 break;

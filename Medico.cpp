@@ -56,17 +56,31 @@ bool Medico::getEstado() {
 void Medico::Cargar(){
     Persona p;
     p.Cargar();
-    cout << "Ingrese el ID del medico: ";
+
+    cout << "Ingrese el ID del medico: " << endl;
     cin >> _idMedico;
+
     cout << "Ingrese el ID del puesto: ";
     cin >> _idPuesto;
     //agregar opciones de tipos de puesto ej: 1---- odontologo.
-    cout << "Ingrese el ID de la especialidad: ";
+    cout << "Ingrese el ID de la especialidad: " << endl;
+
+    cout << "1- Clinico" <<endl;
+    cout << "2- Oftalmologo" << endl;
+    cout << "3- Odontologo" << endl;
+    cout << "4- Pediatra" << endl;
+    cout << "5- Traumatologo " << endl;
+    cout << "6- Dermatologo" << endl;
+    cout << "7- Cardiologo" << endl;
+    do{
     cin >> _idEspecialidad;
-     //agregar opciones de tipos de puesto ej: 1---- odontologo     redundante ????????.
+        if (_idEspecialidad < 1 || _idEspecialidad  > 7){
+            cout << "Error al elegir la especialidad, vuelva a seleccionar." << endl;
+        }
+    }while (_idEspecialidad < 1 || _idEspecialidad  > 7 );
+
     cout << "Ingrese la matricula: ";
-    cin.ignore();
-    cin.getline(_matriculaProfesional,12);
+    cin >> _matriculaProfesional;
     _fechaIngreso.CargarFecha();
     setEstado(true);
 }
