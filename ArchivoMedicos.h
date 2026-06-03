@@ -1,13 +1,14 @@
 #pragma once
 #include "Medico.h"
 #include <cstdio>
+#include <cstring>
 
 class ArchivoMedicos{
 private:
 	char _nombre[30];
 
 public:
-	ArchivoMedicos(const char* _nombre = "Medicos.dat");
+	ArchivoMedicos();
 
 	bool guardar(Medico obj);
 

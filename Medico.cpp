@@ -1,6 +1,7 @@
 #include "Medico.h"
 #include "Persona.h"
 #include "Fecha.h"
+#include "ArchivoMedicos.h"
 #include <cstring>
 
 void Medico::setIdMedico(int id){
@@ -55,14 +56,15 @@ bool Medico::getEstado() {
 
 void Medico::Cargar(){
     bool op = false;
+    Medico medico;
     do{
-    Persona::Cargar();
+    medico.Persona::Cargar();
 
     cout << "Ingrese el ID del medico: ";
-    cin >> _idMedico;
+    cin >>  medico._idMedico;
 
     cout << "Ingrese el ID del puesto: ";
-    cin >> _idPuesto;
+    cin >> medico. _idPuesto;
     //agregar opciones de tipos de puesto ej: 1---- odontologo.
     cout << "Ingrese el ID de la especialidad: " << endl;
 
@@ -74,24 +76,26 @@ void Medico::Cargar(){
     cout << "6- Dermatologo" << endl;
     cout << "7- Cardiologo" << endl;
     do{
-    cin >> _idEspecialidad;
-        if (_idEspecialidad < 1 || _idEspecialidad  > 7){
+    cin >>  medico._idEspecialidad;
+        if (medico._idEspecialidad < 1 || medico._idEspecialidad  > 7){
             cout << "Error al elegir la especialidad, vuelva a seleccionar." << endl;
         }
-    }while (_idEspecialidad < 1 || _idEspecialidad  > 7 );
+    }while (medico._idEspecialidad < 1 || medico._idEspecialidad  > 7 );
 
     cout << "Ingrese la matricula: ";
-    cin >> _matriculaProfesional;
-    _fechaIngreso.CargarFecha();
+    cin >>  medico._matriculaProfesional;
+    medico._fechaIngreso.CargarFecha();
 
     cout << "esta seguro que el medico esta correctamente cargado? 1-Si 0-No" << endl;
     cin >> op;
    if (op== false){cin.ignore();};
     }while(op == false);
 
-    setEstado(true);
+     medico.setEstado(true);
 
+    ArchivoMedicos archivo;
 
+    archivo.guardar(medico);
 
 }
 

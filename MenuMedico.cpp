@@ -3,8 +3,10 @@
 #include "showItem.h"
 #include "MenuMedico.h"
 #include "Medico.h"
+#include "ArchivoMedicos.h"
 
 void MenuMedico::menuMedico(){
+    ArchivoMedicos archivo;
     Medico medico;
     int op = 1, y = 0;
 
@@ -63,7 +65,7 @@ void MenuMedico::menuMedico(){
             case 0:
                 system("cls");
                 medico.Cargar(); /// LLAMADO FUNC CARGAR MED
-                medico.Mostrar();
+
                 system("pause");
                 system("cls");
                 break;

@@ -1,5 +1,9 @@
 #include "ArchivoMedicos.h"
 
+ArchivoMedicos::ArchivoMedicos(){
+    strcpy(_nombre,"Medicos.dat");
+}
+
 
 bool ArchivoMedicos::guardar(Medico obj){
 
@@ -12,8 +16,15 @@ bool ArchivoMedicos::guardar(Medico obj){
 
   bool pudoEscribir = fwrite(&obj, sizeof(Medico), 1, p);
   fclose(p);
+  if (pudoEscribir == 1){
+    cout << "Exito al guardar..." << endl;
+  }
+  else{
+    cout << "Error al guardar..." << endl;
+  }
   return pudoEscribir;
 }
+
 
 Medico ArchivoMedicos::leer(int pos){
 
