@@ -54,10 +54,11 @@ bool Medico::getEstado() {
 }
 
 void Medico::Cargar(){
-    Persona p;
-    p.Cargar();
+    bool op = false;
+    do{
+    Persona::Cargar();
 
-    cout << "Ingrese el ID del medico: " << endl;
+    cout << "Ingrese el ID del medico: ";
     cin >> _idMedico;
 
     cout << "Ingrese el ID del puesto: ";
@@ -82,16 +83,24 @@ void Medico::Cargar(){
     cout << "Ingrese la matricula: ";
     cin >> _matriculaProfesional;
     _fechaIngreso.CargarFecha();
+
+    cout << "esta seguro que el medico esta correctamente cargado? 1-Si 0-No" << endl;
+    cin >> op;
+   if (op== false){cin.ignore();};
+    }while(op == false);
+
     setEstado(true);
+
+
+
 }
 
 void Medico::Mostrar(){
-    Persona p;
-    p.Mostrar();
+    Persona::Mostrar();
     cout << "ID del medico :"  << _idMedico << endl;
     cout << "ID del puesto: " << _idPuesto << endl;
     cout << "ID de la especialidad: " << _idEspecialidad << endl;
-    cout << "Matricula: " << _matriculaProfesional;
-    cout << "Fecha de ingreso: " << _fechaIngreso.toString();
-    cout << "Estado: " << _estado;
+    cout << "Matricula: " << _matriculaProfesional << endl;
+    cout << "Fecha de ingreso: " << _fechaIngreso.toString() << endl;
+    cout << "Estado: " << _estado << endl;
 }

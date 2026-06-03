@@ -57,12 +57,11 @@ string Fecha::toString(string formatoFecha){
 }
 
 void Fecha::CargarFecha(){
-    int d,m,a;
     cout << "Ingrese la fecha" << endl ;
     cout << "Dia: ";
-    cin >> d;
+    cin >> _dia;
     cout << "Mes: " ;
-    cin >> m;
+    cin >> _mes;
     cout << "Anio: ";
-    cin >> a;
+    cin >> _anio;
 }

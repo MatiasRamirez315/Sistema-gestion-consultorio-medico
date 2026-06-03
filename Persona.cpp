@@ -26,16 +26,21 @@ int Persona::getDNI(){
 }
 
 void Persona::Cargar(){
+
     cout << "Ingrese el nombre : ";
-    cin>> _nombre;
+
+    cin.getline (_nombre,30);
     cout << "Ingrese el apellido: ";
-    cin >> _apellido;
+
+    cin.getline (_apellido,30);
+    //cin >> _apellido;
     cout << "Ingrese el DNI: ";
+
     cin >> _dni;
 }
 
 void Persona::Mostrar(){
-    cout << "Nombre: " << _nombre;
-    cout << "Apellido: " << _apellido;
-    cout << "DNI: " << _dni;
+    cout << "Nombre: " << _nombre << endl;
+    cout << "Apellido: " << _apellido << endl;
+    cout << "DNI: " << _dni << endl;
 }
