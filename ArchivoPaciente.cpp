@@ -1,5 +1,9 @@
 #include "ArchivoPaciente.h"
 
+ArchivoPaciente::ArchivoPaciente(){
+    strcpy(_nombre,"Pacientes.dat");
+}
+
 bool ArchivoPaciente::guardar(Paciente obj){
   FILE *p = fopen(_nombre, "ab");
 

@@ -1,4 +1,5 @@
 #include "Paciente.h"
+#include "ArchivoPaciente.h"
 #include "Persona.h"
 #include "Fecha.h"
 #include <cstring>
@@ -60,32 +61,47 @@ bool Paciente::getEstado(){
 }
 
 void Paciente::CargarPaciente(){
-    Persona p;
-    p.Cargar();
+    bool op = false;
+    Paciente paciente;
+    do{
+    paciente.Persona::Cargar();
     cout << "Ingrese el ID del paciente: ";
-    cin >> _idPaciente;
+    cin >> paciente._idPaciente;
+
     cout << "Ingrese el telefono: ";
-    cin.ignore();
-    cin.getline(_telefono,20);
+    cin >> paciente._telefono;
+
     cout << "Ingrese el email: ";
-    cin.ignore();
-    cin.getline(_email,30);
+    cin >> paciente._email;
+
     cout << "Ingrese el genero (F o M): ";
-    cin >> _genero;
+    cin >> paciente._genero;
+
     cout << "Ingrese el ID de la obra social: ";
-    cin >> _idObraSocial;
-    _fechaNacimiento.CargarFecha();
-    setEstado(true);
+    cin >> paciente._idObraSocial;
+
+    paciente._fechaNacimiento.CargarFecha();
+
+    cout << "esta seguro que el paciente esta correctamente cargado? 1-Si 0-No: ";
+    cin >> op;
+    if(op == false){cin.ignore();};
+    }while (op== false);
+
+    paciente.setEstado(true);
+
+    ArchivoPaciente archivo;
+
+    archivo.guardar(paciente);
+
 }
 
 void Paciente::MostrarPaciente(){
-    Persona p;
-    p.Mostrar();
+    Persona::Mostrar();
     cout << "ID del paciente :"  << _idPaciente << endl;
     cout << "Telefono: " << _telefono << endl;
     cout << "Email: " << _email << endl;
-    cout << "Genero: " << _genero;
-    cout << "ID de la obra social: " << _idObraSocial;
-    cout << "Fecha de nacimiento: " << _fechaNacimiento.toString();
-    cout << "Estado: " << _estado;
+    cout << "Genero: " << _genero<< endl;
+    cout << "ID de la obra social: " << _idObraSocial<< endl;
+    cout << "Fecha de nacimiento: " << _fechaNacimiento.toString()<< endl;
+    cout << "Estado: " << _estado<< endl;
 }

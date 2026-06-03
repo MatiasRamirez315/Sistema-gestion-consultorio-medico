@@ -1,9 +1,12 @@
 #include <iostream>
 #include "rlutil.h"
 #include "showItem.h"
+#include "Paciente.h"
 #include "MenuPaciente.h"
+#include "ArchivoPaciente.h"
 
 void MenuPaciente::menuPaciente(){
+    Paciente paciente;
 
     int op = 1, y = 0;
 
@@ -62,6 +65,9 @@ void MenuPaciente::menuPaciente(){
             case 0:
                 system("cls");
                 /// LLAMADO FUNC CARGAR PAC
+
+                paciente.CargarPaciente();
+
                 system("pause");
                 system("cls");
                 break;
