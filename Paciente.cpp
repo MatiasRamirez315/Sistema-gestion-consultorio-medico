@@ -82,7 +82,7 @@ void Paciente::CargarPaciente(){
 
     paciente._fechaNacimiento.CargarFecha();
 
-    cout << "esta seguro que el paciente esta correctamente cargado? 1-Si 0-No: ";
+    cout << "Desea confirmar sus datos? 1-Si 0-No: ";
     cin >> op;
     if(op == false){cin.ignore();};
     }while (op== false);

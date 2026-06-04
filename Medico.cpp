@@ -86,7 +86,7 @@ void Medico::Cargar(){
     cin >>  medico._matriculaProfesional;
     medico._fechaIngreso.CargarFecha();
 
-    cout << "esta seguro que el medico esta correctamente cargado? 1-Si 0-No" << endl;
+    cout << "Desea confirmar sus datos? 1-Si 0-No: ";
     cin >> op;
    if (op== false){cin.ignore();};
     }while(op == false);

@@ -1,5 +1,10 @@
 #include "ArchivoObraSociales.h"
 
+ArchivoObraSociales::ArchivoObraSociales(){
+    strcpy(_nombre,"ObrasSociales.dat");
+}
+
+
 bool ArchivoObraSociales::guardar(ObraSociales obj){
   FILE *p = fopen(_nombre, "ab");
 

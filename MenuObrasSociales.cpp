@@ -2,9 +2,11 @@
 #include "rlutil.h"
 #include "showItem.h"
 #include "MenuObrasSociales.h"
+#include "ObraSociales.h"
+
 
 void MenuObrasSociales::menuObrasSociales(){
-
+    ObraSociales OS;
     int op = 1, y = 0;
 
     do
@@ -62,6 +64,8 @@ void MenuObrasSociales::menuObrasSociales(){
             case 0:
                 system("cls");
                 /// LLAMADO FUNC CARGAR OS
+                OS.Cargar();
+
                 system("pause");
                 system("cls");
                 break;

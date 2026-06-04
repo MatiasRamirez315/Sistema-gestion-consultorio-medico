@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 
 class ObraSociales{
 private:
@@ -21,6 +22,9 @@ public:
 	const char* getPlan() ;
 	int getTipoCobertura();
 	bool getEstado();
+
+	void Cargar();
+	void Mostrar();
 
 };
 
