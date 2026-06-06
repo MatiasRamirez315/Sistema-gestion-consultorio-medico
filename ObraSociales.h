@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 
+using namespace std;
+
 class ObraSociales{
 private:
 	int _idObraSocial;
@@ -25,6 +27,7 @@ public:
 
 	void Cargar();
 	void Mostrar();
+	void MostrarTodas();
 
 };
 

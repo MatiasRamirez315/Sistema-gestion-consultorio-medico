@@ -87,6 +87,7 @@ void MenuObrasSociales::menuObrasSociales(){
             case 3:
                 system("cls");
                 /// LLAMADO FUNC LISTAR TODAS LAS OS
+                OS.MostrarTodas();
                 system("pause");
                 system("cls");
                 break;

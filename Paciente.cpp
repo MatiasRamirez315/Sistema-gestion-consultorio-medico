@@ -91,7 +91,12 @@ void Paciente::CargarPaciente(){
 
     ArchivoPaciente archivo;
 
-    archivo.guardar(paciente);
+    if (archivo.guardar(paciente)){
+            cout << "exito al guardar... " << endl;
+    }
+    else {
+            cout << "no se pudo guardar el paciente..." << endl;
+    }
 
 }
 
@@ -104,4 +109,22 @@ void Paciente::MostrarPaciente(){
     cout << "ID de la obra social: " << _idObraSocial<< endl;
     cout << "Fecha de nacimiento: " << _fechaNacimiento.toString()<< endl;
     cout << "Estado: " << _estado<< endl;
+}
+
+void Paciente::MostrarTodos(){
+ArchivoPaciente archivo;
+Paciente paciente;
+int cantReg = archivo.contarRegistros();
+
+for (int i=0;i<cantReg ; i++){
+    paciente = archivo.leer(i);
+    paciente.Persona::Mostrar();
+    cout << "ID del paciente:"  << paciente.getIdPaciente() << endl;
+    cout << "Telefono: " << paciente.getTelefono() << endl ;
+    cout << "Email: " << paciente.getEmail() << endl;
+    cout << "Genero: " << paciente.getGenero() << endl;
+    cout << "Fecha de nacimiento: " << paciente.getFechaNac().toString() << endl;
+    cout << "Estado: " << paciente.getEstado() << endl << endl;
+
+    }
 }

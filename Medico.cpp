@@ -100,6 +100,7 @@ void Medico::Cargar(){
 }
 
 void Medico::Mostrar(){
+
     Persona::Mostrar();
     cout << "ID del medico :"  << _idMedico << endl;
     cout << "ID del puesto: " << _idPuesto << endl;
@@ -107,4 +108,25 @@ void Medico::Mostrar(){
     cout << "Matricula: " << _matriculaProfesional << endl;
     cout << "Fecha de ingreso: " << _fechaIngreso.toString() << endl;
     cout << "Estado: " << _estado << endl;
+}
+
+void Medico::MostrarTodos(){
+ArchivoMedicos archivo;
+Medico medico;
+int cantReg = archivo.contarRegistros();
+
+for (int i=0;i<cantReg ; i++){
+    medico = archivo.leer(i);
+    medico.Persona::Mostrar();
+    cout << "ID del medico :"  << medico._idMedico << endl;
+    cout << "ID del puesto: " << medico._idPuesto << endl ;
+    cout << "ID de la especialidad: " << medico._idEspecialidad << endl;
+    cout << "Matricula: " << medico._matriculaProfesional << endl;
+    cout << "Fecha de ingreso: " << medico._fechaIngreso.toString() << endl;
+    cout << "Estado: " << medico._estado << endl << endl;
+
+
+}
+
+
 }

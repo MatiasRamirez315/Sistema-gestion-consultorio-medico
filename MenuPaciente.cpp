@@ -89,6 +89,7 @@ void MenuPaciente::menuPaciente(){
             case 3:
                 system("cls");
                 /// LLAMADO FUNC LISTAR TODOS LOS PAC
+                paciente.MostrarTodos();
                 system("pause");
                 system("cls");
                 break;

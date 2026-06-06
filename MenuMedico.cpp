@@ -72,6 +72,8 @@ void MenuMedico::menuMedico(){
 
             case 1:
                 system("cls");
+
+
                 /// LLAMADO FUNC MOSTRAR MED
                 system("pause");
                 system("cls");
@@ -87,6 +89,7 @@ void MenuMedico::menuMedico(){
             case 3:
                 system("cls");
                 /// LLAMADO FUNC LISTAR TODOS LOS MED
+                medico.MostrarTodos();
                 system("pause");
                 system("cls");
                 break;
