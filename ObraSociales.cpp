@@ -55,7 +55,7 @@ void ObraSociales::Cargar(){
 
 	 archivo.guardar(OS);
 
-};
+}
 
 void ObraSociales::Mostrar(){
 
@@ -66,7 +66,7 @@ void ObraSociales::Mostrar(){
     cout << "estado : " << _estado << endl;
 
 
-};
+} //COMENTARIO
 
 
 void ObraSociales::MostrarTodas(){

@@ -595,3 +595,233 @@
 	"rlutil.h"
 	"showItem.h"
 
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\agendamedico.cpp
+	"AgendaMedico.h"
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\agendamedico.h
+	"Hora.h"
+	"Fecha.h"
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\hora.h
+	<iostream>
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\fecha.h
+	<iostream>
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivoagendamedico.cpp
+	"ArchivoAgendaMedico.h"
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivoagendamedico.h
+	"AgendaMedico.h"
+	<cstdio>
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivoconsultorios.cpp
+	"ArchivoConsultorios.h"
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivoconsultorios.h
+	"Consultorios.h"
+	<cstdio>
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\consultorios.h
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivoespecialidades.cpp
+	"ArchivoEspecialidades.h"
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivoespecialidades.h
+	"Especialidades.h"
+	<cstdio>
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\especialidades.h
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivofacturas.cpp
+	"ArchivoFacturas.h"
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivofacturas.h
+	"Factura.h"
+	<cstdio>
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\factura.h
+	"Fecha.h"
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivohistoriaclinica.cpp
+	"ArchivoHistoriaClinica.h"
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivohistoriaclinica.h
+	"HistoriaClinica.h"
+	<cstdio>
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\historiaclinica.h
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivomedicos.cpp
+	"ArchivoMedicos.h"
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivomedicos.h
+	"Medico.h"
+	<cstdio>
+	<cstring>
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\medico.h
+	"Persona.h"
+	"Fecha.h"
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\persona.h
+	"Fecha.h"
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivoobrasociales.cpp
+	"ArchivoObraSociales.h"
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivoobrasociales.h
+	"ObraSociales.h"
+	<cstdio>
+	<cstring>
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\obrasociales.h
+	<iostream>
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivopaciente.cpp
+	"ArchivoPaciente.h"
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivopaciente.h
+	"Paciente.h"
+	<cstdio>
+	<cstring>
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\paciente.h
+	"Persona.h"
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivopuestos.cpp
+	"ArchivoPuestos.h"
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivopuestos.h
+	"Puestos.h"
+	<cstdio>
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\puestos.h
+	<cstring>
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivoturnos.cpp
+	"ArchivoTurnos.h"
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\archivoturnos.h
+	"Turnos.h"
+	<cstdio>
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\turnos.h
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\consultorios.cpp
+	"Consultorios.h"
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\especialidades.cpp
+	"Especialidades.h"
+	<cstring>
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\factura.cpp
+	"Factura.h"
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\fecha.cpp
+	"Fecha.h"
+	<iostream>
+	<chrono>
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\historiaclinica.cpp
+	"HistoriaClinica.h"
+	<cstring>
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\hora.cpp
+	"Hora.h"
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\main.cpp
+	<iostream>
+	"Menu.h"
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\menu.h
+	"MenuMedico.h"
+	"MenuPaciente.h"
+	"MenuObrasSociales.h"
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\menumedico.h
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\menupaciente.h
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\menuobrassociales.h
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\medico.cpp
+	"Medico.h"
+	"Persona.h"
+	"Fecha.h"
+	"ArchivoMedicos.h"
+	<cstring>
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\menu.cpp
+	"Menu.h"
+	"rlutil.h"
+	"showItem.h"
+	<iostream>
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1780863768 c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\showitem.h
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\menumedico.cpp
+	<iostream>
+	"rlutil.h"
+	"showItem.h"
+	"MenuMedico.h"
+	"Medico.h"
+	"ArchivoMedicos.h"
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\menuobrassociales.cpp
+	<iostream>
+	"rlutil.h"
+	"showItem.h"
+	"MenuObrasSociales.h"
+	"ObraSociales.h"
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\menupaciente.cpp
+	<iostream>
+	"rlutil.h"
+	"showItem.h"
+	"Paciente.h"
+	"MenuPaciente.h"
+	"ArchivoPaciente.h"
+
+1780863989 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\obrasociales.cpp
+	"ObraSociales.h"
+	"ArchivoObraSociales.h"
+	<cstring>
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\paciente.cpp
+	"Paciente.h"
+	"ArchivoPaciente.h"
+	"Persona.h"
+	"Fecha.h"
+	<cstring>
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\persona.cpp
+	"Persona.h"
+	<cstring>
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\puestos.cpp
+	"Puestos.h"
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\showitem.cpp
+	<iostream>
+	"rlutil.h"
+	"showItem.h"
+
+1780863768 source:c:\users\axel sabusechi\documents\github\sistema-gestion-consultorio-medico\turnos.cpp
+	"Turnos.h"
+	<cstring>
+
