@@ -66,7 +66,7 @@ void ObraSociales::Mostrar(){
     cout << "estado : " << _estado << endl;
 
 
-} //COMENTARIO
+}
 
 
 void ObraSociales::MostrarTodas(){
