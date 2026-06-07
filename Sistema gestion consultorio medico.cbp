@@ -66,6 +66,12 @@
 		<Unit filename="HistoriaClinica.h" />
 		<Unit filename="Hora.cpp" />
 		<Unit filename="Hora.h" />
+		<Unit filename="ManagerMedico.cpp" />
+		<Unit filename="ManagerMedico.h" />
+		<Unit filename="ManagerObraSocial.cpp" />
+		<Unit filename="ManagerObraSocial.h" />
+		<Unit filename="ManagerPaciente.cpp" />
+		<Unit filename="ManagerPaciente.h" />
 		<Unit filename="Medico.cpp" />
 		<Unit filename="Medico.h" />
 		<Unit filename="Menu.cpp" />

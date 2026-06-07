@@ -1,22 +1,23 @@
 #pragma once
 #include <cstring>
+#include <string>
 
 class Puestos{
 private:
 	int _idPuesto;
 	float _sueldo;
-	char _descripcion [200];
+	std::string _descripcion;
 	bool _estado;
 public:
 
 	void setIdPuesto(int IDPuesto);
 	void setSueldo (float Sueldo);
-	void setDescripcion (const char * descripcion);
+	void setDescripcion (std::string descripcion);
 	void setEstado(bool estado);
 
 	int getIDPuesto();
 	float getSueldo();
-	const char * getDescripcion();
+	std::string getDescripcion();
 	bool getEstado();
 
 };

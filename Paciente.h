@@ -1,11 +1,12 @@
 #pragma once
 #include "Persona.h"
+#include <string>
 
 class Paciente : public Persona{
 private:
 	int _idPaciente;
-	char _telefono[20];
-	char _email [30] ;
+	std::string _telefono;
+	std::string _email ;
 	char _genero;
 	int _idObraSocial;
 	Fecha _fechaNacimiento;
@@ -14,16 +15,16 @@ private:
 public:
 
 	void setIdPaciente(int ID);
-	void setTelefono(const char* tel);
-	void setEmail(const char* mail);
+	void setTelefono(std::string tel);
+	void setEmail(std::string mail);
 	void setGenero(char g);
 	void setIdObraSocial(int id);
 	void setFechaNacimiento(Fecha fechaNac);
 	void setEstado(bool estado);
 
 	int getIdPaciente();
-	const char* getTelefono();
-	const char* getEmail();
+	std::string getTelefono();
+	std::string getEmail();
 	char getGenero();
 	int getIdObraSocial();
 	Fecha getFechaNac();

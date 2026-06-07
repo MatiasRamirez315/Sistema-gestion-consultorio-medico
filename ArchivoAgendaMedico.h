@@ -1,15 +1,17 @@
 #pragma once
 #include "AgendaMedico.h"
+#include <string>
 #include <cstdio>
 
 class ArchivoAgendaMedicos{
 private:
-	char _nombre[30];
+	std::string _nombre;
 
 public:
-	ArchivoAgendaMedicos(const char* _nombre = "AgendaMedicos.dat");
+	ArchivoAgendaMedicos(std::string _nombre = "AgendaMedicos.dat");
 
 	bool guardar(AgendaMedicos obj);
 	AgendaMedicos leer(int pos);
 	int getCantRegistros();
+	int getNuevoId();
 };

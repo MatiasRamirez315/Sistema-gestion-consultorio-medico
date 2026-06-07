@@ -1,21 +1,22 @@
 #pragma once
 #include "Fecha.h"
+#include <string>
 
 class Persona{
 private:
-	char _nombre [30];
-	char _apellido [30];
+	std::string _nombre;
+	std::string _apellido;
 	int _dni;
 
 public:
 
-	void setNombre (const char *nombre);
-	void setApellido(const char *apellido);
+	void setNombre (std::string nombre);
+	void setApellido(std::string apellido);
 	void setDNI(int dni);
 
 
-	const char* getNombre();
-	const char* getApellido();
+	std::string getNombre();
+	std::string getApellido();
 	int getDNI();
 
 

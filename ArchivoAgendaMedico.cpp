@@ -1,8 +1,17 @@
+#include <string>
+#include <cstring>
 #include "ArchivoAgendaMedico.h"
+
+using namespace std;
+
+ArchivoAgendaMedicos::ArchivoAgendaMedicos(string nombreArchivo)
+    :_nombre(nombreArchivo)
+{
+}
 
 bool ArchivoAgendaMedicos::guardar(AgendaMedicos obj){
 
-  FILE *p = fopen(_nombre, "ab");
+  FILE *p = fopen(_nombre.c_str(), "ab");
 
   if (p == NULL)
   {
@@ -17,7 +26,7 @@ bool ArchivoAgendaMedicos::guardar(AgendaMedicos obj){
 AgendaMedicos ArchivoAgendaMedicos::leer(int pos){
 
   AgendaMedicos aux;
-  FILE *p = fopen(_nombre, "rb");
+  FILE *p = fopen(_nombre.c_str(), "rb");
   if (p == NULL)
   {
     return aux;
@@ -30,7 +39,7 @@ AgendaMedicos ArchivoAgendaMedicos::leer(int pos){
 }
 
 int ArchivoAgendaMedicos::getCantRegistros(){
-    FILE*p=fopen(_nombre,"rb");
+    FILE*p=fopen(_nombre.c_str(),"rb");
     if(p==NULL){
 return 0;
     }
@@ -40,3 +49,9 @@ return 0;
     fclose(p);
 return cantidad;
 }
+
+int ArchivoAgendaMedicos::getNuevoId()
+{
+    return getCantRegistros()+1;
+}
+

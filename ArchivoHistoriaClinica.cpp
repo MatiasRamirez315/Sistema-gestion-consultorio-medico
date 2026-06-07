@@ -1,9 +1,11 @@
+#include <string>
+#include <cstring>
 #include "ArchivoHistoriaClinica.h"
 
 bool ArchivoHistoriaClinica::guardar(HistoriaClinica obj){
 
 
-  FILE *p = fopen(_nombre, "ab");
+  FILE *p = fopen(_nombre.c_str(), "ab");
 
   if (p == NULL)
   {
@@ -17,7 +19,7 @@ bool ArchivoHistoriaClinica::guardar(HistoriaClinica obj){
 }
 HistoriaClinica ArchivoHistoriaClinica::leer(int pos){
  HistoriaClinica aux;
-  FILE *p = fopen(_nombre, "rb");
+  FILE *p = fopen(_nombre.c_str(), "rb");
   if (p == NULL)
   {
     return aux;
@@ -30,7 +32,7 @@ HistoriaClinica ArchivoHistoriaClinica::leer(int pos){
 
 }
 int ArchivoHistoriaClinica::contarRegistros(){
-    FILE*p=fopen(_nombre,"rb");
+    FILE*p=fopen(_nombre.c_str(),"rb");
     if(p==NULL){
 return 0;
     }
@@ -40,4 +42,10 @@ return 0;
     fclose(p);
 return cantidad;
 }
+
+int ArchivoHistoriaClinica::getNuevoId()
+{
+    return contarRegistros()+1;
+}
+
 

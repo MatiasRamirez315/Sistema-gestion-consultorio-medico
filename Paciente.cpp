@@ -2,18 +2,25 @@
 #include "ArchivoPaciente.h"
 #include "Persona.h"
 #include "Fecha.h"
+#include <string>
 #include <cstring>
+
+using namespace std;
 
 void Paciente::setIdPaciente(int ID){
     _idPaciente = ID;
 }
 
-void Paciente::setTelefono(const char* tel){
-    strcpy(_telefono,tel);
+void Paciente::setTelefono(string tel){
+
+       _telefono = tel;
+
 }
 
-void Paciente::setEmail(const char* mail){
-    strcpy(_email,mail);
+void Paciente::setEmail(string email){
+
+ _email, email;
+
 }
 
 void Paciente::setGenero(char g){
@@ -36,11 +43,11 @@ int Paciente::getIdPaciente(){
     return _idPaciente;
 }
 
-const char* Paciente::getTelefono(){
+string Paciente::getTelefono(){
     return _telefono;
 }
 
-const char* Paciente::getEmail(){
+string Paciente::getEmail(){
     return _email;
 }
 

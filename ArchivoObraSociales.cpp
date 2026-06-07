@@ -1,12 +1,14 @@
+#include <string>
+#include <cstring>
 #include "ArchivoObraSociales.h"
 
 ArchivoObraSociales::ArchivoObraSociales(){
-    strcpy(_nombre,"ObrasSociales.dat");
+    _nombre = "ObrasSociales.dat";
 }
 
 
 bool ArchivoObraSociales::guardar(ObraSociales obj){
-  FILE *p = fopen(_nombre, "ab");
+  FILE *p = fopen(_nombre.c_str(), "ab");
 
   if (p == NULL)
   {
@@ -22,7 +24,7 @@ bool ArchivoObraSociales::guardar(ObraSociales obj){
 ObraSociales ArchivoObraSociales::leer(int pos){
 
   ObraSociales aux;
-  FILE *p = fopen(_nombre, "rb");
+  FILE *p = fopen(_nombre.c_str(), "rb");
   if (p == NULL)
   {
     return aux;
@@ -36,7 +38,7 @@ ObraSociales ArchivoObraSociales::leer(int pos){
 }
 
 int ArchivoObraSociales::contarRegistros(){
-    FILE*p=fopen(_nombre,"rb");
+    FILE*p=fopen(_nombre.c_str(),"rb");
     if(p==NULL){
 return 0;
     }
@@ -45,4 +47,9 @@ return 0;
     int cantidad=ftell(p)/sizeof(ObraSociales);
     fclose(p);
 return cantidad;
+}
+
+int ArchivoObraSociales::getNuevoId()
+{
+    return contarRegistros()+1;
 }

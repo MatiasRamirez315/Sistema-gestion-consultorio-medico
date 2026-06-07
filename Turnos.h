@@ -1,24 +1,25 @@
 #pragma once
+#include <string>
 
 class Turnos{
 private:
 		int _idTurno;
 		int _idAgendaMedicos;
 		int _idPaciente;
-		char _motivo[300];
+		std::string _motivo;
 		bool _estado;
 public:
 	void setIdTurno(int id);
 	void setIdAgendaMedico(int idAgenda);
 	void setIdPaciente(int idPaciente);
-	void setMotivo(const char* motivo);
+	void setMotivo(std::string motivo);
 	void setEstado(bool estado);
 
 	// GETTERS
 	int getIdTurno();
 	int getIdAgendaMedico() ;
 	int getIdPaciente();
-	const char* getMotivo() ;
+	std::string getMotivo() ;
 	bool getEstado();
 
 	void Cargar(); /**hay que desarrollar*/

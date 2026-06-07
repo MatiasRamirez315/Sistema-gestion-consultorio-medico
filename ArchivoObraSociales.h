@@ -2,9 +2,10 @@
 #include "ObraSociales.h"
 #include <cstdio>
 #include <cstring>
+
 class ArchivoObraSociales{
 private:
-	char _nombre[30];
+	std::string _nombre;
 
 public:
 	ArchivoObraSociales();
@@ -12,4 +13,5 @@ public:
 	bool guardar(ObraSociales obj);
 	ObraSociales leer(int pos);
 	int contarRegistros();
+	int getNuevoId();
 };

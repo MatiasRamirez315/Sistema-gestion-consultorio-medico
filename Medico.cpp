@@ -2,7 +2,11 @@
 #include "Persona.h"
 #include "Fecha.h"
 #include "ArchivoMedicos.h"
+#include <string>
 #include <cstring>
+#include <iostream>
+
+using namespace std;
 
 void Medico::setIdMedico(int id)
 {
@@ -19,9 +23,10 @@ void Medico::setIdEspecialidad(int id)
     _idEspecialidad = id;
 }
 
-void Medico::setMatriculaProfesional(const char* mat)
+void Medico::setMatriculaProfesional(string matProf)
 {
-    strcpy(_matriculaProfesional,mat);
+_matriculaProfesional =  matProf;
+
 }
 
 void Medico::setFechaIngreso(Fecha f)
@@ -51,7 +56,7 @@ int Medico::getIdEspecialidad()
     return _idEspecialidad;
 }
 
-const char* Medico::getMatriculaProfesional()
+string Medico::getMatriculaProfesional()
 {
     return _matriculaProfesional;
 }

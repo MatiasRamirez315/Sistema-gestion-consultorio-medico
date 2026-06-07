@@ -4,12 +4,13 @@
 
 class ArchivoConsultorios{
 private:
-	char _nombre[30];
+	std::string _nombre;
 
 public:
-	ArchivoConsultorios(const char* _nombre = "Consultorios.dat");
+	ArchivoConsultorios(std::string _nombre = "Consultorios.dat");
 
 	bool guardar(Consultorios obj);
 	Consultorios leer(int pos);
 	int contarRegistros();
+	int getNuevoId();
 };

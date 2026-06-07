@@ -1,11 +1,13 @@
+#include <string>
+#include <cstring>
 #include "ArchivoPaciente.h"
 
 ArchivoPaciente::ArchivoPaciente(){
-    strcpy(_nombre,"Pacientes.dat");
+    _nombre = "Pacientes.dat";
 }
 
 bool ArchivoPaciente::guardar(Paciente obj){
-  FILE *p = fopen(_nombre, "ab");
+  FILE *p = fopen(_nombre.c_str(), "ab");
 
   if (p == NULL)
   {
@@ -20,7 +22,7 @@ bool ArchivoPaciente::guardar(Paciente obj){
 Paciente ArchivoPaciente::leer(int pos){
 
   Paciente aux;
-  FILE *p = fopen(_nombre, "rb");
+  FILE *p = fopen(_nombre.c_str(), "rb");
   if (p == NULL)
   {
     return aux;
@@ -33,7 +35,7 @@ Paciente ArchivoPaciente::leer(int pos){
 
 }
 int ArchivoPaciente::contarRegistros(){
-    FILE*p=fopen(_nombre,"rb");
+    FILE*p=fopen(_nombre.c_str(),"rb");
     if(p==NULL){
 return 0;
     }
@@ -43,3 +45,9 @@ return 0;
     fclose(p);
 return cantidad;
 }
+
+int ArchivoPaciente::getNuevoId()
+{
+    return contarRegistros()+1;
+}
+

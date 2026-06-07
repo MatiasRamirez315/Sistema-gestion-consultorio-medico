@@ -1,5 +1,8 @@
 #include "HistoriaClinica.h"
+#include <string>
 #include <cstring>
+
+using namespace std;
 
 void HistoriaClinica::setIdHistorial(int id){
 _idHistorial = id;
@@ -9,8 +12,10 @@ void HistoriaClinica::setIdPaciente(int id){
 _idPaciente = id;
 }
 
-void HistoriaClinica::setDescripcion(const char* descripcion){
-strcpy(_descripcion,descripcion);
+void HistoriaClinica::setDescripcion(string descripcion)
+{
+_descripcion = descripcion;
+
 }
 
 void HistoriaClinica::setEstado(bool estado){
@@ -26,7 +31,7 @@ int HistoriaClinica::getIdPaciente(){
 return _idPaciente;
 }
 
-const char* HistoriaClinica::getDescripcion(){
+string HistoriaClinica::getDescripcion(){
 return _descripcion;
 }
 

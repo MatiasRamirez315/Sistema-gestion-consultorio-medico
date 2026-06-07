@@ -1,13 +1,15 @@
+#include <string>
+#include <cstring>
 #include "ArchivoMedicos.h"
 
 ArchivoMedicos::ArchivoMedicos(){
-    strcpy(_nombre,"Medicos.dat");
+    _nombre = "Medicos.dat";
 }
 
 
 bool ArchivoMedicos::guardar(Medico obj){
 
-  FILE *p = fopen(_nombre, "ab");
+  FILE *p = fopen(_nombre.c_str(), "ab");
 
   if (p == NULL)
   {
@@ -28,7 +30,7 @@ bool ArchivoMedicos::guardar(Medico obj){
 Medico ArchivoMedicos::leer(int pos){
 
   Medico aux;
-  FILE *p = fopen(_nombre, "rb");
+  FILE *p = fopen(_nombre.c_str(), "rb");
   if (p == NULL)
   {
     return aux;
@@ -45,7 +47,7 @@ int ArchivoMedicos::BuscarPosXID(int id){
   Medico aux;
     int pos = 0;
 
-  FILE *p = fopen(_nombre, "rb");
+  FILE *p = fopen(_nombre.c_str(), "rb");
   if (p == NULL)
   {
     return -1;
@@ -62,7 +64,7 @@ int ArchivoMedicos::BuscarPosXID(int id){
 }
 
 int ArchivoMedicos::contarRegistros(){
-    FILE*p=fopen(_nombre,"rb");
+    FILE*p=fopen(_nombre.c_str(),"rb");
     if(p==NULL){
 return 0;
     }
@@ -75,8 +77,7 @@ return cantidad;
 
 bool ArchivoMedicos::Modificar (Medico medico, int pos){
 
-
-  FILE *p = fopen(_nombre, "rb+");
+  FILE *p = fopen(_nombre.c_str(), "rb+");
 
   if (p == NULL)
   {
@@ -91,4 +92,10 @@ bool ArchivoMedicos::Modificar (Medico medico, int pos){
   return pudoModificar;
 
 
-	}
+}
+
+int ArchivoMedicos::getNuevoId()
+{
+    return contarRegistros()+1;
+}
+

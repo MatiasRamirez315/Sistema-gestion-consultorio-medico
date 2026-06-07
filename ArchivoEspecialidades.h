@@ -4,13 +4,14 @@
 
 class ArchivoEspecialidades{
 private:
-	char _nombre[30];
+	std::string _nombre;
 
 public:
-	ArchivoEspecialidades(const char* _nombre = "Especialidades.dat");
+	ArchivoEspecialidades(std::string _nombre = "Especialidades.dat");
 
 	bool guardar(Especialidades obj);
 	Especialidades leer(int pos);
 	int contarRegistros();
+	int getNuevoId();
 };
 

@@ -1,4 +1,8 @@
 #include "Puestos.h"
+#include <string>
+#include <cstring>
+
+using namespace std;
 
 void Puestos::setIdPuesto(int IDPuesto){
 _idPuesto = IDPuesto;
@@ -8,8 +12,9 @@ void Puestos::setSueldo (float Sueldo){
 _sueldo = Sueldo;
 }
 
-void Puestos::setDescripcion (const char * descripcion){
-strcpy(_descripcion,descripcion);
+void Puestos::setDescripcion (string descripcion){
+        _descripcion = descripcion;
+
 }
 
 void Puestos::setEstado(bool estado){
@@ -24,7 +29,7 @@ float Puestos::getSueldo(){
     return _sueldo;
 }
 
-const char *Puestos::getDescripcion(){
+string Puestos::getDescripcion(){
 return _descripcion;
 }
 

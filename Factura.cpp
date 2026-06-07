@@ -1,5 +1,7 @@
 #include "Factura.h"
 
+using namespace std;
+
 void Facturas::setIdFactura(int idFac){
 _idFactura = idFac;
 }
@@ -19,7 +21,7 @@ _importe = importe;
 }
 
 void Facturas::setPagado(bool pagado){
-_pagado;
+_pagado = pagado;
 }
 
 void Facturas::setEstado(bool estado){

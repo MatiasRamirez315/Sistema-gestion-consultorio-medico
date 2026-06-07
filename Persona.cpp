@@ -1,23 +1,27 @@
 #include "Persona.h"
 #include <cstring>
 
-void Persona::setNombre (const char *nombre){
-    strcpy(_nombre,nombre);
+using namespace std;
+
+void Persona::setNombre (string nombre){
+_nombre = nombre;
+
 }
 
-void Persona::setApellido(const char *apellido){
-    strcpy(_apellido, apellido);
+void Persona::setApellido(string apellido){
+_apellido, apellido;
+
 }
 
 void Persona::setDNI(int dni){
     _dni = dni;
 }
 
-const char* Persona::getNombre(){
+string  Persona::getNombre(){
     return _nombre;
 }
 
-const char* Persona::getApellido(){
+string Persona::getApellido(){
     return _apellido;
 }
 
@@ -29,10 +33,10 @@ void Persona::Cargar(){
 
     cout << "Ingrese el nombre : ";
 
-    cin.getline (_nombre,30);
+    cin >>_nombre;
     cout << "Ingrese el apellido: ";
 
-    cin.getline (_apellido,30);
+    cin>> _apellido;
     //cin >> _apellido;
     cout << "Ingrese el DNI: ";
 

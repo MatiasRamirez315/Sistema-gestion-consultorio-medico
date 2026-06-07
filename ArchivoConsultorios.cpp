@@ -1,8 +1,17 @@
+#include <string>
+#include <cstring>
 #include "ArchivoConsultorios.h"
+
+using namespace std;
+
+ArchivoConsultorios::ArchivoConsultorios(string nombreArchivo)
+    :_nombre(nombreArchivo)
+{
+}
 
 bool ArchivoConsultorios::guardar(Consultorios obj){
 
-  FILE *p = fopen(_nombre, "ab");
+  FILE *p = fopen(_nombre.c_str(), "ab");
 
   if (p == NULL)
   {
@@ -19,7 +28,7 @@ Consultorios ArchivoConsultorios::leer(int pos){
 
 
   Consultorios aux;
-  FILE *p = fopen(_nombre, "rb");
+  FILE *p = fopen(_nombre.c_str(), "rb");
   if (p == NULL)
   {
     return aux;
@@ -32,7 +41,7 @@ Consultorios ArchivoConsultorios::leer(int pos){
 
 }
 int ArchivoConsultorios::contarRegistros(){
-    FILE*p=fopen(_nombre,"rb");
+    FILE*p=fopen(_nombre.c_str(),"rb");
     if(p==NULL){
 return 0;
     }
@@ -41,4 +50,8 @@ return 0;
     int cantidad=ftell(p)/sizeof(Consultorios);
     fclose(p);
 return cantidad;
+}
+
+int ArchivoConsultorios::getNuevoId(){
+    return contarRegistros()+1;
 }

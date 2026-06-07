@@ -1,15 +1,17 @@
 #pragma once
 #include "Puestos.h"
 #include <cstdio>
+#include <string>
 
 class ArchivoPuestos{
 private:
-	char _nombre[30];
+	std::string _nombre;
 
 public:
-	ArchivoPuestos(const char* _nombre = "Puestos.dat");
+	ArchivoPuestos(std::string _nombre = "Puestos.dat");
 
 	bool guardar(Puestos obj);
 	Puestos leer(int pos);
 	int contarRegistros();
+	int getNuevoId();
 };

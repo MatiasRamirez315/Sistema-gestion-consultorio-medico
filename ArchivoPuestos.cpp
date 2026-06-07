@@ -1,8 +1,18 @@
+#include <string>
+#include <cstring>
 #include "ArchivoPuestos.h"
+
+using namespace std;
+
+ArchivoPuestos::ArchivoPuestos(string nombreArchivo)
+    :_nombre(nombreArchivo)
+{
+}
+
 
 bool ArchivoPuestos::guardar(Puestos obj){
 
-  FILE *p = fopen(_nombre, "ab");
+  FILE *p = fopen(_nombre.c_str(), "ab");
 
   if (p == NULL)
   {
@@ -16,7 +26,7 @@ bool ArchivoPuestos::guardar(Puestos obj){
 Puestos ArchivoPuestos::leer(int pos){
 
   Puestos aux;
-  FILE *p = fopen(_nombre, "rb");
+  FILE *p = fopen(_nombre.c_str(), "rb");
   if (p == NULL)
   {
     return aux;
@@ -29,7 +39,7 @@ Puestos ArchivoPuestos::leer(int pos){
 
 }
 int ArchivoPuestos::contarRegistros(){
-    FILE*p=fopen(_nombre,"rb");
+    FILE*p=fopen(_nombre.c_str(),"rb");
     if(p==NULL){
 return 0;
     }
@@ -38,4 +48,9 @@ return 0;
     int cantidad=ftell(p)/sizeof(Puestos);
     fclose(p);
 return cantidad;
+}
+
+int ArchivoPuestos::getNuevoId()
+{
+    return contarRegistros()+1;
 }

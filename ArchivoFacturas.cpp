@@ -1,8 +1,17 @@
+#include <string>
+#include <cstring>
 #include "ArchivoFacturas.h"
+
+using namespace std;
+
+ArchivoFacturas::ArchivoFacturas(string nombreArchivo)
+    :_nombre(nombreArchivo)
+{
+}
 
 bool ArchivoFacturas::guardar(Facturas obj){
 
- FILE *p = fopen(_nombre, "ab");
+ FILE *p = fopen(_nombre.c_str(), "ab");
 
   if (p == NULL)
   {
@@ -16,7 +25,7 @@ bool ArchivoFacturas::guardar(Facturas obj){
 Facturas ArchivoFacturas::leer(int pos){
 
   Facturas aux;
-  FILE *p = fopen(_nombre, "rb");
+  FILE *p = fopen(_nombre.c_str(), "rb");
   if (p == NULL)
   {
     return aux;
@@ -29,7 +38,7 @@ Facturas ArchivoFacturas::leer(int pos){
 
 }
 int ArchivoFacturas::contarRegistros(){
-    FILE*p=fopen(_nombre,"rb");
+    FILE*p=fopen(_nombre.c_str(),"rb");
     if(p==NULL){
 return 0;
     }
@@ -39,4 +48,10 @@ return 0;
     fclose(p);
 return cantidad;
 }
+
+int ArchivoFacturas::getNuevoId()
+{
+    return contarRegistros()+1;
+}
+
 

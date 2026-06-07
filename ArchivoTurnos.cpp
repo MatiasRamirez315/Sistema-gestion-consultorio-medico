@@ -1,8 +1,17 @@
+#include <string>
+#include <cstring>
 #include "ArchivoTurnos.h"
+
+using namespace std;
+
+ArchivoTurnos::ArchivoTurnos(string nombreArchivo)
+    :_nombre(nombreArchivo)
+{
+}
 
 bool ArchivoTurnos::guardar(Turnos obj){
 
-  FILE *p = fopen(_nombre, "ab");
+  FILE *p = fopen(_nombre.c_str(), "ab");
 
   if (p == NULL)
   {
@@ -16,7 +25,7 @@ bool ArchivoTurnos::guardar(Turnos obj){
 Turnos ArchivoTurnos::leer(int pos){
 
   Turnos aux;
-  FILE *p = fopen(_nombre, "rb");
+  FILE *p = fopen(_nombre.c_str(), "rb");
   if (p == NULL)
   {
     return aux;
@@ -29,7 +38,7 @@ Turnos ArchivoTurnos::leer(int pos){
 
 }
 int ArchivoTurnos::contarRegistros(){
-    FILE*p=fopen(_nombre,"rb");
+    FILE*p=fopen(_nombre.c_str(),"rb");
     if(p==NULL){
 return 0;
     }
@@ -39,3 +48,9 @@ return 0;
     fclose(p);
 return cantidad;
 }
+
+int ArchivoTurnos::getNuevoId()
+{
+    return contarRegistros()+1;
+}
+

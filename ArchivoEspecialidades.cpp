@@ -1,8 +1,18 @@
+#include <string>
+#include <cstring>
 #include "ArchivoEspecialidades.h"
+
+using namespace std;
+
+ArchivoEspecialidades::ArchivoEspecialidades(string nombreArchivo)
+    :_nombre(nombreArchivo)
+{
+}
+
 
 bool ArchivoEspecialidades::guardar(Especialidades obj){
 
-  FILE *p = fopen(_nombre, "ab");
+  FILE *p = fopen(_nombre.c_str(), "ab");
 
   if (p == NULL)
   {
@@ -14,9 +24,10 @@ bool ArchivoEspecialidades::guardar(Especialidades obj){
   return pudoEscribir;
 
 }
+
 Especialidades ArchivoEspecialidades::leer(int pos){
   Especialidades aux;
-  FILE *p = fopen(_nombre, "rb");
+  FILE *p = fopen(_nombre.c_str(), "rb");
   if (p == NULL)
   {
     return aux;
@@ -29,7 +40,7 @@ Especialidades ArchivoEspecialidades::leer(int pos){
 
 }
 int ArchivoEspecialidades::contarRegistros(){
-    FILE*p=fopen(_nombre,"rb");
+    FILE*p=fopen(_nombre.c_str(),"rb");
     if(p==NULL){
 return 0;
     }
@@ -38,4 +49,9 @@ return 0;
     int cantidad=ftell(p)/sizeof(Especialidades);
     fclose(p);
 return cantidad;
+}
+
+int ArchivoEspecialidades::getNuevoId()
+{
+    return contarRegistros()+1;
 }
