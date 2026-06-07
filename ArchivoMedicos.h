@@ -11,8 +11,10 @@ public:
 	ArchivoMedicos();
 
 	bool guardar(Medico obj);
-
 	Medico leer(int pos);
 	int contarRegistros();
+
+	bool Modificar (Medico medico, int pos);
+    int BuscarPosXID(int id);
 };
 

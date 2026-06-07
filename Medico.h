@@ -32,4 +32,6 @@ public:
 
 	void MostrarTodos();
 
+	void Eliminar();
+
 };

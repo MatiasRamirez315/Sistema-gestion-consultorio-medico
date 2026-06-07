@@ -25,7 +25,6 @@ bool ArchivoMedicos::guardar(Medico obj){
   return pudoEscribir;
 }
 
-
 Medico ArchivoMedicos::leer(int pos){
 
   Medico aux;
@@ -40,6 +39,28 @@ Medico ArchivoMedicos::leer(int pos){
   fclose(p);
   return aux;
 }
+
+int ArchivoMedicos::BuscarPosXID(int id){
+
+  Medico aux;
+    int pos = 0;
+
+  FILE *p = fopen(_nombre, "rb");
+  if (p == NULL)
+  {
+    return -1;
+  }
+
+   while (fread(&aux, sizeof(Medico), 1, p) ) {
+    if (aux.getIdMedico() == id){
+            fclose(p);
+            return pos;
+        }
+        pos++;
+   }
+
+}
+
 int ArchivoMedicos::contarRegistros(){
     FILE*p=fopen(_nombre,"rb");
     if(p==NULL){
@@ -52,3 +73,22 @@ return 0;
 return cantidad;
 }
 
+bool ArchivoMedicos::Modificar (Medico medico, int pos){
+
+
+  FILE *p = fopen(_nombre, "rb+");
+
+  if (p == NULL)
+  {
+    return false;
+  }
+
+    fseek(p, pos * sizeof(Medico), SEEK_SET);
+
+  bool pudoModificar = fwrite(&medico, sizeof(Medico), 1, p);
+  fclose(p);
+
+  return pudoModificar;
+
+
+	}

@@ -96,6 +96,7 @@ void MenuMedico::menuMedico(){
 
             case 4:
                 system("cls");
+                medico.Eliminar();
                 /// LLAMADO FUNC ELIMINAR MED
                 system("pause");
                 system("cls");
