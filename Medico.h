@@ -30,9 +30,7 @@ public:
 
 	void Cargar();
 	void Mostrar();
-
 	void MostrarTodos();
-
 	void Eliminar();
 
 };

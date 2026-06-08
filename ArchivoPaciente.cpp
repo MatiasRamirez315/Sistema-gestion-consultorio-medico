@@ -34,6 +34,25 @@ Paciente ArchivoPaciente::leer(int pos){
   return aux;
 
 }
+
+int ArchivoPaciente::BuscarPosXID(int id){
+    Paciente aux;
+    int pos = 0;
+    FILE *p = fopen(_nombre.c_str(), "rb");
+    if (p == NULL)
+    {
+        return -1;
+    }
+
+    while (fread(&aux, sizeof(Paciente), 1, p) ) {
+    if (aux.getIdPaciente() == id){
+            fclose(p);
+            return pos;
+        }
+        pos++;
+    }
+}
+
 int ArchivoPaciente::contarRegistros(){
     FILE*p=fopen(_nombre.c_str(),"rb");
     if(p==NULL){
@@ -44,6 +63,22 @@ return 0;
     int cantidad=ftell(p)/sizeof(Paciente);
     fclose(p);
 return cantidad;
+}
+
+bool ArchivoPaciente::Modificar (Paciente paciente, int pos){
+
+    FILE *p = fopen(_nombre.c_str(), "rb+");
+
+    if (p == NULL){
+        return false;
+    }
+
+    fseek(p, pos * sizeof(Paciente), SEEK_SET);
+
+    bool pudoModificar = fwrite(&paciente, sizeof(Paciente), 1, p);
+    fclose(p);
+
+    return pudoModificar;
 }
 
 int ArchivoPaciente::getNuevoId()

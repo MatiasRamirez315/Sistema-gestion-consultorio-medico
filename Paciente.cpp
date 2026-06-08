@@ -119,19 +119,48 @@ void Paciente::MostrarPaciente(){
 }
 
 void Paciente::MostrarTodos(){
-ArchivoPaciente archivo;
-Paciente paciente;
-int cantReg = archivo.contarRegistros();
+    ArchivoPaciente archivo;
+    Paciente paciente;
+    int cantReg = archivo.contarRegistros();
 
-for (int i=0;i<cantReg ; i++){
-    paciente = archivo.leer(i);
-    paciente.Persona::Mostrar();
-    cout << "ID del paciente:"  << paciente.getIdPaciente() << endl;
-    cout << "Telefono: " << paciente.getTelefono() << endl ;
-    cout << "Email: " << paciente.getEmail() << endl;
-    cout << "Genero: " << paciente.getGenero() << endl;
-    cout << "Fecha de nacimiento: " << paciente.getFechaNac().toString() << endl;
-    cout << "Estado: " << paciente.getEstado() << endl << endl;
+    for (int i=0;i<cantReg ; i++){
+        paciente = archivo.leer(i);
+        paciente.Persona::Mostrar();
+        cout << "ID del paciente:"  << paciente.getIdPaciente() << endl;
+        cout << "Telefono: " << paciente.getTelefono() << endl ;
+        cout << "Email: " << paciente.getEmail() << endl;
+        cout << "Genero: " << paciente.getGenero() << endl;
+        cout << "Fecha de nacimiento: " << paciente.getFechaNac().toString() << endl;
+        cout << "Estado: " << paciente.getEstado() << endl << endl;
+    }
+}
 
+
+void Paciente::Eliminar(){
+    ArchivoPaciente archivo;
+    Paciente paciente;
+    int id;
+    int pos;
+    cout << "Ingrese el ID del paciente que desea eliminar: ";
+    cin >> id;
+
+    pos = archivo.BuscarPosXID(id);
+
+        if(paciente.getEstado() == false)
+    {
+        cout << "Paciente no encontrado..." << endl;
+        return;
+    }
+
+    paciente = archivo.leer(pos);
+
+    paciente.setEstado(false);
+
+    if (archivo.Modificar (paciente,pos)){
+
+        cout << "Paciente eliminado con exito..." << endl;
+    }
+    else{
+        cout << "Error al eliminar paciente..." << endl;
     }
 }

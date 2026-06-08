@@ -33,5 +33,5 @@ public:
 	void CargarPaciente();
 	void MostrarPaciente();
 	void MostrarTodos();
-
+    void Eliminar();
 };
