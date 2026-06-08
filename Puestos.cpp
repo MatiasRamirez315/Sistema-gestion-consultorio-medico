@@ -12,8 +12,8 @@ void Puestos::setSueldo (float Sueldo){
 _sueldo = Sueldo;
 }
 
-void Puestos::setDescripcion (string descripcion){
-        _descripcion = descripcion;
+void Puestos::setDescripcion (const char* descripcion){
+        strcpy(_descripcion,descripcion);
 
 }
 
@@ -29,7 +29,7 @@ float Puestos::getSueldo(){
     return _sueldo;
 }
 
-string Puestos::getDescripcion(){
+const char* Puestos::getDescripcion(){
 return _descripcion;
 }
 

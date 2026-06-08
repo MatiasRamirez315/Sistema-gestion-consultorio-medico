@@ -5,10 +5,10 @@
 
 class ArchivoHistoriaClinica{
 private:
-	std::string _nombre;
+	char _nombre[30];
 
 public:
-	ArchivoHistoriaClinica(std::string _nombre = "HistorialesClinicos.dat");
+	ArchivoHistoriaClinica( );
 
 	bool guardar(HistoriaClinica obj);
 	HistoriaClinica leer(int pos);

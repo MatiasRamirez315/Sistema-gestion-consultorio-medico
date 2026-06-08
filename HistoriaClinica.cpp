@@ -12,9 +12,9 @@ void HistoriaClinica::setIdPaciente(int id){
 _idPaciente = id;
 }
 
-void HistoriaClinica::setDescripcion(string descripcion)
+void HistoriaClinica::setDescripcion(const char* descripcion)
 {
-_descripcion = descripcion;
+strcpy(_descripcion, descripcion);
 
 }
 
@@ -31,7 +31,7 @@ int HistoriaClinica::getIdPaciente(){
 return _idPaciente;
 }
 
-string HistoriaClinica::getDescripcion(){
+const char * HistoriaClinica::getDescripcion(){
 return _descripcion;
 }
 

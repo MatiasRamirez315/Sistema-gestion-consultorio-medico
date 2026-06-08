@@ -2,12 +2,10 @@
 #include <cstring>
 #include "ArchivoPaciente.h"
 
-ArchivoPaciente::ArchivoPaciente(){
-    _nombre = "Pacientes.dat";
-}
+ArchivoPaciente::ArchivoPaciente(){strcpy (_nombre,"Pacientes.dat");}
 
 bool ArchivoPaciente::guardar(Paciente obj){
-  FILE *p = fopen(_nombre.c_str(), "ab");
+  FILE *p = fopen(_nombre, "ab");
 
   if (p == NULL)
   {
@@ -22,7 +20,7 @@ bool ArchivoPaciente::guardar(Paciente obj){
 Paciente ArchivoPaciente::leer(int pos){
 
   Paciente aux;
-  FILE *p = fopen(_nombre.c_str(), "rb");
+  FILE *p = fopen(_nombre, "rb");
   if (p == NULL)
   {
     return aux;
@@ -38,7 +36,7 @@ Paciente ArchivoPaciente::leer(int pos){
 int ArchivoPaciente::BuscarPosXID(int id){
     Paciente aux;
     int pos = 0;
-    FILE *p = fopen(_nombre.c_str(), "rb");
+    FILE *p = fopen(_nombre, "rb");
     if (p == NULL)
     {
         return -1;
@@ -54,7 +52,7 @@ int ArchivoPaciente::BuscarPosXID(int id){
 }
 
 int ArchivoPaciente::contarRegistros(){
-    FILE*p=fopen(_nombre.c_str(),"rb");
+    FILE*p=fopen(_nombre,"rb");
     if(p==NULL){
 return 0;
     }
@@ -67,7 +65,7 @@ return cantidad;
 
 bool ArchivoPaciente::Modificar (Paciente paciente, int pos){
 
-    FILE *p = fopen(_nombre.c_str(), "rb+");
+    FILE *p = fopen(_nombre, "rb+");
 
     if (p == NULL){
         return false;

@@ -1,13 +1,14 @@
 #pragma once
 #include "Consultorios.h"
-#include <cstdio>
+#include <cstring>
 
 class ArchivoConsultorios{
 private:
-	std::string _nombre;
+    char _nombre[30];
 
 public:
-	ArchivoConsultorios(std::string _nombre = "Consultorios.dat");
+	ArchivoConsultorios() ;
+
 
 	bool guardar(Consultorios obj);
 	Consultorios leer(int pos);

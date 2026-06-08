@@ -5,10 +5,10 @@
 
 class ArchivoAgendaMedicos{
 private:
-	std::string _nombre;
+	char _nombre [30];
 
 public:
-	ArchivoAgendaMedicos(std::string _nombre = "AgendaMedicos.dat");
+	ArchivoAgendaMedicos();
 
 	bool guardar(AgendaMedicos obj);
 	AgendaMedicos leer(int pos);

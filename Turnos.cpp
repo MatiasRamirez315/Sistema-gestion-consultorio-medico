@@ -16,9 +16,9 @@ void Turnos::setIdPaciente(int idPaciente){
 _idPaciente = idPaciente;
 }
 
-void Turnos::setMotivo(string motivo)
+void Turnos::setMotivo(const char* motivo)
 {
-    _motivo = motivo;
+    strcpy(_motivo, motivo);
 
 }
 
@@ -39,7 +39,7 @@ int Turnos::getIdPaciente(){
 return _idPaciente;
 }
 
-string Turnos::getMotivo() {
+const char* Turnos::getMotivo() {
 return _motivo;
 }
 

@@ -1,17 +1,14 @@
-#include <string>
 #include <cstring>
+#include <cstdio>
 #include "ArchivoConsultorios.h"
 
-using namespace std;
-
-ArchivoConsultorios::ArchivoConsultorios(string nombreArchivo)
-    :_nombre(nombreArchivo)
-{
+ArchivoConsultorios :: ArchivoConsultorios(){
+strcpy (_nombre,"Consultorios.dat");
 }
 
 bool ArchivoConsultorios::guardar(Consultorios obj){
 
-  FILE *p = fopen(_nombre.c_str(), "ab");
+  FILE *p = fopen(_nombre, "ab");
 
   if (p == NULL)
   {
@@ -28,7 +25,7 @@ Consultorios ArchivoConsultorios::leer(int pos){
 
 
   Consultorios aux;
-  FILE *p = fopen(_nombre.c_str(), "rb");
+  FILE *p = fopen(_nombre, "rb");
   if (p == NULL)
   {
     return aux;
@@ -41,7 +38,7 @@ Consultorios ArchivoConsultorios::leer(int pos){
 
 }
 int ArchivoConsultorios::contarRegistros(){
-    FILE*p=fopen(_nombre.c_str(),"rb");
+    FILE*p=fopen(_nombre,"rb");
     if(p==NULL){
 return 0;
     }

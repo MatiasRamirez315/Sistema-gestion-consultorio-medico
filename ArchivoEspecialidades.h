@@ -4,10 +4,10 @@
 
 class ArchivoEspecialidades{
 private:
-	std::string _nombre;
+	char _nombre[30];
 
 public:
-	ArchivoEspecialidades(std::string _nombre = "Especialidades.dat");
+	ArchivoEspecialidades();
 
 	bool guardar(Especialidades obj);
 	Especialidades leer(int pos);

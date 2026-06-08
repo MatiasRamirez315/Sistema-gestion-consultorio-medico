@@ -5,7 +5,7 @@
 
 class ArchivoObraSociales{
 private:
-	std::string _nombre;
+	 char _nombre[30];
 
 public:
 	ArchivoObraSociales();

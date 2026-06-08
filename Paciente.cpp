@@ -11,15 +11,15 @@ void Paciente::setIdPaciente(int ID){
     _idPaciente = ID;
 }
 
-void Paciente::setTelefono(string tel){
+void Paciente::setTelefono(const char* tel){
 
-       _telefono = tel;
+       strcpy(_telefono, tel);
 
 }
 
-void Paciente::setEmail(string email){
+void Paciente::setEmail(const char* email){
 
- _email, email;
+ strcpy(_email, email);
 
 }
 
@@ -43,11 +43,11 @@ int Paciente::getIdPaciente(){
     return _idPaciente;
 }
 
-string Paciente::getTelefono(){
+const char* Paciente::getTelefono(){
     return _telefono;
 }
 
-string Paciente::getEmail(){
+const char* Paciente::getEmail(){
     return _email;
 }
 

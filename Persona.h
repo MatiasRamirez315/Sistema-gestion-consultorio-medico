@@ -4,19 +4,19 @@
 
 class Persona{
 private:
-	std::string _nombre;
-	std::string _apellido;
+	char _nombre[50];
+	char _apellido[50];
 	int _dni;
 
 public:
 
-	void setNombre (std::string nombre);
-	void setApellido(std::string apellido);
+	void setNombre (const char* nombre);
+	void setApellido(const char* apellido);
 	void setDNI(int dni);
 
 
-	std::string getNombre();
-	std::string getApellido();
+	const char* getNombre();
+	const char* getApellido();
 	int getDNI();
 
 

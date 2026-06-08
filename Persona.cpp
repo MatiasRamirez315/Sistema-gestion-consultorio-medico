@@ -3,13 +3,13 @@
 
 using namespace std;
 
-void Persona::setNombre (string nombre){
-_nombre = nombre;
+void Persona::setNombre (const char* nombre){
+strcpy(_nombre, nombre);
 
 }
 
-void Persona::setApellido(string apellido){
-_apellido, apellido;
+void Persona::setApellido(const char * apellido){
+strcpy(_apellido, apellido);
 
 }
 
@@ -17,11 +17,11 @@ void Persona::setDNI(int dni){
     _dni = dni;
 }
 
-string  Persona::getNombre(){
+const char*  Persona::getNombre(){
     return _nombre;
 }
 
-string Persona::getApellido(){
+const char* Persona::getApellido(){
     return _apellido;
 }
 

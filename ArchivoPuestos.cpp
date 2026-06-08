@@ -4,15 +4,11 @@
 
 using namespace std;
 
-ArchivoPuestos::ArchivoPuestos(string nombreArchivo)
-    :_nombre(nombreArchivo)
-{
-}
-
+ArchivoPuestos:: ArchivoPuestos( ){strcpy (_nombre,"Puestos.dat");}
 
 bool ArchivoPuestos::guardar(Puestos obj){
 
-  FILE *p = fopen(_nombre.c_str(), "ab");
+  FILE *p = fopen(_nombre, "ab");
 
   if (p == NULL)
   {
@@ -26,7 +22,7 @@ bool ArchivoPuestos::guardar(Puestos obj){
 Puestos ArchivoPuestos::leer(int pos){
 
   Puestos aux;
-  FILE *p = fopen(_nombre.c_str(), "rb");
+  FILE *p = fopen(_nombre, "rb");
   if (p == NULL)
   {
     return aux;
@@ -39,7 +35,7 @@ Puestos ArchivoPuestos::leer(int pos){
 
 }
 int ArchivoPuestos::contarRegistros(){
-    FILE*p=fopen(_nombre.c_str(),"rb");
+    FILE*p=fopen(_nombre,"rb");
     if(p==NULL){
 return 0;
     }

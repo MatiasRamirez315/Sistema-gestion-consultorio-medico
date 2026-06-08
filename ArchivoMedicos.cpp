@@ -2,14 +2,11 @@
 #include <cstring>
 #include "ArchivoMedicos.h"
 
-ArchivoMedicos::ArchivoMedicos(){
-    _nombre = "Medicos.dat";
-}
-
+ArchivoMedicos::ArchivoMedicos(){strcpy (_nombre,"Medicos.dat");}
 
 bool ArchivoMedicos::guardar(Medico obj){
 
-  FILE *p = fopen(_nombre.c_str(), "ab");
+  FILE *p = fopen(_nombre, "ab");
 
   if (p == NULL)
   {
@@ -30,7 +27,7 @@ bool ArchivoMedicos::guardar(Medico obj){
 Medico ArchivoMedicos::leer(int pos){
 
   Medico aux;
-  FILE *p = fopen(_nombre.c_str(), "rb");
+  FILE *p = fopen(_nombre, "rb");
   if (p == NULL)
   {
     return aux;
@@ -41,30 +38,33 @@ Medico ArchivoMedicos::leer(int pos){
   fclose(p);
   return aux;
 }
-
 int ArchivoMedicos::BuscarPosXID(int id){
 
-  Medico aux;
+    Medico aux;
     int pos = 0;
 
-  FILE *p = fopen(_nombre.c_str(), "rb");
-  if (p == NULL)
-  {
-    return -1;
-  }
+    FILE *p = fopen(_nombre, "rb");
+    if (p == NULL)
+    {
+        return -1;
+    }
 
-   while (fread(&aux, sizeof(Medico), 1, p) ) {
-    if (aux.getIdMedico() == id){
+    while (fread(&aux, sizeof(Medico), 1, p))
+    {
+        if (aux.getIdMedico() == id)
+        {
             fclose(p);
             return pos;
         }
         pos++;
-   }
+    }
 
+    fclose(p);
+    return -1;
 }
 
 int ArchivoMedicos::contarRegistros(){
-    FILE*p=fopen(_nombre.c_str(),"rb");
+    FILE*p=fopen(_nombre,"rb");
     if(p==NULL){
 return 0;
     }
@@ -77,7 +77,7 @@ return cantidad;
 
 bool ArchivoMedicos::Modificar (Medico medico, int pos){
 
-  FILE *p = fopen(_nombre.c_str(), "rb+");
+  FILE *p = fopen(_nombre, "rb+");
 
   if (p == NULL)
   {

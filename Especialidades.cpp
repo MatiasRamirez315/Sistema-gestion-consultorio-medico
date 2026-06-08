@@ -8,9 +8,9 @@ void Especialidades::setIdEspecialidad(int id){
     _idEspecialidad = id;
     }
 
-void Especialidades::setDescripcion(std::string descripcion)
+void Especialidades::setDescripcion(char *descripcion)
 {
-    _descripcion = descripcion;
+    strcpy(_descripcion, descripcion);
 }
 
 void Especialidades::setEstado(bool estado){
@@ -20,7 +20,7 @@ void Especialidades::setEstado(bool estado){
 int Especialidades::getIdEspecialidad() {
     return _idEspecialidad;
  }
-string Especialidades::getDescripcion() {
+const char * Especialidades::getDescripcion() {
     return _descripcion;
 }
 bool Especialidades::getEstado(){

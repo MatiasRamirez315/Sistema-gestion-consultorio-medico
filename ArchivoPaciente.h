@@ -2,11 +2,10 @@
 #include "Paciente.h"
 #include <cstdio>
 #include <cstring>
-#include <string>
 
 class ArchivoPaciente{
 private:
-	std::string _nombre;
+	char _nombre [30];
 
 public:
 	ArchivoPaciente();

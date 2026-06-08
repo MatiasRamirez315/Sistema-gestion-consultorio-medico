@@ -7,23 +7,23 @@ using namespace std;
 class ObraSociales{
 private:
 	int _idObraSocial;
-	std::string _nombre;
-	std::string _plan;
+	char _nombre [50];
+	char _plan [30];
 	int _tipoCobertura ;
 	bool _estado;
 
 public:
 	void setIdObraSocial(int id);
-	void setNombre(std::string nombre);
-	void setPlan(std::string plan);
+	void setNombre(const char * nombre);
+	void setPlan(const char* plan);
 	void setTipoCobertura(int tipo);
 
 	void setEstado(bool estado);
 
 		// GETTERS
 	int getIdObraSocial();
-	std::string getNombre();
-	std::string getPlan() ;
+	const char* getNombre();
+	const char* getPlan() ;
 	int getTipoCobertura();
 	bool getEstado();
 

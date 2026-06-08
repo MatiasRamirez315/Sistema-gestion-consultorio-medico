@@ -8,14 +8,14 @@ using namespace std;
 void ObraSociales::setIdObraSocial(int id){
 _idObraSocial = id;
 }
-void ObraSociales::setNombre(string nombre){
+void ObraSociales::setNombre(const char *nombre){
 
-  _nombre = nombre;
+ strcpy( _nombre, nombre);
 
 }
-void ObraSociales::setPlan(string plan){
+void ObraSociales::setPlan(const char* plan){
 
-_plan, plan;
+strcpy (_plan, plan);
 
 }
 void ObraSociales::setTipoCobertura(int tipo){
@@ -30,11 +30,11 @@ int ObraSociales::getIdObraSocial() {
 	return _idObraSocial;
 }
 
-string ObraSociales::getNombre() {
+const char* ObraSociales::getNombre() {
 	return _nombre;
 	}
 
-string ObraSociales:: getPlan() {
+const char* ObraSociales:: getPlan() {
 	return _plan;
 }
 

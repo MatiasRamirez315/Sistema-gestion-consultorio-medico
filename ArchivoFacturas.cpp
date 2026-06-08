@@ -4,14 +4,11 @@
 
 using namespace std;
 
-ArchivoFacturas::ArchivoFacturas(string nombreArchivo)
-    :_nombre(nombreArchivo)
-{
-}
+	ArchivoFacturas::ArchivoFacturas( ){strcpy (_nombre,"Facturas.dat");}
 
 bool ArchivoFacturas::guardar(Facturas obj){
 
- FILE *p = fopen(_nombre.c_str(), "ab");
+ FILE *p = fopen(_nombre, "ab");
 
   if (p == NULL)
   {
@@ -25,7 +22,7 @@ bool ArchivoFacturas::guardar(Facturas obj){
 Facturas ArchivoFacturas::leer(int pos){
 
   Facturas aux;
-  FILE *p = fopen(_nombre.c_str(), "rb");
+  FILE *p = fopen(_nombre, "rb");
   if (p == NULL)
   {
     return aux;
@@ -38,7 +35,7 @@ Facturas ArchivoFacturas::leer(int pos){
 
 }
 int ArchivoFacturas::contarRegistros(){
-    FILE*p=fopen(_nombre.c_str(),"rb");
+    FILE*p=fopen(_nombre,"rb");
     if(p==NULL){
 return 0;
     }

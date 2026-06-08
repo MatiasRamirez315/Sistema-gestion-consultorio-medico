@@ -5,18 +5,18 @@ class HistoriaClinica{
 private:
 	int _idHistorial;
 	int _idPaciente ;
-	std::string _descripcion;
+	char _descripcion[300];
 	bool _estado;
 public:
 	// SETTERS
 	void setIdHistorial(int id);
 	void setIdPaciente(int id);
-	void setDescripcion(std::string descripcion);
+	void setDescripcion(const char* descripcion);
 	void setEstado(bool estado);
 
 	// GETTERS
 	int getIdHistorial();
 	int getIdPaciente();
-	std::string getDescripcion();
+	const char* getDescripcion();
 	bool getEstado();
 };

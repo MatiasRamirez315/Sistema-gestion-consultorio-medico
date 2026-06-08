@@ -1,14 +1,13 @@
 #pragma once
 #include "Turnos.h"
 #include <cstdio>
-#include <string>
 
 class ArchivoTurnos{
 private:
-	std::string _nombre;
+	 char _nombre[30];
 
 public:
-	ArchivoTurnos(std::string _nombre = "Turnos.dat");
+	ArchivoTurnos();
 
 	bool guardar(Turnos obj);
 	Turnos leer(int pos);

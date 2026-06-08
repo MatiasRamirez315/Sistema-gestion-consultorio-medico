@@ -8,7 +8,7 @@ private:
 	int _idMedico;
 	int _idPuesto;
 	int _idEspecialidad;
-	std::string _matriculaProfesional;
+	char _matriculaProfesional [12];
 	Fecha _fechaIngreso;
 	bool _estado;
 
@@ -16,7 +16,7 @@ public:
 	void setIdMedico(int id);
 	void setIdPuesto(int id);
 	void setIdEspecialidad(int id);
-	void setMatriculaProfesional(std::string mat);
+	void setMatriculaProfesional(const char *mat);
 	void setFechaIngreso(Fecha f);
 	void setEstado(bool e);
 
@@ -24,7 +24,7 @@ public:
 	int getIdMedico();
 	int getIdPuesto();
 	int getIdEspecialidad();
-	std::string getMatriculaProfesional();
+	const char* getMatriculaProfesional();
 	Fecha getFechaIngreso();
 	bool getEstado();
 

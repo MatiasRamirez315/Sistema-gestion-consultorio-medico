@@ -23,9 +23,9 @@ void Medico::setIdEspecialidad(int id)
     _idEspecialidad = id;
 }
 
-void Medico::setMatriculaProfesional(string matProf)
+void Medico::setMatriculaProfesional(const char* matProf)
 {
-_matriculaProfesional =  matProf;
+strcpy(_matriculaProfesional,  matProf);
 
 }
 
@@ -56,7 +56,7 @@ int Medico::getIdEspecialidad()
     return _idEspecialidad;
 }
 
-string Medico::getMatriculaProfesional()
+const char* Medico::getMatriculaProfesional()
 {
     return _matriculaProfesional;
 }
@@ -170,22 +170,25 @@ void Medico::Eliminar()
 
     pos = archivo.BuscarPosXID(id);
 
-        if(medico.getEstado() == false)
+
+        if(pos == -1)
     {
         cout << "medico no encontrado.." << endl;
         return;
     }
-
-    medico = archivo.leer(pos);
-
-    medico.setEstado(false);
-
-    if (archivo.Modificar (medico,pos)){
-
-        cout << "medico eliminado con exito.." << endl;
-    }
     else{
-        cout << "error al eliminar el medico.." << endl;
+
+        medico = archivo.leer(pos);
+
+        medico.setEstado(false);
+
+        if (archivo.Modificar (medico,pos)){
+
+            cout << "medico eliminado con exito.." << endl;
+        }
+        else{
+            cout << "error al eliminar el medico.." << endl;
+        }
     }
 
 

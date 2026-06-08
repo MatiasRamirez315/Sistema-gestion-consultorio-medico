@@ -4,14 +4,11 @@
 
 using namespace std;
 
-ArchivoTurnos::ArchivoTurnos(string nombreArchivo)
-    :_nombre(nombreArchivo)
-{
-}
+ArchivoTurnos:: ArchivoTurnos() {strcpy (_nombre,"Turnos.dat");}
 
 bool ArchivoTurnos::guardar(Turnos obj){
 
-  FILE *p = fopen(_nombre.c_str(), "ab");
+  FILE *p = fopen(_nombre, "ab");
 
   if (p == NULL)
   {
@@ -25,7 +22,7 @@ bool ArchivoTurnos::guardar(Turnos obj){
 Turnos ArchivoTurnos::leer(int pos){
 
   Turnos aux;
-  FILE *p = fopen(_nombre.c_str(), "rb");
+  FILE *p = fopen(_nombre, "rb");
   if (p == NULL)
   {
     return aux;
@@ -38,7 +35,7 @@ Turnos ArchivoTurnos::leer(int pos){
 
 }
 int ArchivoTurnos::contarRegistros(){
-    FILE*p=fopen(_nombre.c_str(),"rb");
+    FILE*p=fopen(_nombre,"rb");
     if(p==NULL){
 return 0;
     }

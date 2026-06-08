@@ -4,14 +4,13 @@
 
 using namespace std;
 
-ArchivoAgendaMedicos::ArchivoAgendaMedicos(string nombreArchivo)
-    :_nombre(nombreArchivo)
-{
-}
+ArchivoAgendaMedicos::ArchivoAgendaMedicos(){
+    strcpy (_nombre,"AgendaMedicos.dat");
+    }
 
 bool ArchivoAgendaMedicos::guardar(AgendaMedicos obj){
 
-  FILE *p = fopen(_nombre.c_str(), "ab");
+  FILE *p = fopen(_nombre, "ab");
 
   if (p == NULL)
   {
@@ -26,7 +25,7 @@ bool ArchivoAgendaMedicos::guardar(AgendaMedicos obj){
 AgendaMedicos ArchivoAgendaMedicos::leer(int pos){
 
   AgendaMedicos aux;
-  FILE *p = fopen(_nombre.c_str(), "rb");
+  FILE *p = fopen(_nombre, "rb");
   if (p == NULL)
   {
     return aux;
@@ -39,7 +38,7 @@ AgendaMedicos ArchivoAgendaMedicos::leer(int pos){
 }
 
 int ArchivoAgendaMedicos::getCantRegistros(){
-    FILE*p=fopen(_nombre.c_str(),"rb");
+    FILE*p=fopen(_nombre,"rb");
     if(p==NULL){
 return 0;
     }

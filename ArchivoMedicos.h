@@ -2,11 +2,11 @@
 #include "Medico.h"
 #include <cstdio>
 #include <cstring>
-#include <string>
+
 
 class ArchivoMedicos{
 private:
-	std::string _nombre;
+	 char _nombre[30];
 
 public:
 	ArchivoMedicos();

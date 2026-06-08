@@ -6,18 +6,18 @@ class Puestos{
 private:
 	int _idPuesto;
 	float _sueldo;
-	std::string _descripcion;
+	char _descripcion [50];
 	bool _estado;
 public:
 
 	void setIdPuesto(int IDPuesto);
 	void setSueldo (float Sueldo);
-	void setDescripcion (std::string descripcion);
+	void setDescripcion (const char *descripcion);
 	void setEstado(bool estado);
 
 	int getIDPuesto();
 	float getSueldo();
-	std::string getDescripcion();
+	const char* getDescripcion();
 	bool getEstado();
 
 };
