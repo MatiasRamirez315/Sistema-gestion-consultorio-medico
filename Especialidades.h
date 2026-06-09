@@ -3,14 +3,14 @@
 class Especialidades{
 private:
 	int _idEspecialidad ;
-	char _descripcion[120];
+	char _descripcion [200];
 	bool _estado;
 public:
 	void setIdEspecialidad(int id);
-	void setDescripcion(const char* desc);
+	void setDescripcion(char *descripcion);
 	void setEstado(bool estado);
 
 	int getIdEspecialidad();
-	const char* getDescripcion();
+	const char * getDescripcion();
 	bool getEstado();
 };

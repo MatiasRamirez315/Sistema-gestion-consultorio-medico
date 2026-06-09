@@ -1,18 +1,20 @@
 #pragma once
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 class ObraSociales{
 private:
 	int _idObraSocial;
-	char _nombre[20];
-	char _plan[10];
+	char _nombre [50];
+	char _plan [30];
 	int _tipoCobertura ;
 	bool _estado;
+
 public:
 	void setIdObraSocial(int id);
-	void setNombre(const char* nombre);
+	void setNombre(const char * nombre);
 	void setPlan(const char* plan);
 	void setTipoCobertura(int tipo);
 

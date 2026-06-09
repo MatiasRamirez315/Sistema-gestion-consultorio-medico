@@ -1,4 +1,10 @@
+#include <string>
+#include <cstring>
 #include "ArchivoHistoriaClinica.h"
+
+ArchivoHistoriaClinica:: ArchivoHistoriaClinica( ){
+    strcpy (_nombre,"HistoriaClinica.dat");
+    }
 
 bool ArchivoHistoriaClinica::guardar(HistoriaClinica obj){
 
@@ -40,4 +46,10 @@ return 0;
     fclose(p);
 return cantidad;
 }
+
+int ArchivoHistoriaClinica::getNuevoId()
+{
+    return contarRegistros()+1;
+}
+
 

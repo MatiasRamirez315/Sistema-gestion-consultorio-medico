@@ -1,9 +1,15 @@
+#include <string>
+#include <cstring>
 #include "ArchivoTurnos.h"
 #include <cstring>
 
 ArchivoTurnos::ArchivoTurnos(const char* nombre){
     strcpy(_nombre, nombre);
 }
+
+using namespace std;
+
+ArchivoTurnos:: ArchivoTurnos() {strcpy (_nombre,"Turnos.dat");}
 
 bool ArchivoTurnos::guardar(Turnos obj){
 
@@ -44,3 +50,9 @@ return 0;
     fclose(p);
 return cantidad;
 }
+
+int ArchivoTurnos::getNuevoId()
+{
+    return contarRegistros()+1;
+}
+

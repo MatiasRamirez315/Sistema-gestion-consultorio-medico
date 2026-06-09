@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 #include "Persona.h"
 #include "Fecha.h"
 
@@ -7,7 +8,7 @@ private:
 	int _idMedico;
 	int _idPuesto;
 	int _idEspecialidad;
-	char _matriculaProfesional[12];
+	char _matriculaProfesional [12];
 	Fecha _fechaIngreso;
 	bool _estado;
 
@@ -15,7 +16,7 @@ public:
 	void setIdMedico(int id);
 	void setIdPuesto(int id);
 	void setIdEspecialidad(int id);
-	void setMatriculaProfesional(const char* mat);
+	void setMatriculaProfesional(const char *mat);
 	void setFechaIngreso(Fecha f);
 	void setEstado(bool e);
 
@@ -29,9 +30,7 @@ public:
 
 	void Cargar();
 	void Mostrar();
-
 	void MostrarTodos();
-
 	void Eliminar();
 
 };

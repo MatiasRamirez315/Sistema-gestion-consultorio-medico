@@ -1,4 +1,10 @@
+#include <string>
+#include <cstring>
 #include "ArchivoPuestos.h"
+
+using namespace std;
+
+ArchivoPuestos:: ArchivoPuestos( ){strcpy (_nombre,"Puestos.dat");}
 
 bool ArchivoPuestos::guardar(Puestos obj){
 
@@ -38,4 +44,9 @@ return 0;
     int cantidad=ftell(p)/sizeof(Puestos);
     fclose(p);
 return cantidad;
+}
+
+int ArchivoPuestos::getNuevoId()
+{
+    return contarRegistros()+1;
 }

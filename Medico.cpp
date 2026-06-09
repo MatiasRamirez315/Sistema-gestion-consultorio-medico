@@ -2,7 +2,11 @@
 #include "Persona.h"
 #include "Fecha.h"
 #include "ArchivoMedicos.h"
+#include <string>
 #include <cstring>
+#include <iostream>
+
+using namespace std;
 
 void Medico::setIdMedico(int id)
 {
@@ -19,9 +23,10 @@ void Medico::setIdEspecialidad(int id)
     _idEspecialidad = id;
 }
 
-void Medico::setMatriculaProfesional(const char* mat)
+void Medico::setMatriculaProfesional(const char* matProf)
 {
-    strcpy(_matriculaProfesional,mat);
+strcpy(_matriculaProfesional,  matProf);
+
 }
 
 void Medico::setFechaIngreso(Fecha f)
@@ -165,22 +170,25 @@ void Medico::Eliminar()
 
     pos = archivo.BuscarPosXID(id);
 
-        if(medico.getEstado() == false)
+
+        if(pos == -1)
     {
         cout << "medico no encontrado.." << endl;
         return;
     }
-
-    medico = archivo.leer(pos);
-
-    medico.setEstado(false);
-
-    if (archivo.Modificar (medico,pos)){
-
-        cout << "medico eliminado con exito.." << endl;
-    }
     else{
-        cout << "error al eliminar el medico.." << endl;
+
+        medico = archivo.leer(pos);
+
+        medico.setEstado(false);
+
+        if (archivo.Modificar (medico,pos)){
+
+            cout << "medico eliminado con exito.." << endl;
+        }
+        else{
+            cout << "error al eliminar el medico.." << endl;
+        }
     }
 
 

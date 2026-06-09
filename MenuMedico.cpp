@@ -64,17 +64,14 @@ void MenuMedico::menuMedico(){
             {
             case 0:
                 system("cls");
-                medico.Cargar(); /// LLAMADO FUNC CARGAR MED
-
+                medico.Cargar();
                 system("pause");
                 system("cls");
                 break;
 
             case 1:
                 system("cls");
-
-
-                /// LLAMADO FUNC MOSTRAR MED
+                /// LLAMADO FUNC MODIFICAR MED
                 system("pause");
                 system("cls");
                 break;
@@ -88,7 +85,6 @@ void MenuMedico::menuMedico(){
 
             case 3:
                 system("cls");
-                /// LLAMADO FUNC LISTAR TODOS LOS MED
                 medico.MostrarTodos();
                 system("pause");
                 system("cls");
@@ -97,7 +93,6 @@ void MenuMedico::menuMedico(){
             case 4:
                 system("cls");
                 medico.Eliminar();
-                /// LLAMADO FUNC ELIMINAR MED
                 system("pause");
                 system("cls");
                 break;

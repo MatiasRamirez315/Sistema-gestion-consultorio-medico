@@ -1,15 +1,22 @@
 #include "ObraSociales.h"
 #include "ArchivoObraSociales.h"
 #include <cstring>
+#include <iostream>
+
+using namespace std;
 
 void ObraSociales::setIdObraSocial(int id){
 _idObraSocial = id;
 }
-void ObraSociales::setNombre(const char* nombre){
-strcpy(_nombre,nombre);
+void ObraSociales::setNombre(const char *nombre){
+
+ strcpy( _nombre, nombre);
+
 }
 void ObraSociales::setPlan(const char* plan){
-strcpy(_plan,plan);
+
+strcpy (_plan, plan);
+
 }
 void ObraSociales::setTipoCobertura(int tipo){
 _tipoCobertura = tipo;
@@ -27,7 +34,7 @@ const char* ObraSociales::getNombre() {
 	return _nombre;
 	}
 
-const char*ObraSociales:: getPlan() {
+const char* ObraSociales:: getPlan() {
 	return _plan;
 }
 
@@ -55,7 +62,7 @@ void ObraSociales::Cargar(){
 
 	 archivo.guardar(OS);
 
-};
+}
 
 void ObraSociales::Mostrar(){
 
@@ -66,7 +73,7 @@ void ObraSociales::Mostrar(){
     cout << "estado : " << _estado << endl;
 
 
-};
+}
 
 
 void ObraSociales::MostrarTodas(){

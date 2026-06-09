@@ -1,11 +1,12 @@
 #pragma once
 #include "Persona.h"
+#include <string>
 
 class Paciente : public Persona{
 private:
 	int _idPaciente;
-	char _telefono[20];
-	char _email [30] ;
+	char _telefono[15];
+	char _email[70] ;
 	char _genero;
 	int _idObraSocial;
 	Fecha _fechaNacimiento;
@@ -14,8 +15,8 @@ private:
 public:
 
 	void setIdPaciente(int ID);
-	void setTelefono(const char* tel);
-	void setEmail(const char* mail);
+	void setTelefono(const char * tel);
+	void setEmail(const char *mail);
 	void setGenero(char g);
 	void setIdObraSocial(int id);
 	void setFechaNacimiento(Fecha fechaNac);
@@ -32,5 +33,5 @@ public:
 	void CargarPaciente();
 	void MostrarPaciente();
 	void MostrarTodos();
-
+    void Eliminar();
 };

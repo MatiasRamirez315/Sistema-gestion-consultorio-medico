@@ -1,4 +1,10 @@
+#include <cstring>
+#include <cstdio>
 #include "ArchivoConsultorios.h"
+
+ArchivoConsultorios :: ArchivoConsultorios(){
+strcpy (_nombre,"Consultorios.dat");
+}
 
 bool ArchivoConsultorios::guardar(Consultorios obj){
 
@@ -41,4 +47,8 @@ return 0;
     int cantidad=ftell(p)/sizeof(Consultorios);
     fclose(p);
 return cantidad;
+}
+
+int ArchivoConsultorios::getNuevoId(){
+    return contarRegistros()+1;
 }

@@ -7,10 +7,11 @@ private:
 	char _nombre[30];
 
 public:
-	ArchivoEspecialidades(const char* _nombre = "Especialidades.dat");
+	ArchivoEspecialidades();
 
 	bool guardar(Especialidades obj);
 	Especialidades leer(int pos);
 	int contarRegistros();
+	int getNuevoId();
 };
 

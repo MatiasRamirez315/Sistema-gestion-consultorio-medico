@@ -1,5 +1,7 @@
 #include "Consultorios.h"
 
+using namespace std;
+
 void Consultorios::setIdConsultorio(int id){
 _idConsultorio = id;
 }

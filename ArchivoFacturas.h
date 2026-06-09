@@ -4,12 +4,13 @@
 
 class ArchivoFacturas{
 private:
-	char _nombre[30];
+	char _nombre [30];
 
 public:
-	ArchivoFacturas(const char* _nombre = "Facturas.dat");
+	ArchivoFacturas( );
 
 	bool guardar(Facturas obj);
 	Facturas leer(int pos);
 	int contarRegistros();
+	int getNuevoId();
 };

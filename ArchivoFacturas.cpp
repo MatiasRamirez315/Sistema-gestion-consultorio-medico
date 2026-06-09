@@ -1,4 +1,10 @@
+#include <string>
+#include <cstring>
 #include "ArchivoFacturas.h"
+
+using namespace std;
+
+	ArchivoFacturas::ArchivoFacturas( ){strcpy (_nombre,"Facturas.dat");}
 
 bool ArchivoFacturas::guardar(Facturas obj){
 
@@ -39,4 +45,10 @@ return 0;
     fclose(p);
 return cantidad;
 }
+
+int ArchivoFacturas::getNuevoId()
+{
+    return contarRegistros()+1;
+}
+
 

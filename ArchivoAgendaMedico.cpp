@@ -1,4 +1,12 @@
+#include <string>
+#include <cstring>
 #include "ArchivoAgendaMedico.h"
+
+using namespace std;
+
+ArchivoAgendaMedicos::ArchivoAgendaMedicos(){
+    strcpy (_nombre,"AgendaMedicos.dat");
+    }
 
 bool ArchivoAgendaMedicos::guardar(AgendaMedicos obj){
 
@@ -40,3 +48,9 @@ return 0;
     fclose(p);
 return cantidad;
 }
+
+int ArchivoAgendaMedicos::getNuevoId()
+{
+    return getCantRegistros()+1;
+}
+

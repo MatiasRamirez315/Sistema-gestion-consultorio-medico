@@ -1,4 +1,12 @@
+#include <string>
+#include <cstring>
 #include "ArchivoEspecialidades.h"
+
+using namespace std;
+ArchivoEspecialidades::ArchivoEspecialidades()
+{
+    strcpy (_nombre,"Especialidades.dat");
+    }
 
 bool ArchivoEspecialidades::guardar(Especialidades obj){
 
@@ -14,6 +22,7 @@ bool ArchivoEspecialidades::guardar(Especialidades obj){
   return pudoEscribir;
 
 }
+
 Especialidades ArchivoEspecialidades::leer(int pos){
   Especialidades aux;
   FILE *p = fopen(_nombre, "rb");
@@ -38,4 +47,9 @@ return 0;
     int cantidad=ftell(p)/sizeof(Especialidades);
     fclose(p);
 return cantidad;
+}
+
+int ArchivoEspecialidades::getNuevoId()
+{
+    return contarRegistros()+1;
 }

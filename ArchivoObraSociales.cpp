@@ -1,9 +1,8 @@
+#include <string>
+#include <cstring>
 #include "ArchivoObraSociales.h"
 
-ArchivoObraSociales::ArchivoObraSociales(){
-    strcpy(_nombre,"ObrasSociales.dat");
-}
-
+ArchivoObraSociales::ArchivoObraSociales(){strcpy (_nombre,"ObrasSociales.dat");}
 
 bool ArchivoObraSociales::guardar(ObraSociales obj){
   FILE *p = fopen(_nombre, "ab");
@@ -45,4 +44,9 @@ return 0;
     int cantidad=ftell(p)/sizeof(ObraSociales);
     fclose(p);
 return cantidad;
+}
+
+int ArchivoObraSociales::getNuevoId()
+{
+    return contarRegistros()+1;
 }

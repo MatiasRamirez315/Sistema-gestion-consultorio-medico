@@ -64,17 +64,14 @@ void MenuPaciente::menuPaciente(){
             {
             case 0:
                 system("cls");
-                /// LLAMADO FUNC CARGAR PAC
-
                 paciente.CargarPaciente();
-
                 system("pause");
                 system("cls");
                 break;
 
             case 1:
                 system("cls");
-                /// LLAMADO FUNC MOSTRAR PAC
+                /// LLAMADO FUNC MODIFICAR PAC
                 system("pause");
                 system("cls");
                 break;
@@ -88,7 +85,6 @@ void MenuPaciente::menuPaciente(){
 
             case 3:
                 system("cls");
-                /// LLAMADO FUNC LISTAR TODOS LOS PAC
                 paciente.MostrarTodos();
                 system("pause");
                 system("cls");
@@ -96,7 +92,7 @@ void MenuPaciente::menuPaciente(){
 
             case 4:
                 system("cls");
-                /// LLAMADO FUNC ELIMINAR PAC
+                paciente.Eliminar();
                 system("pause");
                 system("cls");
                 break;

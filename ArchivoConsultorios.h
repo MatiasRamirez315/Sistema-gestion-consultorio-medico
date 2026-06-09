@@ -1,15 +1,17 @@
 #pragma once
 #include "Consultorios.h"
-#include <cstdio>
+#include <cstring>
 
 class ArchivoConsultorios{
 private:
-	char _nombre[30];
+    char _nombre[30];
 
 public:
-	ArchivoConsultorios(const char* _nombre = "Consultorios.dat");
+	ArchivoConsultorios() ;
+
 
 	bool guardar(Consultorios obj);
 	Consultorios leer(int pos);
 	int contarRegistros();
+	int getNuevoId();
 };

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Turnos.h"
 #include <cstring>
+
 using namespace std;
 
 void Turnos::setIdTurno(int id){
@@ -15,8 +16,10 @@ void Turnos::setIdPaciente(int idPaciente){
 _idPaciente = idPaciente;
 }
 
-void Turnos::setMotivo(const char* motivo){
-strcpy(_motivo,motivo);
+void Turnos::setMotivo(const char* motivo)
+{
+    strcpy(_motivo, motivo);
+
 }
 
 void Turnos::setEstado(bool estado){
