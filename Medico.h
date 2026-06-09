@@ -29,8 +29,10 @@ public:
 	bool getEstado();
 
 	void Cargar();
+	void cargarModificado();
 	void Mostrar();
 	void MostrarTodos();
 	void Eliminar();
+	void Modificacion();
 
 };

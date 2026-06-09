@@ -190,6 +190,89 @@ void Medico::Eliminar()
             cout << "error al eliminar el medico.." << endl;
         }
     }
+}
+
+void Medico::Modificacion(){
+
+    ArchivoMedicos archivo;
+    Medico medico;
+    int id;
+    int pos;
+
+    cout << "ingrese el ID del medico que quiere modificar: ";
+    cin >> id;
+
+    pos = archivo.BuscarPosXID(id);
+
+        if(pos == -1)
+    {
+        cout << "medico no encontrado.." << endl;
+        return;
+    }
+    else{
+
+        medico = archivo.leer(pos);
+
+        cout << "medico hallado: " << endl;
+        medico.Mostrar();
 
 
+        medico.cargarModificado();
+
+        if (archivo.Modificar (medico,pos)){
+
+            cout << "medico modificado con exito.." << endl;
+        }
+        else{
+            cout << "error al modificar el medico.." << endl;
+        }
+
+    }
+}
+
+void Medico::cargarModificado(){
+        cout << "----------------------------" << endl;
+        cout << "ingrese el nuevo medico: " << endl;
+
+        bool op = false;
+    do
+    {
+        Persona::Cargar();
+
+        cout << "Ingrese el ID del puesto: ";
+        cin >> _idPuesto;
+        //agregar opciones de tipos de puesto ej: 1---- odontologo.
+        cout << "Ingrese el ID de la especialidad: " << endl;
+
+        cout << "1- Clinico" <<endl;
+        cout << "2- Oftalmologo" << endl;
+        cout << "3- Odontologo" << endl;
+        cout << "4- Pediatra" << endl;
+        cout << "5- Traumatologo " << endl;
+        cout << "6- Dermatologo" << endl;
+        cout << "7- Cardiologo" << endl;
+        do
+        {
+            cin >>  _idEspecialidad;
+            if (_idEspecialidad < 1 || _idEspecialidad  > 7)
+            {
+                cout << "Error al elegir la especialidad, vuelva a seleccionar." << endl;
+            }
+        }
+        while (_idEspecialidad < 1 || _idEspecialidad  > 7 );
+
+        cout << "Ingrese la matricula: ";
+        cin >>  _matriculaProfesional;
+        _fechaIngreso.CargarFecha();
+
+        cout << "Desea confirmar sus datos? 1-Si 0-No: ";
+        cin >> op;
+        if (op== false)
+        {
+            cin.ignore();
+        };
+    }
+    while(op == false);
+
+    setEstado(true);
 }

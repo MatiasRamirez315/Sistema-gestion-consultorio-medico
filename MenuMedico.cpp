@@ -72,6 +72,7 @@ void MenuMedico::menuMedico(){
             case 1:
                 system("cls");
                 /// LLAMADO FUNC MODIFICAR MED
+                medico.Modificacion();
                 system("pause");
                 system("cls");
                 break;
