@@ -3,10 +3,6 @@
 #include "ArchivoTurnos.h"
 #include <cstring>
 
-ArchivoTurnos::ArchivoTurnos(const char* nombre){
-    strcpy(_nombre, nombre);
-}
-
 using namespace std;
 
 ArchivoTurnos:: ArchivoTurnos() {strcpy (_nombre,"Turnos.dat");}

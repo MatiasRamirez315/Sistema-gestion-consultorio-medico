@@ -42,7 +42,9 @@ int ArchivoMedicos::BuscarPosXID(int id){
     int pos=0;
 
     FILE *p=fopen(_nombre,"rb");
-    if(p==NULL)return -1;
+    if(p==NULL){
+            return -1;
+    }
 
     while(fread(&aux,sizeof(Medico),1,p)){
         if(aux.getIdMedico()==id){

@@ -125,6 +125,7 @@ void Paciente::MostrarTodos(){
 
     for (int i=0;i<cantReg ; i++){
         paciente = archivo.leer(i);
+    if(paciente.getEstado() == true){
         paciente.Persona::Mostrar();
         cout << "ID del paciente:"  << paciente.getIdPaciente() << endl;
         cout << "Telefono: " << paciente.getTelefono() << endl ;
@@ -132,6 +133,7 @@ void Paciente::MostrarTodos(){
         cout << "Genero: " << paciente.getGenero() << endl;
         cout << "Fecha de nacimiento: " << paciente.getFechaNac().toString() << endl;
         cout << "Estado: " << paciente.getEstado() << endl << endl;
+        }
     }
 }
 
@@ -146,7 +148,7 @@ void Paciente::Eliminar(){
 
     pos = archivo.BuscarPosXID(id);
 
-        if(paciente.getEstado() == false)
+        if(pos == -1)
     {
         cout << "Paciente no encontrado..." << endl;
         return;

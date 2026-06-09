@@ -49,6 +49,8 @@ int ArchivoPaciente::BuscarPosXID(int id){
         }
         pos++;
     }
+    fclose(p);
+    return -1;
 }
 
 int ArchivoPaciente::contarRegistros(){
