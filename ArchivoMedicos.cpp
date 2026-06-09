@@ -46,19 +46,19 @@ int ArchivoMedicos::BuscarPosXID(int id){
     int pos = 0;
 
   FILE *p = fopen(_nombre, "rb");
-  if (p == NULL)
-  {
+  if (p == NULL){
     return -1;
   }
-
    while (fread(&aux, sizeof(Medico), 1, p) ) {
-    if (aux.getIdMedico() == id){
+        if (aux.getIdMedico() == id){
             fclose(p);
             return pos;
         }
         pos++;
    }
+    fclose(p);
 
+    return -1;
 }
 
 int ArchivoMedicos::contarRegistros(){

@@ -1,4 +1,9 @@
 #include "ArchivoTurnos.h"
+#include <cstring>
+
+ArchivoTurnos::ArchivoTurnos(const char* nombre){
+    strcpy(_nombre, nombre);
+}
 
 bool ArchivoTurnos::guardar(Turnos obj){
 

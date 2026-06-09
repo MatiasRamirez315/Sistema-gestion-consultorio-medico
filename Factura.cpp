@@ -19,7 +19,7 @@ _importe = importe;
 }
 
 void Facturas::setPagado(bool pagado){
-_pagado;
+_pagado=pagado;
 }
 
 void Facturas::setEstado(bool estado){
