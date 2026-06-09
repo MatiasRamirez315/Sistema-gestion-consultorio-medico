@@ -50,3 +50,40 @@ int ArchivoObraSociales::getNuevoId()
 {
     return contarRegistros()+1;
 }
+
+int ArchivoObraSociales::BuscarPosXID(int id){
+
+    ObraSociales aux;
+    int pos=0;
+
+    FILE *p=fopen(_nombre,"rb");
+    if(p==NULL){
+            return -1;
+    }
+
+    while(fread(&aux,sizeof(ObraSociales),1,p)){
+        if(aux.getIdObraSocial()==id){
+            fclose(p);
+            return pos;
+        }
+        pos++;
+    }
+
+    fclose(p);
+    return -1;
+}
+
+bool ArchivoObraSociales::Modificar(ObraSociales OS,int pos){
+
+    FILE *p=fopen(_nombre,"rb+");
+    if(p==NULL)return false;
+
+    fseek(p,pos*sizeof(ObraSociales),SEEK_SET);
+
+    bool pudoModificar=fwrite(&OS,sizeof(ObraSociales),1,p);
+
+    fclose(p);
+
+    return pudoModificar;
+}
+

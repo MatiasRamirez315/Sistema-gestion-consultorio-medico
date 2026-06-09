@@ -31,7 +31,9 @@ public:
 	bool getEstado();
 
 	void CargarPaciente();
+	void cargarModificado();
 	void MostrarPaciente();
 	void MostrarTodos();
     void Eliminar();
+    void Modificacion();
 };

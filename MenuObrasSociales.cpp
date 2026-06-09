@@ -73,6 +73,7 @@ void MenuObrasSociales::menuObrasSociales(){
             case 1:
                 system("cls");
                 /// LLAMADO FUNC MOSTRAR OS
+                OS.Modificacion();
                 system("pause");
                 system("cls");
                 break;
@@ -95,6 +96,7 @@ void MenuObrasSociales::menuObrasSociales(){
             case 4:
                 system("cls");
                 /// LLAMADO FUNC ELIMINAR OS
+                OS.Eliminar();
                 system("pause");
                 system("cls");
                 break;

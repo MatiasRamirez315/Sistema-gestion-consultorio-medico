@@ -166,3 +166,77 @@ void Paciente::Eliminar(){
         cout << "Error al eliminar paciente..." << endl;
     }
 }
+
+void Paciente::Modificacion(){
+
+
+    ArchivoPaciente archivo;
+    Paciente paciente;
+    int id;
+    int pos;
+
+    cout << "ingrese el ID del medico que quiere modificar: ";
+    cin >> id;
+
+    pos = archivo.BuscarPosXID(id);
+
+        if(pos == -1)
+    {
+        cout << "Paciente no encontrado.." << endl;
+        return;
+    }
+    else{
+
+        paciente = archivo.leer(pos);
+
+        cout << "medico hallado: " << endl;
+        paciente.Mostrar();
+
+
+        paciente.cargarModificado();
+
+        if (archivo.Modificar (paciente,pos)){
+
+            cout << "paciente modificado con exito.." << endl;
+        }
+        else{
+            cout << "error al modificar el paciente.." << endl;
+        }
+
+    }
+
+
+}
+
+void Paciente::cargarModificado(){
+        cout << "----------------------------" << endl;
+        cout << "ingrese el nuevo paciente: " << endl;
+
+bool op = false;
+    Paciente paciente;
+    do{
+    Persona::Cargar();
+
+    cout << "Ingrese el telefono: ";
+    cin >> _telefono;
+
+    cout << "Ingrese el email: ";
+    cin >> _email;
+
+    cout << "Ingrese el genero (F o M): ";
+    cin >> _genero;
+
+    cout << "Ingrese el ID de la obra social: ";
+    cin >> _idObraSocial;
+
+    _fechaNacimiento.CargarFecha();
+
+    cout << "Desea confirmar sus datos? 1-Si 0-No: ";
+    cin >> op;
+    if(op == false){
+            cin.ignore();
+    }
+    }while (op== false);
+
+    setEstado(true);
+}

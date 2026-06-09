@@ -28,8 +28,11 @@ public:
 	bool getEstado();
 
 	void Cargar();
+	void cargarModificado();
 	void Mostrar();
 	void MostrarTodas();
+	void Eliminar();
+    void Modificacion();
 
 };
 

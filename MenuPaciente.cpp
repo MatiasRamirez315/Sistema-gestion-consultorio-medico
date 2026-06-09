@@ -72,6 +72,7 @@ void MenuPaciente::menuPaciente(){
             case 1:
                 system("cls");
                 /// LLAMADO FUNC MODIFICAR PAC
+                paciente.Modificacion();
                 system("pause");
                 system("cls");
                 break;
