@@ -28,7 +28,6 @@ void Facturas::setEstado(bool estado){
 _estado = estado;
 }
 
-// GETTERS
 int Facturas::getIdFactura(){
 return _idFactura;
 }
@@ -40,6 +39,7 @@ return _idTurno;
 Fecha Facturas::getFecha(){
 return _fecha;
 }
+
 float Facturas::getImporte(){
 return _importe;
 }

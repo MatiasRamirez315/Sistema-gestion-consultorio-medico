@@ -1,6 +1,11 @@
 #include <string>
 #include <cstring>
 #include "ArchivoTurnos.h"
+#include <cstring>
+
+ArchivoTurnos::ArchivoTurnos(const char* nombre){
+    strcpy(_nombre, nombre);
+}
 
 using namespace std;
 
