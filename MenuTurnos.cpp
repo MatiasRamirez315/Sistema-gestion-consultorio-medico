@@ -25,11 +25,13 @@ void MenuTurnos::menuTurnos(){
 
         showItem("             PEDIR TURNO              ",40,13,y==0);
         showItem("             LISTAR TURNOS            ",40,14,y==1);
+        showItem("             MODIFICAR TURNOS            ",40,15,y==2);
+        showItem("             ELIMINAR TURNOS            ",40,16,y==3);
 
-        rlutil::locate(40,15);
+        rlutil::locate(40,17);
         cout<<"---------------------------------------"<<endl;
 
-        showItem("               VOLVER                 ",40,16,y==2);
+        showItem("               VOLVER                 ",40,18,y==4);
 
         int key=rlutil::getkey();
 
@@ -42,7 +44,7 @@ void MenuTurnos::menuTurnos(){
 
         case 15:
             y++;
-            if(y>2)y=2;
+            if(y>4)y=4;
             break;
 
         case 1:
@@ -62,8 +64,20 @@ void MenuTurnos::menuTurnos(){
                 system("pause");
                 system("cls");
                 break;
-
             case 2:
+                system("cls");
+                ModificarTurno();
+                system("pause");
+                system("cls");
+                break;
+            case 3:
+                system("cls");
+                EliminarTurno();
+                system("pause");
+                system("cls");
+                break;
+
+            case 4:
                 op=0;
                 system("cls");
                 break;
@@ -109,4 +123,81 @@ void MenuTurnos::listarTurnos(){
             turno.Mostrar();
         }
     }
+}
+
+void MenuTurnos::ModificarTurno(){
+
+
+    ArchivoTurnos archivo;
+    Turnos turno;
+    int id;
+    int pos;
+
+    cout << "ingrese el ID del turno que quiere modificar: ";
+    cin >> id;
+
+    pos = archivo.BuscarPosXID(id);
+
+        if(pos == -1)
+    {
+        cout << "turno no encontrado.." << endl;
+        return;
+    }
+    else{
+
+        turno = archivo.leer(pos);
+
+        cout << "turno hallado: " << endl;
+        turno.Mostrar();
+
+
+        turno.cargarModificado();
+
+        if (archivo.Modificar (turno,pos)){
+
+            cout << "turno modificado con exito.." << endl;
+        }
+        else{
+            cout << "error al modificar el turno.." << endl;
+        }
+
+    }
+
+
+}
+
+void MenuTurnos::EliminarTurno(){
+
+
+    Turnos turno;
+    ArchivoTurnos archivo;
+    int id;
+    int pos;
+    cout << "ingrese el ID del turno que desea eliminar: ";
+    cin >> id;
+
+    pos = archivo.BuscarPosXID(id);
+
+
+        if(pos == -1)
+    {
+        cout << "Turno no encontrado.." << endl;
+        return;
+    }
+    else{
+
+        turno = archivo.leer(pos);
+
+        turno.setEstado(false);
+
+        if (archivo.Modificar (turno,pos)){
+
+            cout << "Turno eliminado con exito.." << endl;
+        }
+        else{
+            cout << "error al eliminar el turno.." << endl;
+        }
+    }
+
+
 }

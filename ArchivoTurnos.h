@@ -13,4 +13,6 @@ public:
 	Turnos leer(int pos);
 	int contarRegistros();
 	int getNuevoId();
+	bool Modificar (Turnos turno, int pos);
+    int BuscarPosXID(int id);
 };

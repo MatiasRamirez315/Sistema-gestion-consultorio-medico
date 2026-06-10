@@ -35,6 +35,16 @@ void Hora::setHora (int hora){
     _hora = hora;
 }
 
+void Hora::Cargar(){
+    cout << "ingrese la hora (00-23): " << endl;
+    cin >> _hora;
+    cout << "ingrese los minutos (00-59)" << endl;
+    cin >> _minutos;
+    cout << "ingrese los segundos (00-59)" << endl;
+    cin >> _segundos;
+     }
+
+
 
 string Hora::toString(string formatoHora){
     return to_string(_hora) + ":" + to_string(_minutos) + ":" + to_string(_segundos);

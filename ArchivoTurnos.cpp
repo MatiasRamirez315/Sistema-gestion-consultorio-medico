@@ -47,6 +47,43 @@ return 0;
 return cantidad;
 }
 
+int ArchivoTurnos::BuscarPosXID(int id){
+
+    Turnos aux;
+    int pos=0;
+
+    FILE *p=fopen(_nombre,"rb");
+    if(p==NULL){
+            return -1;
+    }
+
+    while(fread(&aux,sizeof(Turnos),1,p)){
+        if(aux.getIdTurno()==id){
+            fclose(p);
+            return pos;
+        }
+        pos++;
+    }
+
+    fclose(p);
+    return -1;
+}
+
+bool ArchivoTurnos::Modificar(Turnos turno,int pos){
+
+    FILE *p=fopen(_nombre,"rb+");
+    if(p==NULL)return false;
+
+    fseek(p,pos*sizeof(Turnos),SEEK_SET);
+
+    bool pudoModificar=fwrite(&turno,sizeof(Turnos),1,p);
+
+    fclose(p);
+
+    return pudoModificar;
+}
+
+
 int ArchivoTurnos::getNuevoId()
 {
     return contarRegistros()+1;

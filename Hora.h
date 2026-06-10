@@ -21,6 +21,7 @@ public:
 	void setHora (int hora);
 	void setMinutos(int min);
 	void setSegundos (int seg);
+	void Cargar();
 	string toString(string formatoHora = "HH:MM:SS");
 };
 

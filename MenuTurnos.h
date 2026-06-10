@@ -8,5 +8,7 @@ public:
     void menuTurnos();
     void pedirTurno();
     void listarTurnos();
+    void ModificarTurno();
+    void EliminarTurno();
 
 };
