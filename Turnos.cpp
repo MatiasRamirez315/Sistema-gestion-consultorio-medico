@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Turnos.h"
 #include <cstring>
+#include<cstdio>
 
 using namespace std;
 
@@ -57,12 +58,10 @@ void Turnos::Cargar(){
 
     cout << "Ingrese el ID del paciente: ";
     cin >> _idPaciente;
-
-    cin.ignore();
-
+    char motivo[300];
     cout << "Ingrese el motivo del turno: ";
-    cin.getline(_motivo, 300);
-
+    scanf("%s",motivo);
+    setMotivo(motivo);
     _estado = true;
 }
 
