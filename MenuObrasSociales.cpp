@@ -63,16 +63,13 @@ void MenuObrasSociales::menuObrasSociales(){
             {
             case 0:
                 system("cls");
-                /// LLAMADO FUNC CARGAR OS
                 OS.Cargar();
-
                 system("pause");
                 system("cls");
                 break;
 
             case 1:
                 system("cls");
-                /// LLAMADO FUNC MOSTRAR OS
                 OS.Modificacion();
                 system("pause");
                 system("cls");
@@ -80,14 +77,13 @@ void MenuObrasSociales::menuObrasSociales(){
 
             case 2:
                 system("cls");
-                /// LLAMADO FUNC CONSULTAR FACT
+                OS.MostrarFacturacion();
                 system("pause");
                 system("cls");
                 break;
 
             case 3:
                 system("cls");
-                /// LLAMADO FUNC LISTAR TODAS LAS OS
                 OS.MostrarTodas();
                 system("pause");
                 system("cls");
@@ -95,7 +91,6 @@ void MenuObrasSociales::menuObrasSociales(){
 
             case 4:
                 system("cls");
-                /// LLAMADO FUNC ELIMINAR OS
                 OS.Eliminar();
                 system("pause");
                 system("cls");

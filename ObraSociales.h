@@ -10,6 +10,7 @@ private:
 	char _nombre [50];
 	char _plan [30];
 	int _tipoCobertura ;
+    float _porcentajeDescuento;
 	bool _estado;
 
 public:
@@ -17,14 +18,14 @@ public:
 	void setNombre(const char * nombre);
 	void setPlan(const char* plan);
 	void setTipoCobertura(int tipo);
-
+    void setPorcentajeDescuento(float pDescuento);
 	void setEstado(bool estado);
 
-		// GETTERS
 	int getIdObraSocial();
 	const char* getNombre();
 	const char* getPlan() ;
 	int getTipoCobertura();
+	float getPorcentajeDescuento();
 	bool getEstado();
 
 	void Cargar();
@@ -33,6 +34,7 @@ public:
 	void MostrarTodas();
 	void Eliminar();
     void Modificacion();
+    void MostrarFacturacion();
 
 };
 
