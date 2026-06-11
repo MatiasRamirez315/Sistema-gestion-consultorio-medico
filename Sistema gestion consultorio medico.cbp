@@ -94,6 +94,8 @@
 		<Unit filename="Puestos.h" />
 		<Unit filename="Turnos.cpp" />
 		<Unit filename="Turnos.h" />
+		<Unit filename="Validaciones.cpp" />
+		<Unit filename="Validaciones.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="rlutil.h" />
 		<Unit filename="showItem.cpp" />

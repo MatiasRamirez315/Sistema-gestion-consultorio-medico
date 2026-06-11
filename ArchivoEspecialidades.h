@@ -13,5 +13,6 @@ public:
 	Especialidades leer(int pos);
 	int contarRegistros();
 	int getNuevoId();
+	int BuscarPosXID(int id);
 };
 
