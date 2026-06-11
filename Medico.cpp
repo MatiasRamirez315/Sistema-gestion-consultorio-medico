@@ -216,7 +216,7 @@ void Medico::Modificacion(){
 }
 
 void Medico::cargarModificado(){
-        Especialidades especialidad;
+        Especialidades esp;
         cout << "----------------------------" << endl;
         cout << "ingrese el nuevo medico: " << endl;
 
@@ -229,24 +229,7 @@ void Medico::cargarModificado(){
         cin >> _idPuesto;
         //agregar opciones de tipos de puesto ej: 1---- odontologo.
 
-        cout << "Ingrese el ID de la especialidad: " << endl;
-
-        cout << "1- Clinico" <<endl;
-        cout << "2- Oftalmologo" << endl;
-        cout << "3- Odontologo" << endl;
-        cout << "4- Pediatra" << endl;
-        cout << "5- Traumatologo " << endl;
-        cout << "6- Dermatologo" << endl;
-        cout << "7- Cardiologo" << endl;
-        do
-        {
-            cin >>  _idEspecialidad;
-            if (_idEspecialidad < 1 || _idEspecialidad  > 7)
-            {
-                cout << "Error al elegir la especialidad, vuelva a seleccionar." << endl;
-            }
-        }
-        while (_idEspecialidad < 1 || _idEspecialidad  > 7 );
+        _idEspecialidad =  esp.Eleccion();
 
         cout << "Ingrese la matricula: ";
         cin >>  _matriculaProfesional;
