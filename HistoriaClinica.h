@@ -19,4 +19,7 @@ public:
 	int getIdPaciente();
 	const char* getDescripcion();
 	bool getEstado();
+
+	void Cargar();
+	void MostrarTodas();
 };

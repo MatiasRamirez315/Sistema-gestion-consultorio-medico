@@ -154,16 +154,18 @@
 	<string>
 	<cstdio>
 
-1780957027 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\archivoconsultorios.cpp
+1781297093 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\archivoconsultorios.cpp
 	<cstring>
 	<cstdio>
 	"ArchivoConsultorios.h"
 
-1780957002 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\archivoconsultorios.h
+1781297093 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\archivoconsultorios.h
 	"Consultorios.h"
 	<cstring>
 
-1779394712 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\consultorios.h
+1781297739 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\consultorios.h
+	"Fecha.h"
+	"Hora.h"
 
 1781208729 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\archivoespecialidades.cpp
 	<string>
@@ -185,7 +187,7 @@
 	"Factura.h"
 	<cstdio>
 
-1779396628 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\factura.h
+1781292704 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\factura.h
 	"Fecha.h"
 
 1780957187 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\archivohistoriaclinica.cpp
@@ -198,7 +200,7 @@
 	<cstdio>
 	<string>
 
-1780958912 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\historiaclinica.h
+1781306510 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\historiaclinica.h
 	<string>
 
 1781042235 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\archivomedicos.cpp
@@ -276,8 +278,10 @@
 	"Hora.h"
 	<string>
 
-1780954841 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\consultorios.cpp
+1781298788 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\consultorios.cpp
 	"Consultorios.h"
+	"ArchivoConsultorios.h"
+	<iostream>
 
 1781210935 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\especialidades.cpp
 	"Especialidades.h"
@@ -285,18 +289,21 @@
 	<iostream>
 	<cstring>
 
-1780972144 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\factura.cpp
+1781292704 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\factura.cpp
 	"Factura.h"
+	"ArchivoFacturas.h"
 
 1780522471 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\fecha.cpp
 	"Fecha.h"
 	<iostream>
 	<chrono>
 
-1780959048 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\historiaclinica.cpp
+1781306435 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\historiaclinica.cpp
 	"HistoriaClinica.h"
+	"ArchivoHistoriaClinica.h"
 	<string>
 	<cstring>
+	<iostream>
 
 1781125212 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\hora.cpp
 	"Hora.h"
@@ -334,7 +341,7 @@
 	<string>
 	<cstring>
 
-1781126733 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\turnos.cpp
+1781292704 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\turnos.cpp
 	<iostream>
 	"Turnos.h"
 	"ArchivoTurnos.h"
@@ -567,18 +574,20 @@
 	<string>
 	<cstring>
 
-1781209682 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menu.cpp
+1781295871 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menu.cpp
 	"Menu.h"
 	"rlutil.h"
 	"showItem.h"
 	<iostream>
 
-1781207010 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menu.h
+1781307158 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menu.h
 	"MenuMedico.h"
 	"MenuPaciente.h"
 	"MenuObrasSociales.h"
 	"MenuTurnos.h"
 	"MenuEspecialidades.h"
+	"MenuConsultorios.h"
+	"MenuHistoriaClinica.h"
 
 1780360412 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\usuario.cpp
 	"Usuario.h"
@@ -1271,14 +1280,16 @@
 	"showItem.h"
 	<iostream>
 
-1781126733 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuturnos.h
+1781292704 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuturnos.h
 	"Turnos.h"
 	"ArchivoTurnos.h"
+	"Factura.h"
 
-1781126871 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuturnos.cpp
+1781292704 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuturnos.cpp
 	"MenuTurnos.h"
 	"rlutil.h"
 	"showItem.h"
+	"ArchivoFacturas.h"
 	<iostream>
 
 1781233699 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\menuturnos.h
@@ -1301,11 +1312,25 @@
 
 1781206979 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuespecialidades.h
 
-1781209542 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuespecialidades.cpp
+1781295734 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuespecialidades.cpp
 	<iostream>
 	"rlutil.h"
 	"showItem.h"
 	"MenuEspecialidades.h"
 	"Especialidades.h"
 	"ArchivoEspecialidades.h"
+
+1781295595 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuconsultorios.h
+
+1781303859 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuconsultorios.cpp
+	<iostream>
+	"rlutil.h"
+	"showItem.h"
+	"MenuConsultorios.h"
+	"Consultorios.h"
+	"ArchivoConsultorios.h"
+
+1781307131 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuhistoriaclinica.h
+
+1781307131 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuhistoriaclinica.cpp
 

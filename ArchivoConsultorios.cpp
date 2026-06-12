@@ -52,3 +52,41 @@ return cantidad;
 int ArchivoConsultorios::getNuevoId(){
     return contarRegistros()+1;
 }
+
+
+int ArchivoConsultorios::BuscarPosXID(int id){
+
+    Consultorios aux;
+    int pos=0;
+
+    FILE *p=fopen(_nombre,"rb");
+    if(p==NULL){
+            return -1;
+    }
+
+    while(fread(&aux,sizeof(Consultorios),1,p)){
+        if(aux.getIDConsultorio()==id){
+            fclose(p);
+            return pos;
+        }
+        pos++;
+    }
+
+    fclose(p);
+    return -1;
+}
+
+bool ArchivoConsultorios::Modificar(Consultorios cons,int pos){
+
+    FILE *p=fopen(_nombre,"rb+");
+    if(p==NULL)return false;
+
+    fseek(p,pos*sizeof(Consultorios),SEEK_SET);
+
+    bool pudoModificar=fwrite(&cons,sizeof(Consultorios),1,p);
+
+    fclose(p);
+
+    return pudoModificar;
+}
+

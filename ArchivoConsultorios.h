@@ -14,4 +14,6 @@ public:
 	Consultorios leer(int pos);
 	int contarRegistros();
 	int getNuevoId();
+    bool Modificar(Consultorios cons, int pos);
+	int BuscarPosXID (int id);
 };
