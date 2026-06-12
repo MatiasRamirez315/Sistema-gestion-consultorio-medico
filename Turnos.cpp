@@ -83,10 +83,10 @@ void Turnos::Cargar(){
     cin.ignore();
     cin.getline(motivo,300);
     setMotivo(motivo);
-    cout << "ingrese la fecha del turno: " << endl;
+    cout << "Ingrese la fecha del turno: " << endl;
     _fechaTurno.CargarFecha();
 
-    cout << "ingrese el horario del turno: " << endl;
+    cout << "Ingrese el horario del turno: " << endl;
     _horaTurno.Cargar();
     _estado = true;
 }
@@ -97,7 +97,7 @@ void Turnos::Mostrar(){
     cout << "ID Paciente: " << _idPaciente << endl;
     cout << "Motivo: " << _motivo << endl;
     cout << "Fecha: " << _fechaTurno.toString() << endl;
-    cout << "hora: " << _horaTurno.toString()<< endl;
+    cout << "Hora: " << _horaTurno.toString()<< endl;
 
     if(_estado == true){
         cout << "Estado: Activo" << endl;
@@ -113,7 +113,7 @@ void Turnos::Mostrar(){
 
 void Turnos::cargarModificado(){
         cout << "----------------------------" << endl;
-        cout << "ingrese el turno modificado: " << endl;
+        cout << "Ingrese el turno modificado: " << endl;
 
 
         cout << "Ingrese el ID de la agenda medica: ";
@@ -126,10 +126,10 @@ void Turnos::cargarModificado(){
         cin.ignore();
         cin.getline(motivo,300);
         setMotivo(motivo);
-        cout << "ingrese la fecha del turno: " << endl;
+        cout << "Ingrese la fecha del turno: " << endl;
         _fechaTurno.CargarFecha();
 
-        cout << "ingrese el horario del turno: " << endl;
+        cout << "Ingrese el horario del turno: " << endl;
         _horaTurno.Cargar();
         _estado = true;
 }

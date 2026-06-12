@@ -10,6 +10,7 @@ private:
 	float _importe;
 	bool _pagado;
 	bool _estado;
+
 public:
 	void setIdFactura(int idFac);
 	void setIdTurno(int idTurno);
@@ -18,11 +19,14 @@ public:
 	void setPagado(bool pagado);
 	void setEstado(bool estado);
 
-	// GETTERS
 	int getIdFactura();
 	int getIdTurno();
 	Fecha getFecha();
 	float getImporte();
 	bool getPagado();
 	bool getEstado();
+
+	void Cargar(int idTurno);
+	bool TurnoYaFacturado(int idTurno);
+	void Mostrar();
 };

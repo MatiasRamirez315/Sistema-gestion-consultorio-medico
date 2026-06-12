@@ -409,7 +409,7 @@
 	"Factura.h"
 	<cstdio>
 
-1779828459 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\factura.h
+1781233699 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\factura.h
 	"Fecha.h"
 
 1781043688 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivohistoriaclinica.cpp
@@ -507,8 +507,9 @@
 	"Especialidades.h"
 	<cstring>
 
-1781043688 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\factura.cpp
+1781233699 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\factura.cpp
 	"Factura.h"
+	"ArchivoFacturas.h"
 
 1781043688 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\historiaclinica.cpp
 	"HistoriaClinica.h"
@@ -526,7 +527,7 @@
 	<string>
 	<cstring>
 
-1781130934 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\turnos.cpp
+1781135797 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\turnos.cpp
 	<iostream>
 	"Turnos.h"
 	"ArchivoTurnos.h"
@@ -639,7 +640,7 @@
 	"MenuObrasSociales.h"
 	"ObraSociales.h"
 
-1781050131 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\menupaciente.cpp
+1781134366 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\menupaciente.cpp
 	<iostream>
 	"rlutil.h"
 	"showItem.h"
@@ -1280,14 +1281,16 @@
 	"showItem.h"
 	<iostream>
 
-1781130934 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\menuturnos.h
+1781233699 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\menuturnos.h
 	"Turnos.h"
 	"ArchivoTurnos.h"
+	"Factura.h"
 
-1781130934 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\menuturnos.cpp
+1781233753 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\menuturnos.cpp
 	"MenuTurnos.h"
 	"rlutil.h"
 	"showItem.h"
+	"ArchivoFacturas.h"
 	<iostream>
 
 1781133578 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\validaciones.cpp
