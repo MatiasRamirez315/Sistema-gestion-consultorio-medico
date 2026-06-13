@@ -4,14 +4,16 @@
 #include "MenuMedico.h"
 #include "Medico.h"
 #include "ArchivoMedicos.h"
+#include "ArchivoAgendaMedico.h"
+#include "AgendaMedico.h"
+using namespace std;
 
 void MenuMedico::menuMedico(){
     ArchivoMedicos archivo;
     Medico medico;
     int op = 1, y = 0;
 
-    do
-    {
+    do{
         rlutil::hidecursor();
 
         setColor(rlutil::WHITE);
@@ -79,7 +81,7 @@ void MenuMedico::menuMedico(){
 
             case 2:
                 system("cls");
-                /// LLAMADO FUNC CONSULTAR AGENDA
+                consultarAgenda();
                 system("pause");
                 system("cls");
                 break;
@@ -108,4 +110,28 @@ void MenuMedico::menuMedico(){
 
     system("cls");
     return;
+}
+void MenuMedico::consultarAgenda(){
+
+    ArchivoAgendaMedicos archivoAgenda;
+    AgendaMedicos agenda;
+    int idMedico;
+    bool encontro = false;
+
+    cout << "Ingrese ID del medico: ";
+    cin >> idMedico;
+
+    for(int i = 0; i < archivoAgenda.getCantRegistros(); i++){
+
+        agenda = archivoAgenda.leer(i);
+
+        if(agenda.getIdMedico() == idMedico && agenda.getEstado() == true){
+            agenda.Mostrar();
+            encontro = true;
+        }
+    }
+
+    if(encontro == false){
+        cout << "No se encontraron agendas para ese medico." << endl;
+    }
 }

@@ -1,4 +1,6 @@
 #include "AgendaMedico.h"
+#include <iostream>
+using namespace std;
 
 void AgendaMedicos::setIdAgendaMedico(int idAgenda){
 _idAgendaMedico = idAgenda;
@@ -53,5 +55,61 @@ bool AgendaMedicos::getEstado() {
 return _estado;
 }
 
-void AgendaMedicos::Cargar(){}
-void AgendaMedicos::Mostrar(){}
+void AgendaMedicos::Cargar(){
+    int dia,mes,anio;
+    int hora,minutos,segundos;
+
+    cout<<"Ingrese ID de agenda: ";
+    cin>>_idAgendaMedico;
+
+    cout<<"Ingrese ID de medico: ";
+    cin>>_idMedico;
+
+    cout<<"Ingrese ID de consultorio: ";
+    cin>>_idConsultorio;
+
+    cout<<"Ingrese dia: ";
+    cin>>dia;
+
+    cout<<"Ingrese mes: ";
+    cin>>mes;
+
+    cout<<"Ingrese anio: ";
+    cin>>anio;
+
+    _fecha.setDia(dia);
+    _fecha.setMes(mes);
+    _fecha.setAnio(anio);
+
+    cout<<"Ingrese hora: ";
+    cin>>hora;
+
+    cout<<"Ingrese minutos: ";
+    cin>>minutos;
+
+    cout<<"Ingrese segundos: ";
+    cin>>segundos;
+
+    _horario.setHora(hora);
+    _horario.setMinutos(minutos);
+    _horario.setSegundos(segundos);
+
+    _estado=true;
+}
+
+void AgendaMedicos::Mostrar(){
+
+    cout<<"ID Agenda: "<<_idAgendaMedico<<endl;
+    cout<<"ID Medico: "<<_idMedico<<endl;
+    cout<<"ID Consultorio: "<<_idConsultorio<<endl;
+    cout<<"Fecha: "<<_fecha.toString()<<endl;
+    cout<<"Horario: "<<_horario.toString()<<endl;
+
+    if(_estado==true){
+    cout<<"Estado: Activo"<<endl;
+    }
+    else{
+    cout<<"Estado: Inactivo"<<endl;
+    }
+    cout<<"-----------------------------"<<endl;
+}
