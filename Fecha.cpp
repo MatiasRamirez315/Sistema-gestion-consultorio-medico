@@ -57,11 +57,50 @@ string Fecha::toString(string formatoFecha){
 }
 
 void Fecha::CargarFecha(){
-    cout << "Ingrese la fecha" << endl ;
+bool fechaValidada = false;
+    do{
+
+
     cout << "Dia: ";
     cin >> _dia;
+
     cout << "Mes: " ;
     cin >> _mes;
+
     cout << "Anio: ";
     cin >> _anio;
+
+    if (esFechaValida(_dia, _mes, _anio)){
+        fechaValidada = true;
+    }
+    else
+    {
+        cout << "fecha invalida. ingrese otra" << endl;
+    }
+    }while (fechaValidada == false);
+
+}
+
+bool Fecha::esFechaValida(int dia, int mes, int anio) {
+  // Verificar el rango del año (asumimos años entre 1900 y 2100)
+  if (anio < 1900 || anio > 2100) {
+    return false;
+  }
+
+  // Verificar el rango del mes (entre 1 y 12)
+  if (mes < 1 || mes > 12) {
+    return false;
+  }
+
+  // Verificar el rango del día en base al mes
+  int diasEnMes[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+  if (mes == 2 && ((anio % 4 == 0 && anio % 100 != 0) || anio % 400 == 0)) {
+    // Año bisiesto, febrero tiene 29 días
+    diasEnMes[1] = 29;
+  }
+  if (dia < 1 || dia > diasEnMes[mes - 1]) {
+    return false;
+  }
+
+  return true;
 }

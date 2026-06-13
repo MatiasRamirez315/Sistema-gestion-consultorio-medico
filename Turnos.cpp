@@ -70,8 +70,10 @@ return _estado;
 
 
 void Turnos::Cargar(){
-    cout << "Ingrese el ID del turno: ";
-    cin >> _idTurno;
+    ArchivoTurnos archivo;
+    Turnos turno;
+   //cout << "Ingrese el ID del turno: ";
+    _idTurno = archivo.getNuevoId();
 
     cout << "Ingrese el ID de la agenda medica: ";
     cin >> _idAgendaMedicos;

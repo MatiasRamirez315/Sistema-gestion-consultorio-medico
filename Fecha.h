@@ -25,6 +25,7 @@ public:
 	void agregarDias(int cantidadDias);
 	string toString(string formatoFecha = "DD/MM/YYYY");
 	 void setCurrentDate();
+	 bool esFechaValida(int dia, int mes, int anio);
 
 	 void CargarFecha();
 };
