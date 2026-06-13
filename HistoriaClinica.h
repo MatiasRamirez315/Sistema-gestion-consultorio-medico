@@ -1,5 +1,5 @@
 #pragma once
-#include <string>
+
 
 class HistoriaClinica{
 private:
@@ -22,4 +22,5 @@ public:
 
 	void Cargar();
 	void MostrarTodas();
+	void MostrarTodoPaciente();
 };

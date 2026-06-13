@@ -28,9 +28,10 @@ void Menu::menuPrincipal(){
         showItem("            MENU TURNOS                ", 40, 16, y == 3);
         showItem("            MENU ESPECIALIDADES        ", 40, 17, y == 4);
         showItem("            MENU CONSULTORIOS          ", 40, 18, y == 5);
-        rlutil::locate(40, 19);
+        showItem("            MENU HISTORIA CLINICA      ", 40, 19, y == 6);
+        rlutil::locate(40, 20);
         std::cout << "---------------------------------------" << std::endl;
-        showItem("                 SALIR                 ", 40, 20, y == 6);
+        showItem("                 SALIR                 ", 40, 21, y == 7);
 
         int key = rlutil::getkey();
 
@@ -52,9 +53,9 @@ void Menu::menuPrincipal(){
             std::cout << " " << std::endl;
             y++;
 
-            if(y > 6)
+            if(y > 7)
             {
-                y = 6;
+                y = 7;
             }
             break;
 
@@ -89,8 +90,12 @@ void Menu::menuPrincipal(){
                 system("cls");
                 _menuConsultorios.menuConsultorios();
                 break;
-
             case 6:
+                system("cls");
+                _menuHistoriaClinica.menuHistoriaClinica();
+                break;
+
+            case 7:
                 op = 0;
                 break;
 

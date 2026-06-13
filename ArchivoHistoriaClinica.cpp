@@ -52,4 +52,28 @@ int ArchivoHistoriaClinica::getNuevoId()
     return contarRegistros()+1;
 }
 
+int ArchivoHistoriaClinica::BuscarPosXID(int id){
+
+    //ArchivoHistoriaClinica archivo;
+    HistoriaClinica aux;
+    int pos=0;
+
+    FILE *p=fopen(_nombre,"rb");
+    if(p==NULL){
+            return -1;
+    }
+
+    while(fread(&aux,sizeof(HistoriaClinica),1,p)){
+        if(aux.getIdPaciente()==id){
+            fclose(p);
+            return pos;
+        }
+        pos++;
+    }
+
+    fclose(p);
+    return -1;
+
+}
+
 

@@ -76,8 +76,12 @@
 		<Unit filename="Medico.h" />
 		<Unit filename="Menu.cpp" />
 		<Unit filename="Menu.h" />
+		<Unit filename="MenuConsultorios.cpp" />
+		<Unit filename="MenuConsultorios.h" />
 		<Unit filename="MenuEspecialidades.cpp" />
 		<Unit filename="MenuEspecialidades.h" />
+		<Unit filename="MenuHistoriaClinica.cpp" />
+		<Unit filename="MenuHistoriaClinica.h" />
 		<Unit filename="MenuMedico.cpp" />
 		<Unit filename="MenuMedico.h" />
 		<Unit filename="MenuObrasSociales.cpp" />

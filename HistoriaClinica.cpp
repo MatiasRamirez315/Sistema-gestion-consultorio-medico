@@ -3,7 +3,7 @@
 #include <string>
 #include <cstring>
 #include <iostream>
-
+#include <cstdio>
 
 using namespace std;
 
@@ -79,5 +79,28 @@ void HistoriaClinica::MostrarTodas(){
         cout << "Descripcion: " << HC.getDescripcion() << endl;
         cout << "Estado: " << HC.getEstado() << endl;
     }
+}
 
+void HistoriaClinica::MostrarTodoPaciente(){
+
+    ArchivoHistoriaClinica archivo;
+    HistoriaClinica HC;
+    int id;
+    cout << "ingrese el id del paciente: ";
+    cin >> id;
+
+    cout << endl;
+
+    int cantReg = archivo.contarRegistros();
+
+    for (int i=0;i<cantReg ; i++){
+
+        HC = archivo.leer(i);
+        if (HC.getIdPaciente() == id && HC.getEstado() == true){
+            cout << "ID " << HC.getIdHistorial() << endl;
+            cout << "ID del paciente " << HC.getIdPaciente() << endl;
+            cout << "Descripcion: " << HC.getDescripcion() << endl;
+            cout << "Estado: " << HC.getEstado() << endl << endl;
+        }
+    }
 }
