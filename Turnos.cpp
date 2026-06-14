@@ -3,6 +3,8 @@
 #include "ArchivoTurnos.h"
 #include <cstring>
 #include<cstdio>
+#include "ArchivoAgendaMedico.h"
+#include "AgendaMedico.h"
 
 using namespace std;
 
@@ -70,26 +72,50 @@ return _estado;
 
 
 void Turnos::Cargar(){
-    ArchivoTurnos archivo;
-    Turnos turno;
-   //cout << "Ingrese el ID del turno: ";
-    _idTurno = archivo.getNuevoId();
+    ArchivoTurnos archivoTurnos;
+    ArchivoAgendaMedicos archivoAgenda;
+    AgendaMedicos agenda;
 
-    cout << "Ingrese el ID de la agenda medica: ";
-    cin >> _idAgendaMedicos;
+    int idMedico;
+    int idConsultorio;
 
-    cout << "Ingrese el ID del paciente: ";
-    cin >> _idPaciente;
-    char motivo[300];
-    cout << "Ingrese el motivo del turno: ";
-    cin.ignore();
-    cin.getline(motivo,300);
-    setMotivo(motivo);
+    _idTurno = archivoTurnos.getNuevoId();
+
+    cout << "Ingrese el ID del medico: ";
+    cin >> idMedico;
+
+    cout << "Ingrese el ID del consultorio: ";
+    cin >> idConsultorio;
+
+    _idAgendaMedicos = archivoAgenda.getNuevoId();
+
+    agenda.setIdAgendaMedico(_idAgendaMedicos);
+    agenda.setIdMedico(idMedico);
+    agenda.setIdConsultorio(idConsultorio);
+
     cout << "Ingrese la fecha del turno: " << endl;
     _fechaTurno.CargarFecha();
 
     cout << "Ingrese el horario del turno: " << endl;
     _horaTurno.Cargar();
+
+    agenda.setFecha(_fechaTurno);
+    agenda.setHorario(_horaTurno);
+    agenda.setEstado(true);
+
+    archivoAgenda.guardar(agenda);
+
+    cout << "Ingrese el ID del paciente: ";
+    cin >> _idPaciente;
+
+    char motivo[300];
+
+    cout << "Ingrese el motivo del turno: ";
+    cin.ignore();
+    cin.getline(motivo,300);
+
+    setMotivo(motivo);
+
     _estado = true;
 }
 
@@ -114,24 +140,50 @@ void Turnos::Mostrar(){
 
 
 void Turnos::cargarModificado(){
-        cout << "----------------------------" << endl;
-        cout << "Ingrese el turno modificado: " << endl;
 
+    ArchivoAgendaMedicos archivoAgenda;
+    AgendaMedicos agenda;
 
-        cout << "Ingrese el ID de la agenda medica: ";
-        cin >> _idAgendaMedicos;
+    int idMedico;
+    int idConsultorio;
 
-        cout << "Ingrese el ID del paciente: ";
-        cin >> _idPaciente;
-        char motivo[300];
-        cout << "Ingrese el motivo del turno: ";
-        cin.ignore();
-        cin.getline(motivo,300);
-        setMotivo(motivo);
-        cout << "Ingrese la fecha del turno: " << endl;
-        _fechaTurno.CargarFecha();
+    cout << "----------------------------" << endl;
+    cout << "Ingrese el turno modificado: " << endl;
 
-        cout << "Ingrese el horario del turno: " << endl;
-        _horaTurno.Cargar();
-        _estado = true;
+    cout << "Ingrese el ID del medico: ";
+    cin >> idMedico;
+
+    cout << "Ingrese el ID del consultorio: ";
+    cin >> idConsultorio;
+
+    _idAgendaMedicos = archivoAgenda.getNuevoId();
+
+    agenda.setIdAgendaMedico(_idAgendaMedicos);
+    agenda.setIdMedico(idMedico);
+    agenda.setIdConsultorio(idConsultorio);
+
+    cout << "Ingrese la fecha del turno: " << endl;
+    _fechaTurno.CargarFecha();
+
+    cout << "Ingrese el horario del turno: " << endl;
+    _horaTurno.Cargar();
+
+    agenda.setFecha(_fechaTurno);
+    agenda.setHorario(_horaTurno);
+    agenda.setEstado(true);
+
+    archivoAgenda.guardar(agenda);
+
+    cout << "Ingrese el ID del paciente: ";
+    cin >> _idPaciente;
+
+    char motivo[300];
+
+    cout << "Ingrese el motivo del turno: ";
+    cin.ignore();
+    cin.getline(motivo,300);
+
+    setMotivo(motivo);
+
+    _estado = true;
 }

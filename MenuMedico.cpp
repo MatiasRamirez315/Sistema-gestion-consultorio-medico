@@ -6,6 +6,8 @@
 #include "ArchivoMedicos.h"
 #include "ArchivoAgendaMedico.h"
 #include "AgendaMedico.h"
+#include "ArchivoTurnos.h"
+#include "Turnos.h"
 using namespace std;
 
 void MenuMedico::menuMedico(){
@@ -114,24 +116,34 @@ void MenuMedico::menuMedico(){
 void MenuMedico::consultarAgenda(){
 
     ArchivoAgendaMedicos archivoAgenda;
+    ArchivoTurnos archivoTurnos;
+
     AgendaMedicos agenda;
+    Turnos turno;
+
     int idMedico;
-    bool encontro = false;
+    bool encontroTurno=false;
 
-    cout << "Ingrese ID del medico: ";
-    cin >> idMedico;
+    cout<<"Ingrese ID del medico: ";
+    cin>>idMedico;
 
-    for(int i = 0; i < archivoAgenda.getCantRegistros(); i++){
+    for(int i=0;i<archivoAgenda.getCantRegistros();i++){
+        agenda=archivoAgenda.leer(i);
+        if(agenda.getIdMedico()==idMedico && agenda.getEstado()==true){
+            for(int j=0;j<archivoTurnos.contarRegistros();j++){
+                turno=archivoTurnos.leer(j);
+                if(turno.getIdAgendaMedico()==agenda.getIdAgendaMedico()&& turno.getEstado()==true){
 
-        agenda = archivoAgenda.leer(i);
-
-        if(agenda.getIdMedico() == idMedico && agenda.getEstado() == true){
-            agenda.Mostrar();
-            encontro = true;
+                    turno.Mostrar();
+                    encontroTurno=true;
+                }
+            }
         }
     }
 
-    if(encontro == false){
-        cout << "No se encontraron agendas para ese medico." << endl;
+    if(encontroTurno==false){
+        cout<<"No se encontraron turnos agendados para ese medico."<<endl;
     }
+
 }
+
