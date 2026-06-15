@@ -1,4 +1,5 @@
 #include "Hora.h"
+#include "Validaciones.h"
 
 Hora::Hora(){
     _hora = 0;
@@ -37,11 +38,13 @@ void Hora::setHora (int hora){
 
 void Hora::Cargar(){
     cout << "ingrese la hora (00-23): " << endl;
-    cin >> _hora;
+    _hora = obtenerEnteroValidado("");
+
     cout << "ingrese los minutos (00-59)" << endl;
-    cin >> _minutos;
+     _minutos =obtenerEnteroValidado("");
+
     cout << "ingrese los segundos (00-59)" << endl;
-    cin >> _segundos;
+    _segundos = obtenerEnteroValidado("");
      }
 
 

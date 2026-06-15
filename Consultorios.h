@@ -24,5 +24,6 @@ public:
     void Cargar();
     void Mostrar();
     void MostrarTodos();
+    bool Ocupado(Fecha fecha, Hora hora);
 
 };

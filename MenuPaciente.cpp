@@ -4,9 +4,11 @@
 #include "Paciente.h"
 #include "MenuPaciente.h"
 #include "ArchivoPaciente.h"
+#include "HistoriaClinica.h"
 
 void MenuPaciente::menuPaciente(){
     Paciente paciente;
+    HistoriaClinica HC;
 
     int op = 1, y = 0;
 
@@ -80,6 +82,7 @@ void MenuPaciente::menuPaciente(){
             case 2:
                 system("cls");
                 /// LLAMADO FUNC CONSULTAR HIST CLIN
+                HC.MostrarTodoPaciente();
                 system("pause");
                 system("cls");
                 break;

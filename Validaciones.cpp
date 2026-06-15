@@ -13,3 +13,26 @@ bool esPalabraValida(const char* palabra) {
     return true;
 }
 
+bool esEnteroValido(const string& input) {
+  for (char c : input) {
+    if (!isdigit(c)) {
+      return false;
+    }
+  }
+  return true;
+}
+
+int obtenerEnteroValidado(const string& mensaje) {
+  string input;
+  cout << mensaje;
+  cin >> input;
+  cin.ignore();
+
+  while (!esEnteroValido(input)) {
+    cout << "Ingrese en formato numerico. Por favor, intentelo nuevamente: ";
+    cin >> input;
+    cin.ignore();
+  }
+
+  return stoi(input);
+}

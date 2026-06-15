@@ -5,6 +5,7 @@
 #include<cstdio>
 #include "ArchivoAgendaMedico.h"
 #include "AgendaMedico.h"
+#include "Consultorios.h"
 
 using namespace std;
 
@@ -75,9 +76,9 @@ void Turnos::Cargar(){
     ArchivoTurnos archivoTurnos;
     ArchivoAgendaMedicos archivoAgenda;
     AgendaMedicos agenda;
-
     int idMedico;
     int idConsultorio;
+
 
     _idTurno = archivoTurnos.getNuevoId();
 
@@ -96,11 +97,13 @@ void Turnos::Cargar(){
     cout << "Ingrese la fecha del turno: " << endl;
     _fechaTurno.CargarFecha();
 
+
     cout << "Ingrese el horario del turno: " << endl;
     _horaTurno.Cargar();
 
     agenda.setFecha(_fechaTurno);
     agenda.setHorario(_horaTurno);
+
     agenda.setEstado(true);
 
     archivoAgenda.guardar(agenda);

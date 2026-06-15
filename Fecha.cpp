@@ -1,4 +1,5 @@
 #include "Fecha.h"
+#include "Validaciones.h"
 #include <iostream>
 #include <chrono>
 using namespace std;
@@ -60,15 +61,14 @@ void Fecha::CargarFecha(){
 bool fechaValidada = false;
     do{
 
-
     cout << "Dia: ";
-    cin >> _dia;
+    _dia = obtenerEnteroValidado("");
 
     cout << "Mes: " ;
-    cin >> _mes;
+    _mes = obtenerEnteroValidado("");
 
     cout << "Anio: ";
-    cin >> _anio;
+    _anio=obtenerEnteroValidado("");
 
     if (esFechaValida(_dia, _mes, _anio)){
         fechaValidada = true;

@@ -85,3 +85,21 @@ void Consultorios::MostrarTodos(){
         }
 }
 
+bool Consultorios :: Ocupado(Fecha fecha, Hora hora){
+    ArchivoConsultorios archivo;
+    Consultorios cons;
+    int cantReg = archivo.contarRegistros();
+
+    for (int i=0;i<cantReg; i++){
+            cons = archivo.leer(i);
+
+        if (fecha == cons._fechaOcupado && hora == cons._horaOcupado){
+            cout << "el consultorio en ese momento esta ocupado." << endl;
+            return true;
+        }
+
+    }
+
+return false;
+}
+

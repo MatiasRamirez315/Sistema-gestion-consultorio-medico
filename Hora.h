@@ -23,5 +23,10 @@ public:
 	void setSegundos (int seg);
 	void Cargar();
 	string toString(string formatoHora = "HH:MM:SS");
+
+	bool operator==(Hora &h){
+	if (h.getSegundos() == _segundos && h.getMinutos() == _minutos && h.getHora() == _hora) {return true;}
+	return false;
+	}
 };
 

@@ -1,4 +1,5 @@
 #include "Persona.h"
+#include "Validaciones.h"
 #include <cstring>
 
 using namespace std;
@@ -30,17 +31,34 @@ int Persona::getDNI(){
 }
 
 void Persona::Cargar(){
-
+    bool ok = false;
+    do{
     cout << "Ingrese el nombre : ";
-
     cin >>_nombre;
+    if (esPalabraValida(_nombre)){
+            ok = true;
+        }
+        else{
+            cout << "ingrese un nombre valido.. " << endl << endl;
+        }
+    }while (ok == false);
+
+    ok = false;
+    do{
     cout << "Ingrese el apellido: ";
-
     cin>> _apellido;
-    //cin >> _apellido;
-    cout << "Ingrese el DNI: ";
+        if (esPalabraValida(_apellido)){
+            ok = true;
+        }
+        else{
+            cout << "ingrese un apellido valido.. " << endl << endl;
+        }
+    }while (ok ==false);
 
-    cin >> _dni;
+    cout << "ingrese el DNI: ";
+    _dni = obtenerEnteroValidado("");
+
+
 }
 
 void Persona::Mostrar(){
