@@ -68,6 +68,7 @@ void AgendaMedicos::Cargar(){
     cout<<"Ingrese ID de consultorio: ";
     cin>>_idConsultorio;
 
+   // _fecha.CargarFecha();
     cout<<"Ingrese dia: ";
     cin>>dia;
 

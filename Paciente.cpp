@@ -70,10 +70,15 @@ bool Paciente::getEstado(){
 void Paciente::CargarPaciente(){
     bool op = false;
     Paciente paciente;
+    ArchivoPaciente archivo;
+    int id;
+
     do{
     paciente.Persona::Cargar();
-    cout << "Ingrese el ID del paciente: ";
-    cin >> paciente._idPaciente;
+
+    id = archivo.getNuevoId();
+    paciente.setIdPaciente(id);
+    cout << "el ID del paciente es: " << id << endl;
 
     cout << "Ingrese el telefono: ";
     cin >> paciente._telefono;
@@ -82,7 +87,13 @@ void Paciente::CargarPaciente(){
     cin >> paciente._email;
 
     cout << "Ingrese el genero (F o M): ";
-    cin >> paciente._genero;
+    do{
+            cin >> paciente._genero;
+            if (paciente.getGenero() != 'F'  || paciente.getGenero() != 'M' || paciente.getGenero() != 'f'  || paciente.getGenero() != 'm'){
+                cout << "ingrese un genero valido" << endl;
+            }
+    }while (paciente.getGenero() == 'F'  || paciente.getGenero() == 'M' || paciente.getGenero() == 'f'  || paciente.getGenero() == 'm' );
+
 
     cout << "Ingrese el ID de la obra social: ";
     cin >> paciente._idObraSocial;
@@ -95,8 +106,6 @@ void Paciente::CargarPaciente(){
     }while (op== false);
 
     paciente.setEstado(true);
-
-    ArchivoPaciente archivo;
 
     if (archivo.guardar(paciente)){
             cout << "exito al guardar... " << endl;

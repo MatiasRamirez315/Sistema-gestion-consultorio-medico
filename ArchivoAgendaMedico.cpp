@@ -54,3 +54,26 @@ int ArchivoAgendaMedicos::getNuevoId()
     return getCantRegistros()+1;
 }
 
+bool ArchivoAgendaMedicos::EstaOcupado(
+    int idConsultorio,
+    Fecha fecha,
+    Hora hora)
+{
+    AgendaMedicos agenda;
+
+    int cantReg = getCantRegistros();
+
+    for(int i=0; i<cantReg; i++){
+
+        agenda = leer(i);
+
+        if(agenda.getIdConsultorio() == idConsultorio &&
+           agenda.getFecha() == fecha &&
+           agenda.getHorario() == hora)
+        {
+            return true;
+        }
+    }
+
+    return false;
+}

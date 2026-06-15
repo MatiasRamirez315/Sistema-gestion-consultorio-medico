@@ -21,6 +21,10 @@ void Turnos::setIdPaciente(int idPaciente){
 _idPaciente = idPaciente;
 }
 
+void Turnos::setIdConsultorio(int idConsultorio){
+_idConsultorio = idConsultorio;
+}
+
 void Turnos::setMotivo(const char* motivo)
 {
     strcpy(_motivo, motivo);
@@ -55,6 +59,10 @@ int Turnos::getIdPaciente(){
 return _idPaciente;
 }
 
+int Turnos::getIdConsultorio(){
+return _idConsultorio;
+}
+
 Fecha Turnos::getFechaTurno(){
     return _fechaTurno;
 }
@@ -76,23 +84,24 @@ void Turnos::Cargar(){
     ArchivoTurnos archivoTurnos;
     ArchivoAgendaMedicos archivoAgenda;
     AgendaMedicos agenda;
+    bool Ocupado;
     int idMedico;
-    int idConsultorio;
 
 
     _idTurno = archivoTurnos.getNuevoId();
+    do{
 
     cout << "Ingrese el ID del medico: ";
     cin >> idMedico;
 
     cout << "Ingrese el ID del consultorio: ";
-    cin >> idConsultorio;
+    cin >> _idConsultorio;
 
     _idAgendaMedicos = archivoAgenda.getNuevoId();
 
     agenda.setIdAgendaMedico(_idAgendaMedicos);
     agenda.setIdMedico(idMedico);
-    agenda.setIdConsultorio(idConsultorio);
+    agenda.setIdConsultorio(_idConsultorio);
 
     cout << "Ingrese la fecha del turno: " << endl;
     _fechaTurno.CargarFecha();
@@ -106,6 +115,17 @@ void Turnos::Cargar(){
 
     agenda.setEstado(true);
 
+
+
+    Ocupado = archivoAgenda.EstaOcupado(_idConsultorio, _fechaTurno, _horaTurno);
+
+
+    if (Ocupado == true ){
+          cout << "Ese consultorio ya esta ocupado en ese horario." << endl;
+    }
+
+
+    }while (Ocupado == true);
     archivoAgenda.guardar(agenda);
 
     cout << "Ingrese el ID del paciente: ";

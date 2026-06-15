@@ -74,8 +74,8 @@ void HistoriaClinica::MostrarTodas(){
 
         HC = archivo.leer(i);
 
-        cout << "ID " << HC.getIdHistorial() << endl;
-        cout << "ID del paciente " << HC.getIdPaciente() << endl;
+        cout << "ID de Historia clinica:" << HC.getIdHistorial() << endl;
+        cout << "ID del paciente: " << HC.getIdPaciente() << endl;
         cout << "Descripcion: " << HC.getDescripcion() << endl;
         cout << "Estado: " << HC.getEstado() << endl<< endl;
     }

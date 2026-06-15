@@ -8,28 +8,12 @@ void Consultorios::setIdConsultorio(int id){
 _idConsultorio = id;
 }
 
-void Consultorios::setFechaOcupado (Fecha f){
-_fechaOcupado = f;
-}
-
-void Consultorios::setHoraOcupado (Hora h){
-_horaOcupado = h;
-}
-
 void Consultorios::setEstado(bool e){
 _estado = e;
 }
 
 int Consultorios::getIDConsultorio () {
     return _idConsultorio;
-}
-
-Fecha Consultorios::getFechaOcupado(){
-return _fechaOcupado;
-}
-
-Hora Consultorios::getHoraOcupado(){
-return _horaOcupado;
 }
 
 bool Consultorios::getEstado(){
@@ -41,8 +25,7 @@ ArchivoConsultorios archivo;
 Consultorios consultorio;
 int id = archivo.getNuevoId();
 consultorio.setIdConsultorio(id) ;
-consultorio._fechaOcupado;
-consultorio._horaOcupado;
+
 
 consultorio.setEstado(false);
 
@@ -63,7 +46,7 @@ if (getEstado() == true){
     else{
         cout << "desocupado ";
     }
-    cout << "en el dia " << _fechaOcupado.toString() << " a las " << _horaOcupado.toString() << endl;
+
 }
 
 
@@ -81,25 +64,6 @@ void Consultorios::MostrarTodos(){
         else{
                 cout << "desocupado " ;
             }
-            cout << "en el dia " << _fechaOcupado.toString() << " a las " << _horaOcupado.toString() << endl;
+            cout << endl;
         }
 }
-
-bool Consultorios :: Ocupado(Fecha fecha, Hora hora){
-    ArchivoConsultorios archivo;
-    Consultorios cons;
-    int cantReg = archivo.contarRegistros();
-
-    for (int i=0;i<cantReg; i++){
-            cons = archivo.leer(i);
-
-        if (fecha == cons._fechaOcupado && hora == cons._horaOcupado){
-            cout << "el consultorio en ese momento esta ocupado." << endl;
-            return true;
-        }
-
-    }
-
-return false;
-}
-

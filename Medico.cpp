@@ -75,14 +75,19 @@ bool Medico::getEstado()
 void Medico::Cargar()
 {
     bool op = false;
+    int id;
+    ArchivoMedicos archivo;
     Especialidades esp;
     Medico medico;
     do
     {
         medico.Persona::Cargar();
 
-        cout << "Ingrese el ID del medico: ";
-        cin >>  medico._idMedico;
+
+        id = archivo.getNuevoId();
+        medico.setIdMedico(id);
+        cout << "ID del medico: " << id << endl;
+
 
         cout << "Ingrese el ID del puesto: ";
         cin >> medico. _idPuesto;
@@ -91,6 +96,7 @@ void Medico::Cargar()
 
         cout << "Ingrese la matricula: ";
         cin >>  medico._matriculaProfesional;
+        cout << "ingrese la fecha en que empezo a trabajar: "<< endl;
         medico._fechaIngreso.CargarFecha();
 
         cout << "Desea confirmar sus datos? 1-Si 0-No: ";
@@ -103,8 +109,6 @@ void Medico::Cargar()
     while(op == false);
 
     medico.setEstado(true);
-
-    ArchivoMedicos archivo;
 
     archivo.guardar(medico);
 
