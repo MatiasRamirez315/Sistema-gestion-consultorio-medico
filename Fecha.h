@@ -1,5 +1,4 @@
 #pragma once
-
 #include <iostream>
 using namespace std;
 
@@ -28,4 +27,13 @@ public:
 	 bool esFechaValida(int dia, int mes, int anio);
 
 	 void CargarFecha();
+
+	 bool operator==(Fecha &f){
+	     if (f.getDia() == _dia && f.getMes() == _mes && f.getAnio() == _anio) {
+                return true;
+	     }
+	     	 return false;
+        }
+
+
 };
