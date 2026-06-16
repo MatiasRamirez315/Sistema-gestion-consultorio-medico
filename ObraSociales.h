@@ -35,6 +35,7 @@ public:
 	void Eliminar();
     void Modificacion();
     void MostrarFacturacion();
+    void MostrarNombreID();
 
 };
 

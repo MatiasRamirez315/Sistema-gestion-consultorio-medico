@@ -1,5 +1,6 @@
 #include "ObraSociales.h"
 #include "ArchivoObraSociales.h"
+#include "Validaciones.h"
 #include <cstring>
 #include <iostream>
 
@@ -54,20 +55,35 @@ bool ObraSociales::getEstado(){
 }
 
 void ObraSociales::Cargar(){
+    int id;
+    ArchivoObraSociales archivo;
     ObraSociales OS;
-    cout << "Ingrese el ID de la Obra social: ";
-    cin >> OS._idObraSocial;
-    cout << "Ingrese el nombre de la Obra social: ";
-    cin >> OS._nombre;
-    cout << "Ingrese el nombre del plan: ";
-    cin >> OS._plan;
+    bool ok = false;
+    id = archivo.getNuevoId();
+    cout << "ID de la Obra social: " << id << endl;
+    OS.setIdObraSocial(id);
+
+    do{
+        cout << "Ingrese el nombre de la Obra social: ";
+        cin >> OS._nombre;
+        ok = esPalabraValida(OS._nombre);
+    }while (ok == false);
+
+    ok = false;
+     do{
+        cout << "Ingrese el nombre del plan: ";
+        cin >> OS._plan;
+        ok = esPalabraValida(OS._plan);
+    }while (ok == false);
+
     cout << "Ingrese el tipo de cobertura: ";
-    cin >> OS._tipoCobertura;
+    OS._tipoCobertura= obtenerEnteroValidado("");
+
     cout << "Ingrese el porcentaje de descuento que tendra a la hora de facturar: ";
-    cin >> OS._porcentajeDescuento;
+    OS._porcentajeDescuento = obtenerEnteroValidado("");
+
     OS._estado = true;
 
-    ArchivoObraSociales archivo;
 
     archivo.guardar(OS);
 }
@@ -98,6 +114,22 @@ void ObraSociales::MostrarTodas(){
         }
     }
 }
+
+void ObraSociales::MostrarNombreID(){
+    ArchivoObraSociales archivo;
+    ObraSociales OS;
+    int cantReg = archivo.contarRegistros();
+
+    for (int i=0;i<cantReg ; i++){
+        OS = archivo.leer(i);
+        if (OS.getEstado() == true){
+            cout << "ID de la Obra social: " << OS.getIdObraSocial()<< endl;
+            cout << "Nombre: " << OS.getNombre() << endl;
+            cout << "Estado: " << OS.getEstado() << endl << endl;
+        }
+    }
+}
+
 
 void ObraSociales::Eliminar(){
     ObraSociales OS;

@@ -1,6 +1,6 @@
 #include "Paciente.h"
 #include "ArchivoPaciente.h"
-#include "ArchivoObraSociales.h"
+#include "ObraSociales.h"
 #include "Persona.h"
 #include "Fecha.h"
 #include <string>
@@ -73,7 +73,7 @@ void Paciente::CargarPaciente(){
     bool op = false;
     Paciente paciente;
     ArchivoPaciente archivo;
-    ArchivoObraSociales archivoOS;
+    ObraSociales OS;
     int id;
 
     do{
@@ -82,6 +82,9 @@ void Paciente::CargarPaciente(){
     id = archivo.getNuevoId();
     paciente.setIdPaciente(id);
     cout << "el ID del paciente es: " << id << endl;
+
+    cout << "ingrese la fecha de nacimiento: ";
+    paciente._fechaNacimiento.CargarFecha();
 
     cout << "Ingrese el telefono: ";
     cin >> paciente._telefono;
@@ -101,10 +104,12 @@ void Paciente::CargarPaciente(){
 
     }while(paciente._genero != 'F' && paciente._genero != 'M');
 
+    OS.MostrarNombreID();
+
     cout << "Ingrese el ID de la obra social: ";
     cin >> paciente._idObraSocial;
    //falta algo para mostrar las OS
-    paciente._fechaNacimiento.CargarFecha();
+
 
     cout << "Desea confirmar sus datos? 1-Si 0-No: ";
     cin >> op;

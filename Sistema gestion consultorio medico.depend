@@ -232,7 +232,7 @@
 	<cstdio>
 	<cstring>
 
-1781133541 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\obrasociales.h
+1781633401 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\obrasociales.h
 	<iostream>
 	<string>
 
@@ -323,15 +323,17 @@
 	<cstring>
 	<iostream>
 
-1781133541 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\obrasociales.cpp
+1781635135 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\obrasociales.cpp
 	"ObraSociales.h"
 	"ArchivoObraSociales.h"
+	"Validaciones.h"
 	<cstring>
 	<iostream>
 
-1781578472 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\paciente.cpp
+1781633401 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\paciente.cpp
 	"Paciente.h"
 	"ArchivoPaciente.h"
+	"ObraSociales.h"
 	"Persona.h"
 	"Fecha.h"
 	<string>
