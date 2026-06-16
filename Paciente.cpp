@@ -1,6 +1,7 @@
 #include "Paciente.h"
 #include "ArchivoPaciente.h"
 #include "ObraSociales.h"
+#include "Validaciones.h"
 #include "Persona.h"
 #include "Fecha.h"
 #include <string>
@@ -107,8 +108,7 @@ void Paciente::CargarPaciente(){
     OS.MostrarNombreID();
 
     cout << "Ingrese el ID de la obra social: ";
-    cin >> paciente._idObraSocial;
-   //falta algo para mostrar las OS
+    paciente._idObraSocial = obtenerEnteroValidado("");;
 
 
     cout << "Desea confirmar sus datos? 1-Si 0-No: ";
@@ -164,7 +164,7 @@ void Paciente::Eliminar(){
     int id;
     int pos;
     cout << "Ingrese el ID del paciente que desea eliminar: ";
-    cin >> id;
+    id = obtenerEnteroValidado("");;
 
     pos = archivo.BuscarPosXID(id);
 
@@ -196,7 +196,7 @@ void Paciente::Modificacion(){
     int pos;
 
     cout << "ingrese el ID del medico que quiere modificar: ";
-    cin >> id;
+    id = obtenerEnteroValidado("");
 
     pos = archivo.BuscarPosXID(id);
 
@@ -244,10 +244,19 @@ bool op = false;
     cin >> _email;
 
     cout << "Ingrese el genero (F o M): ";
+        do{
     cin >> _genero;
 
+    _genero = toupper(_genero);
+
+    if(_genero != 'F' && _genero != 'M'){
+        cout << "Ingrese un genero valido: ";
+    }
+
+    }while(_genero != 'F' && _genero != 'M');
+
     cout << "Ingrese el ID de la obra social: ";
-    cin >> _idObraSocial;
+    _idObraSocial = obtenerEnteroValidado("");
 
     _fechaNacimiento.CargarFecha();
 

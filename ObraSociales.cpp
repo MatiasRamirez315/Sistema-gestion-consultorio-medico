@@ -137,7 +137,7 @@ void ObraSociales::Eliminar(){
     int id;
     int pos;
     cout << "Ingrese el ID de la Obra social que desea eliminar: ";
-    cin >> id;
+    id = obtenerEnteroValidado("");
 
     pos = archivo.BuscarPosXID(id);
 
@@ -168,7 +168,7 @@ void ObraSociales::Modificacion(){
     int pos;
 
     cout << "Ingrese el ID de la Obra social que quiere modificar: ";
-    cin >> id;
+    id =obtenerEnteroValidado("");
 
     pos = archivo.BuscarPosXID(id);
 
@@ -201,16 +201,26 @@ void ObraSociales::Modificacion(){
 void ObraSociales::cargarModificado(){
     cout << "----------------------------" << endl;
     cout << "Ingrese la nueva Obra social: " << endl;
+    bool ok = false;
 
-    ObraSociales OS;
-    cout << "Ingrese el nombre de la Obra social: ";
-    cin>> _nombre;
-    cout << "Ingrese el nombre del plan: ";
-    cin>> _plan;
-    cout << "Ingrese el tipo de cobertura: " ;
-    cin >> _tipoCobertura;
+        do{
+            cout << "Ingrese el nombre de la Obra social: ";
+            cin >> _nombre;
+            ok = esPalabraValida(_nombre);
+        }while (ok == false);
+
+     do{
+        cout << "Ingrese el nombre del plan: ";
+        cin >> _plan;
+        ok = esPalabraValida(_plan);
+    }while (ok == false);
+
+    cout << "Ingrese el tipo de cobertura: ";
+    _tipoCobertura= obtenerEnteroValidado("");
+
     cout << "Ingrese el porcentaje de descuento que tendra a la hora de facturar: ";
-    cin >> _porcentajeDescuento;
+    _porcentajeDescuento = obtenerEnteroValidado("");
+
     _estado = true;
 }
 

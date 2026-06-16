@@ -1,4 +1,5 @@
 #include "Factura.h"
+#include "Validaciones.h"
 #include "ArchivoFacturas.h"
 
 using namespace std;
@@ -54,17 +55,19 @@ bool Facturas::getEstado(){
 }
 
 void Facturas::Cargar(int idTurno){
+    bool confirma;
     Facturas factura;
     cout << "Facturando turno " << idTurno << "..." << endl;
     factura.setIdTurno(idTurno);
     cout << "Ingrese el ID de la factura: ";
-    cin >> factura._idFactura;
+    factura._idFactura = obtenerEnteroValidado("");
     factura._fecha.CargarFecha();
     cout << "Ingrese el importe: ";
-    cin >> factura._importe;
+    factura._importe = obtenerEnteroValidado("");
     cout << "Confirme si ya esta pagada. 1-Si 0-No: ";
-    cin >> factura._pagado;
+    factura._pagado = obtenerEnteroValidado("");
     cout << "Desea confirmar los datos? 1-Si 0-No: ";
+    confirma = obtenerEnteroValidado("");
 
     factura.setEstado(true);
 
