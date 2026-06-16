@@ -278,14 +278,15 @@
 	"Hora.h"
 	<string>
 
-1781562064 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\consultorios.cpp
+1781562825 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\consultorios.cpp
 	"Consultorios.h"
 	"ArchivoConsultorios.h"
 	<iostream>
 
-1781210935 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\especialidades.cpp
+1781576721 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\especialidades.cpp
 	"Especialidades.h"
 	"ArchivoEspecialidades.h"
+	"Validaciones.h"
 	<iostream>
 	<cstring>
 
@@ -311,12 +312,13 @@
 	"Hora.h"
 	"Validaciones.h"
 
-1781555957 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\medico.cpp
+1781576834 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\medico.cpp
 	"Medico.h"
 	"Persona.h"
 	"Fecha.h"
 	"ArchivoMedicos.h"
 	"Especialidades.h"
+	"Validaciones.h"
 	<string>
 	<cstring>
 	<iostream>
@@ -327,13 +329,14 @@
 	<cstring>
 	<iostream>
 
-1781557069 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\paciente.cpp
+1781578472 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\paciente.cpp
 	"Paciente.h"
 	"ArchivoPaciente.h"
 	"Persona.h"
 	"Fecha.h"
 	<string>
 	<cstring>
+	<cctype>
 
 1781479420 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\persona.cpp
 	"Persona.h"

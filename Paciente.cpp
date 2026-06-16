@@ -1,9 +1,11 @@
 #include "Paciente.h"
 #include "ArchivoPaciente.h"
+#include "ArchivoObraSociales.h"
 #include "Persona.h"
 #include "Fecha.h"
 #include <string>
 #include <cstring>
+#include <cctype>
 
 using namespace std;
 
@@ -71,6 +73,7 @@ void Paciente::CargarPaciente(){
     bool op = false;
     Paciente paciente;
     ArchivoPaciente archivo;
+    ArchivoObraSociales archivoOS;
     int id;
 
     do{
@@ -88,16 +91,19 @@ void Paciente::CargarPaciente(){
 
     cout << "Ingrese el genero (F o M): ";
     do{
-            cin >> paciente._genero;
-            if (paciente.getGenero() != 'F'  || paciente.getGenero() != 'M' || paciente.getGenero() != 'f'  || paciente.getGenero() != 'm'){
-                cout << "ingrese un genero valido" << endl;
-            }
-    }while (paciente.getGenero() == 'F'  || paciente.getGenero() == 'M' || paciente.getGenero() == 'f'  || paciente.getGenero() == 'm' );
+    cin >> paciente._genero;
 
+    paciente._genero = toupper(paciente._genero);
+
+    if(paciente._genero != 'F' && paciente._genero != 'M'){
+        cout << "Ingrese un genero valido: ";
+    }
+
+    }while(paciente._genero != 'F' && paciente._genero != 'M');
 
     cout << "Ingrese el ID de la obra social: ";
     cin >> paciente._idObraSocial;
-
+   //falta algo para mostrar las OS
     paciente._fechaNacimiento.CargarFecha();
 
     cout << "Desea confirmar sus datos? 1-Si 0-No: ";

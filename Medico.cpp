@@ -3,6 +3,7 @@
 #include "Fecha.h"
 #include "ArchivoMedicos.h"
 #include "Especialidades.h"
+#include "Validaciones.h"
 #include <string>
 #include <cstring>
 #include <iostream>
@@ -90,7 +91,8 @@ void Medico::Cargar()
 
 
         cout << "Ingrese el ID del puesto: ";
-        cin >> medico. _idPuesto;
+
+        medico._idPuesto = obtenerEnteroValidado("");
         //agregar opciones de tipos de puesto ej: 1---- odontologo.
         medico._idEspecialidad =  esp.Eleccion();
 

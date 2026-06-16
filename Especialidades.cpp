@@ -1,5 +1,6 @@
 #include "Especialidades.h"
 #include "ArchivoEspecialidades.h"
+#include "Validaciones.h"
 #include <iostream>
 #include <cstring>
 
@@ -98,7 +99,7 @@ int Especialidades::Eleccion(){
         cout << "7- Cardiologo" << endl;
         do
         {
-            cin >>_idEspecialidad;
+            _idEspecialidad = obtenerEnteroValidado("");
             if (_idEspecialidad < 1 || _idEspecialidad  > 7)
             {
                 cout << "Error al elegir la especialidad, vuelva a seleccionar." << endl;
