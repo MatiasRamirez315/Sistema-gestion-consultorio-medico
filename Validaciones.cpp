@@ -14,25 +14,24 @@ bool esPalabraValida(const char* palabra) {
 }
 
 bool esEnteroValido(const string& input) {
-  for (char c : input) {
-    if (!isdigit(c)) {
-      return false;
+    for(char c : input) {
+        if(!isdigit(c)) {
+            return false;
+        }
     }
-  }
-  return true;
+    return !input.empty();
 }
 
 int obtenerEnteroValidado(const string& mensaje) {
-  string input;
-  cout << mensaje;
-  cin >> input;
-  cin.ignore();
+    string input;
 
-  while (!esEnteroValido(input)) {
-    cout << "Ingrese en formato numerico. Por favor, intentelo nuevamente: ";
+    cout << mensaje;
     cin >> input;
-    cin.ignore();
-  }
 
-  return stoi(input);
+    while(!esEnteroValido(input) || stoi(input) <= 0) {
+        cout << "Ingrese un numero entero mayor a 0: ";
+        cin >> input;
+    }
+
+    return stoi(input);
 }
