@@ -53,3 +53,31 @@ bool obtenerBooleanoValidado(const string& mensaje) {
 
     return input == "1";
 }
+
+bool esEnteroPositivoValido(const string& input) {
+    if (input.empty()) {
+        return false;
+    }
+
+    for (char c : input) {
+        if (!isdigit(c)) {
+            return false;
+        }
+    }
+
+    return stoi(input) > 0;
+}
+
+int obtenerEnteroPositivo(const string& mensaje) {
+    string input;
+
+    cout << mensaje;
+    cin >> input;
+
+    while (!esEnteroPositivoValido(input)) {
+        cout << "Error. Ingrese un numero entero positivo: ";
+        cin >> input;
+    }
+
+    return stoi(input);
+}

@@ -37,6 +37,7 @@ void Hora::setHora (int hora){
 }
 
 void Hora::Cargar(){
+    do{
     cout << "ingrese la hora (00-23): " << endl;
     _hora = obtenerEnteroValidado("");
 
@@ -45,7 +46,13 @@ void Hora::Cargar(){
 
     cout << "ingrese los segundos (00-59)" << endl;
     _segundos = obtenerEnteroValidado("");
-     }
+
+    if ( _hora < 0 ||  _hora > 23 || _minutos < 0 ||  _minutos > 59 || _segundos < 0 || _segundos > 59){
+        cout << "error , vuelva a elegir el horario" << endl;
+    }
+
+    }while (_hora < 0 ||  _hora > 23 || _minutos < 0 ||  _minutos < 59 || _segundos < 0 || _segundos > 59);
+}
 
 
 

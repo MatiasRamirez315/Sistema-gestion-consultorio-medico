@@ -10,3 +10,7 @@ int obtenerEnteroValidado(const std::string& mensaje);
 bool obtenerBooleanoValidado(const std::string& mensaje);
 
 bool esBooleanoValido(const std::string& input);
+
+int obtenerEnteroPositivo(const std::string& mensaje);
+
+bool esEnteroPositivoValido(const std::string& input) ;

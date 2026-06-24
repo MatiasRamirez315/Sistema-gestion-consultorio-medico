@@ -290,7 +290,7 @@
 	<iostream>
 	<cstring>
 
-1782252233 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\factura.cpp
+1782338307 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\factura.cpp
 	"Factura.h"
 	"Validaciones.h"
 	"ArchivoFacturas.h"
@@ -309,7 +309,7 @@
 	<iostream>
 	<cstdio>
 
-1782253445 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\hora.cpp
+1782343626 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\hora.cpp
 	"Hora.h"
 	"Validaciones.h"
 
@@ -331,7 +331,7 @@
 	<cstring>
 	<iostream>
 
-1782253445 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\paciente.cpp
+1782341044 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\paciente.cpp
 	"Paciente.h"
 	"ArchivoPaciente.h"
 	"ObraSociales.h"
@@ -1323,11 +1323,11 @@
 	"ArchivoFacturas.h"
 	<iostream>
 
-1782256630 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\validaciones.cpp
+1782340973 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\validaciones.cpp
 	<iostream>
 	"Validaciones.h"
 
-1782251109 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\validaciones.h
+1782341023 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\validaciones.h
 	<string>
 
 1781206979 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuespecialidades.h

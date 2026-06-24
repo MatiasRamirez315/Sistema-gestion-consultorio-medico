@@ -57,21 +57,21 @@ bool Facturas::getEstado(){
 void Facturas::Cargar(int idTurno){
     bool confirma;
     Facturas factura;
+    ArchivoFacturas archivo;
     cout << "Facturando turno " << idTurno << "..." << endl;
     factura.setIdTurno(idTurno);
     cout << "Ingrese el ID de la factura: ";
-    factura._idFactura = obtenerEnteroValidado("");
+    factura._idFactura = archivo.getNuevoId();
+    cout << factura._idFactura;
     factura._fecha.CargarFecha();
     cout << "Ingrese el importe: ";
     factura._importe = obtenerEnteroValidado("");
     cout << "Confirme si ya esta pagada. 1-Si 0-No: ";
-    factura._pagado = obtenerEnteroValidado("");
+    factura._pagado = obtenerBooleanoValidado("");
     cout << "Desea confirmar los datos? 1-Si 0-No: ";
     confirma = obtenerBooleanoValidado(" ");
 
     factura.setEstado(true);
-
-    ArchivoFacturas archivo;
 
     archivo.guardar(factura);
 }
