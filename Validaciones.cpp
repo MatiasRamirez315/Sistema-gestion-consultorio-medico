@@ -35,3 +35,21 @@ int obtenerEnteroValidado(const string& mensaje) {
 
     return stoi(input);
 }
+
+ bool esBooleanoValido(const string& input) {
+    return input == "0" || input == "1";
+}
+
+bool obtenerBooleanoValidado(const string& mensaje) {
+    string input;
+
+    cout << mensaje;
+    cin >> input;
+
+    while (!esBooleanoValido(input)) {
+        cout << "Error. Ingrese 0 o 1: ";
+        cin >> input;
+    }
+
+    return input == "1";
+}

@@ -112,7 +112,7 @@ void Paciente::CargarPaciente(){
 
 
     cout << "Desea confirmar sus datos? 1-Si 0-No: ";
-    cin >> op;
+    op = obtenerBooleanoValidado(" ");
     if(op == false){cin.ignore();};
     }while (op== false);
 
@@ -261,7 +261,7 @@ bool op = false;
     _fechaNacimiento.CargarFecha();
 
     cout << "Desea confirmar sus datos? 1-Si 0-No: ";
-    cin >> op;
+    op = obtenerBooleanoValidado(" ");
     if(op == false){
             cin.ignore();
     }

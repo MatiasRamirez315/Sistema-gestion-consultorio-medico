@@ -2,9 +2,9 @@
 #include "Validaciones.h"
 
 Hora::Hora(){
-    _hora = 0;
-    _minutos = 0;
-    _segundos = 0;
+    _hora = 00;
+    _minutos = 00;
+    _segundos = 00;
 }
 Hora::Hora( int hora, int minutos, int segundos){
     _hora = hora;

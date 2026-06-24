@@ -102,7 +102,8 @@ void Medico::Cargar()
         medico._fechaIngreso.CargarFecha();
 
         cout << "Desea confirmar sus datos? 1-Si 0-No: ";
-        cin >> op;
+        op = obtenerBooleanoValidado(" ");
+
         if (op== false)
         {
             cin.ignore();
@@ -239,10 +240,12 @@ void Medico::cargarModificado(){
 
         cout << "Ingrese la matricula: ";
         cin >>  _matriculaProfesional;
+
+        cout << "ingrese la fecha en que comenzo a trabajar: " << endl;
         _fechaIngreso.CargarFecha();
 
         cout << "Desea confirmar sus datos? 1-Si 0-No: ";
-        cin >> op;
+        op= obtenerBooleanoValidado(" ");
         if (op== false)
         {
             cin.ignore();

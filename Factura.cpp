@@ -67,7 +67,7 @@ void Facturas::Cargar(int idTurno){
     cout << "Confirme si ya esta pagada. 1-Si 0-No: ";
     factura._pagado = obtenerEnteroValidado("");
     cout << "Desea confirmar los datos? 1-Si 0-No: ";
-    confirma = obtenerEnteroValidado("");
+    confirma = obtenerBooleanoValidado(" ");
 
     factura.setEstado(true);
 
