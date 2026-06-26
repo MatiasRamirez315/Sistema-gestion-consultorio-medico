@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "Fecha.h"
 
 bool esPalabraValida(const char* palabra);
 
@@ -14,3 +15,5 @@ bool esBooleanoValido(const std::string& input);
 int obtenerEnteroPositivo(const std::string& mensaje);
 
 bool esEnteroPositivoValido(const std::string& input) ;
+
+bool FechaMenorIgualActual (Fecha fecha);

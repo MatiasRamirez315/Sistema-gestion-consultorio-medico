@@ -28,7 +28,7 @@ int obtenerEnteroValidado(const string& mensaje) {
     cout << mensaje;
     cin >> input;
 
-    while(!esEnteroValido(input) || stoi(input) <= 0) {
+    while(!esEnteroValido(input) || stoi(input) < 0) {
         cout << "Ingrese un numero entero mayor a 0: ";
         cin >> input;
     }
@@ -80,4 +80,24 @@ int obtenerEnteroPositivo(const string& mensaje) {
     }
 
     return stoi(input);
+}
+
+bool  FechaMenorIgualActual (Fecha fecha){
+    Fecha hoy;
+    hoy.setCurrentDate();
+
+    if (fecha.getAnio() > hoy.getAnio()){
+        return false;
+    }
+
+    if(fecha.getMes() > hoy.getMes()){
+        return false;
+    }
+
+    if(fecha.getDia() > hoy.getDia()){
+        return false;
+    }
+
+    return true;
+
 }

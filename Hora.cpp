@@ -51,7 +51,7 @@ void Hora::Cargar(){
         cout << "error , vuelva a elegir el horario" << endl;
     }
 
-    }while (_hora < 0 ||  _hora > 23 || _minutos < 0 ||  _minutos < 59 || _segundos < 0 || _segundos > 59);
+    }while (_hora < 0 ||  _hora > 23 || _minutos < 0 ||  _minutos >59 || _segundos < 0 || _segundos > 59);
 }
 
 

@@ -75,6 +75,7 @@ bool Medico::getEstado()
 
 void Medico::Cargar()
 {
+    bool fechaOK;
     bool op = false;
     int id;
     ArchivoMedicos archivo;
@@ -98,8 +99,16 @@ void Medico::Cargar()
 
         cout << "Ingrese la matricula: ";
         cin >>  medico._matriculaProfesional;
-        cout << "ingrese la fecha en que empezo a trabajar: "<< endl;
+
+        do{
+        cout << "ingrese la fecha en que comenzo a trabajar: " << endl;
         medico._fechaIngreso.CargarFecha();
+        fechaOK = FechaMenorIgualActual(_fechaIngreso);
+        if (fechaOK == false){
+            cout << "error en la fecha.. "<< endl ;
+        }
+        }while (fechaOK == false);
+
 
         cout << "Desea confirmar sus datos? 1-Si 0-No: ";
         op = obtenerBooleanoValidado(" ");
@@ -223,6 +232,7 @@ void Medico::Modificacion(){
 }
 
 void Medico::cargarModificado(){
+        bool fechaOK;
         Especialidades esp;
         cout << "----------------------------" << endl;
         cout << "ingrese el nuevo medico: " << endl;
@@ -230,6 +240,7 @@ void Medico::cargarModificado(){
         bool op = false;
     do
     {
+
         Persona::Cargar();
 
         cout << "Ingrese el ID del puesto: ";
@@ -241,8 +252,14 @@ void Medico::cargarModificado(){
         cout << "Ingrese la matricula: ";
         cin >>  _matriculaProfesional;
 
+        do{
         cout << "ingrese la fecha en que comenzo a trabajar: " << endl;
         _fechaIngreso.CargarFecha();
+        fechaOK = FechaMenorIgualActual(_fechaIngreso);
+        if (fechaOK == false){
+            cout << "error en la fecha.. "<< endl ;
+        }
+        }while (fechaOK == false);
 
         cout << "Desea confirmar sus datos? 1-Si 0-No: ";
         op= obtenerBooleanoValidado(" ");

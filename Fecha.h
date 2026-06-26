@@ -26,6 +26,7 @@ public:
 	 void setCurrentDate();
 	 bool esFechaValida(int dia, int mes, int anio);
 
+
 	 void CargarFecha();
 
 	 bool operator==(Fecha &f){
