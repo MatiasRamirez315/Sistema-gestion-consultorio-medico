@@ -247,9 +247,12 @@ void MenuTurnos::CargarFactura(){
 }
 
 void MenuTurnos::ListarFacturas(){
-    ArchivoFacturas archivo;
+    ArchivoFacturas archivoF;
+    ArchivoTurnos archivoT;
     Facturas factura;
-    int cantFacturas = archivo.contarRegistros();
+    Turnos turno;
+    int cantFacturas = archivoF.contarRegistros();
+    int pos = 0;
 
     if(cantFacturas == 0){
         cout << "No hay facturas." << endl;
@@ -257,9 +260,14 @@ void MenuTurnos::ListarFacturas(){
     }
 
     for(int i=0; i<cantFacturas; i++){
-        factura = archivo.leer(i);
+        factura = archivoF.leer(i);
         if(factura.getEstado()){
+            pos = archivoT.BuscarPosXID(factura.getIdTurno());
             factura.Mostrar();
+            turno = archivoT.leer(pos);
+            cout << "Informacion del Turno facturado:" << endl;
+            turno.Mostrar();
+            cout << "-----------------------------" << endl;
         }
     }
 }

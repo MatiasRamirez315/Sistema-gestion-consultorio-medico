@@ -144,6 +144,11 @@ void Medico::MostrarTodos()
     Medico medico;
     int cantReg = archivo.contarRegistros();
 
+    if (cantReg == 0){
+        cout << "No hay medicos..." << endl;
+        return;
+    }
+
     for (int i=0; i<cantReg ; i++)
     {
         medico = archivo.leer(i);

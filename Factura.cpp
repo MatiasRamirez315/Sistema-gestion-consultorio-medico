@@ -1,6 +1,8 @@
 #include "Factura.h"
 #include "Validaciones.h"
 #include "ArchivoFacturas.h"
+#include "ArchivoTurnos.h"
+#include "ArchivoPaciente.h"
 
 using namespace std;
 
@@ -60,9 +62,9 @@ void Facturas::Cargar(int idTurno){
     ArchivoFacturas archivo;
     cout << "Facturando turno " << idTurno << "..." << endl;
     factura.setIdTurno(idTurno);
-    cout << "Ingrese el ID de la factura: ";
+    cout << "ID de la factura: ";
     factura._idFactura = archivo.getNuevoId();
-    cout << factura._idFactura;
+    cout << factura._idFactura << endl;
     factura._fecha.CargarFecha();
     cout << "Ingrese el importe: ";
     factura._importe = obtenerEnteroValidado("");
@@ -93,9 +95,8 @@ bool Facturas::TurnoYaFacturado(int idTurno){
 
 void Facturas::Mostrar(){
     cout << "ID Factura: " << _idFactura << endl;
-    cout << "ID Turno: " << _idTurno << endl;
-    cout << "Fecha: " << _fecha.toString() << endl;
-    cout << "Importe: " << _importe << endl;
+    cout << "Fecha de la factura: " << _fecha.toString() << endl;
+    cout << "Importe de la factura: " << _importe << endl;
     if (_pagado == true){
         cout << "Factura pagada." << endl;
     }
@@ -103,11 +104,24 @@ void Facturas::Mostrar(){
         cout << "Factura no pagada." << endl;
     }
     if(_estado == true){
-        cout << "Estado: Activo" << endl;
+        cout << "Estado de la factura: Activa" << endl;
     }
     else{
-        cout << "Estado: Inactivo" << endl;
+        cout << "Estado de la factura: Inactiva" << endl;
     }
+
+    ArchivoTurnos arcTurnos;
+    int posT = 0;
+    posT = arcTurnos.BuscarPosXID(_idTurno);
+    Turnos turno = arcTurnos.leer(posT);
+
+    ArchivoPaciente arcPacientes;
+    int posP = 0;
+    posP = arcPacientes.BuscarPosXID(turno.getIdPaciente());
+    Paciente paciente = arcPacientes.leer(posP);
+
+    cout << "Paciente facturado: " << endl;
+    paciente.MostrarPaciente();
 
     cout << "-----------------------------" << endl;
 }

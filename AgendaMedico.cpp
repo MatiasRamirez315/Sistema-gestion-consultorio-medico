@@ -1,4 +1,8 @@
 #include "AgendaMedico.h"
+#include "Medico.h"
+#include "ArchivoMedicos.h"
+#include "ArchivoTurnos.h"
+#include "ArchivoAgendaMedico.h"
 #include <iostream>
 using namespace std;
 
@@ -23,7 +27,6 @@ _fecha.setDia(fecha.getDia());
 void AgendaMedicos::setHorario(Hora horario){
 _horario.setHora(horario.getHora());
 _horario.setMinutos(horario.getMinutos());
-_horario.setSegundos(horario.getSegundos());
 }
 
 void AgendaMedicos::setEstado(bool estado){
@@ -55,62 +58,73 @@ bool AgendaMedicos::getEstado() {
 return _estado;
 }
 
-void AgendaMedicos::Cargar(){
-    int dia,mes,anio;
-    int hora,minutos,segundos;
+void AgendaMedicos::Mostrar(int idMedico, Fecha fecha){
+    Medico med;
+    ArchivoMedicos arcMed;
+    int pos = 0;
 
-    cout<<"Ingrese ID de agenda: ";
-    cin>>_idAgendaMedico;
+    pos = arcMed.BuscarPosXID(idMedico);
+    if(pos == -1)
+    {
+        cout << "Medico no encontrado..." << endl;
+        return;
+    }
 
-    cout<<"Ingrese ID de medico: ";
-    cin>>_idMedico;
+    med = arcMed.leer(pos);
 
-    cout<<"Ingrese ID de consultorio: ";
-    cin>>_idConsultorio;
+    cout << "==================================" << endl;
+    cout << "DR. " << med.getNombre() << " " <<  med.getApellido() << endl;
+    cout << fecha.toString() << endl;
+    cout << "==================================" << endl;
 
-   // _fecha.CargarFecha();
-    cout<<"Ingrese dia: ";
-    cin>>dia;
+    for(int bloque=0; bloque<18; bloque++)
+    {
+        int hora = 8 + bloque/2;
+        int minuto = (bloque%2)*30;
 
-    cout<<"Ingrese mes: ";
-    cin>>mes;
+        cout << hora << ":";
 
-    cout<<"Ingrese anio: ";
-    cin>>anio;
+        if(minuto==0){
+            cout << "00";
+        }
+        else{
+            cout << "30";
+        }
 
-    _fecha.setDia(dia);
-    _fecha.setMes(mes);
-    _fecha.setAnio(anio);
+        if(estaOcupado(idMedico, fecha, hora, minuto)){
+            cout << "   Ocupado";
+        }
+        else{
+            cout << "   Disponible";
+        }
 
-    cout<<"Ingrese hora: ";
-    cin>>hora;
-
-    cout<<"Ingrese minutos: ";
-    cin>>minutos;
-
-    cout<<"Ingrese segundos: ";
-    cin>>segundos;
-
-    _horario.setHora(hora);
-    _horario.setMinutos(minutos);
-    _horario.setSegundos(segundos);
-
-    _estado=true;
+        cout << endl;
+    }
 }
 
-void AgendaMedicos::Mostrar(){
+bool AgendaMedicos::estaOcupado(int idMedico, Fecha fecha, int hora, int minuto){
+    ArchivoTurnos arcTurno;
+    Turnos turno;
+    AgendaMedicos agenda;
+    ArchivoAgendaMedicos arcAgenda;
+    int pos = 0;
 
-    cout<<"ID Agenda: "<<_idAgendaMedico<<endl;
-    cout<<"ID Medico: "<<_idMedico<<endl;
-    cout<<"ID Consultorio: "<<_idConsultorio<<endl;
-    cout<<"Fecha: "<<_fecha.toString()<<endl;
-    cout<<"Horario: "<<_horario.toString()<<endl;
+    int cantidad = arcTurno.contarRegistros();
 
-    if(_estado==true){
-    cout<<"Estado: Activo"<<endl;
+    for(int i=0; i<cantidad; i++)
+    {
+        turno = arcTurno.leer(i);
+        pos = arcAgenda.BuscarPosXID(turno.getIdAgendaMedico());
+        agenda = arcAgenda.leer(pos);
+
+        if(agenda.getEstado() &&
+           agenda.getIdMedico() == idMedico &&
+           agenda.getFecha() == fecha &&
+           agenda.getHorario().getHora() == hora &&
+           agenda.getHorario().getMinutos() == minuto){
+            return true;
+        }
     }
-    else{
-    cout<<"Estado: Inactivo"<<endl;
-    }
-    cout<<"-----------------------------"<<endl;
+
+    return false;
 }

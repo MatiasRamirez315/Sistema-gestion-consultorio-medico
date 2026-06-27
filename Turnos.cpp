@@ -6,6 +6,10 @@
 #include "ArchivoAgendaMedico.h"
 #include "AgendaMedico.h"
 #include "Consultorios.h"
+#include "Validaciones.h"
+#include "ArchivoMedicos.h"
+#include "ArchivoPaciente.h"
+#include "ArchivoConsultorios.h"
 
 using namespace std;
 
@@ -84,52 +88,78 @@ void Turnos::Cargar(){
     ArchivoTurnos archivoTurnos;
     ArchivoAgendaMedicos archivoAgenda;
     AgendaMedicos agenda;
+    ArchivoMedicos archivoMedicos;
+    ArchivoConsultorios archivoConsultorios;
+    ArchivoPaciente archivoPacientes;
     bool Ocupado;
     int idMedico;
-
+    bool fechaOk = 0;
 
     _idTurno = archivoTurnos.getNuevoId();
     do{
+        do{
+            cout << "Ingrese el ID del medico: ";
+            cin >> idMedico;
 
-    cout << "Ingrese el ID del medico: ";
-    cin >> idMedico;
+            if (!archivoMedicos.Existe(idMedico)){
+                cout << "El medico no existe..." << endl;
+            }
+        }while(!archivoMedicos.Existe(idMedico));
 
-    cout << "Ingrese el ID del consultorio: ";
-    cin >> _idConsultorio;
+        do{
+            cout << "Ingrese el ID del consultorio: ";
+            cin >> _idConsultorio;
 
-    _idAgendaMedicos = archivoAgenda.getNuevoId();
+            if (!archivoConsultorios.Existe(_idConsultorio)){
+                cout << "El consultorio no existe..." << endl;
+            }
+        }while(!archivoConsultorios.Existe(_idConsultorio));
 
-    agenda.setIdAgendaMedico(_idAgendaMedicos);
-    agenda.setIdMedico(idMedico);
-    agenda.setIdConsultorio(_idConsultorio);
+        _idAgendaMedicos = archivoAgenda.getNuevoId();
 
-    cout << "Ingrese la fecha del turno: " << endl;
-    _fechaTurno.CargarFecha();
+        agenda.setIdAgendaMedico(_idAgendaMedicos);
+        agenda.setIdMedico(idMedico);
+        agenda.setIdConsultorio(_idConsultorio);
+
+        do{
+            cout << "Ingrese la fecha del turno: " << endl;
+            _fechaTurno.CargarFecha();
+            fechaOk = FechaMayorIgualActual(_fechaTurno);
+            if (fechaOk == false){
+                cout << "No se puede agendar un turno en el pasado! Intente nuevamente..." << endl;
+            }
+        }while (fechaOk == false);
+
+        cout << "Ingrese el horario del turno: " << endl;
+        _horaTurno.Cargar();
+
+        agenda.setFecha(_fechaTurno);
+        agenda.setHorario(_horaTurno);
+
+        agenda.setEstado(true);
 
 
-    cout << "Ingrese el horario del turno: " << endl;
-    _horaTurno.Cargar();
 
-    agenda.setFecha(_fechaTurno);
-    agenda.setHorario(_horaTurno);
-
-    agenda.setEstado(true);
+        Ocupado = archivoAgenda.EstaOcupado(_idConsultorio, _fechaTurno, _horaTurno);
 
 
-
-    Ocupado = archivoAgenda.EstaOcupado(_idConsultorio, _fechaTurno, _horaTurno);
-
-
-    if (Ocupado == true ){
-          cout << "Ese consultorio ya esta ocupado en ese horario." << endl;
-    }
+        if (Ocupado == true ){
+              cout << "Ese consultorio ya esta ocupado en ese horario." << endl;
+        }
 
 
     }while (Ocupado == true);
     archivoAgenda.guardar(agenda);
 
-    cout << "Ingrese el ID del paciente: ";
-    cin >> _idPaciente;
+    do{
+        cout << "Ingrese el ID del paciente: ";
+        cin >> _idPaciente;
+
+        if (!archivoPacientes.Existe(_idPaciente)){
+            cout << "El paciente no existe..." << endl;
+        }
+    }while(!archivoPacientes.Existe(_idPaciente));
+
 
     char motivo[300];
 
@@ -146,15 +176,15 @@ void Turnos::Mostrar(){
     cout << "ID Turno: " << _idTurno << endl;
     cout << "ID Agenda Medica: " << _idAgendaMedicos << endl;
     cout << "ID Paciente: " << _idPaciente << endl;
-    cout << "Motivo: " << _motivo << endl;
-    cout << "Fecha: " << _fechaTurno.toString() << endl;
-    cout << "Hora: " << _horaTurno.toString()<< endl;
+    cout << "Motivo del turno: " << _motivo << endl;
+    cout << "Fecha del turno: " << _fechaTurno.toString() << endl;
+    cout << "Hora del turno: " << _horaTurno.toString()<< endl;
 
     if(_estado == true){
-        cout << "Estado: Activo" << endl;
+        cout << "Estado del turno: Activo" << endl;
     }
     else{
-        cout << "Estado: Inactivo" << endl;
+        cout << "Estado del turno: Inactivo" << endl;
     }
 
     cout << "-----------------------------" << endl;

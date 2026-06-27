@@ -75,7 +75,7 @@ bool fechaValidada = false;
     }
     else
     {
-        cout << "fecha invalida. ingrese otra" << endl;
+        cout << "Fecha invalida. Intente nuevamente..." << endl;
     }
     }while (fechaValidada == false);
 

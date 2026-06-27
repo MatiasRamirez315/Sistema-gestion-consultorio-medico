@@ -16,5 +16,6 @@ public:
 	int getNuevoId();
 	bool Modificar (Medico medico, int pos);
     int BuscarPosXID(int id);
+    bool Existe(int idMedico);
 };
 

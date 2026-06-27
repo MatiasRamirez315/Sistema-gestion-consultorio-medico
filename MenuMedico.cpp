@@ -75,7 +75,6 @@ void MenuMedico::menuMedico(){
 
             case 1:
                 system("cls");
-                /// LLAMADO FUNC MODIFICAR MED
                 medico.Modificacion();
                 system("pause");
                 system("cls");
@@ -114,36 +113,21 @@ void MenuMedico::menuMedico(){
     return;
 }
 void MenuMedico::consultarAgenda(){
-
-    ArchivoAgendaMedicos archivoAgenda;
-    ArchivoTurnos archivoTurnos;
-
-    AgendaMedicos agenda;
-    Turnos turno;
-
     int idMedico;
-    bool encontroTurno=false;
-
-    cout<<"Ingrese ID del medico: ";
-    cin>>idMedico;
-
-    for(int i=0;i<archivoAgenda.getCantRegistros();i++){
-        agenda=archivoAgenda.leer(i);
-        if(agenda.getIdMedico()==idMedico && agenda.getEstado()==true){
-            for(int j=0;j<archivoTurnos.contarRegistros();j++){
-                turno=archivoTurnos.leer(j);
-                if(turno.getIdAgendaMedico()==agenda.getIdAgendaMedico()&& turno.getEstado()==true){
-
-                    turno.Mostrar();
-                    encontroTurno=true;
-                }
-            }
-        }
+    Fecha fecha;
+    AgendaMedicos agenda;
+    ArchivoMedicos arcMed;
+    int pos = 0;
+    cout << "Ingrese el ID del Medico: " << endl;
+    cin >> idMedico;
+    pos = arcMed.BuscarPosXID(idMedico);
+    if(pos == -1){
+        cout << "Medico no encontrado..." << endl;
+        return;
     }
+    cout << "Ingrese la fecha: " << endl;
+    fecha.CargarFecha();
 
-    if(encontroTurno==false){
-        cout<<"No se encontraron turnos agendados para ese medico."<<endl;
-    }
-
+    agenda.Mostrar(idMedico, fecha);
 }
 

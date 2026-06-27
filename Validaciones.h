@@ -14,6 +14,14 @@ bool esBooleanoValido(const std::string& input);
 
 int obtenerEnteroPositivo(const std::string& mensaje);
 
+bool FechaMenorIgualActual (Fecha fecha);
+
+bool FechaMayorIgualActual (Fecha fecha);
+
 bool esEnteroPositivoValido(const std::string& input) ;
 
 bool FechaMenorIgualActual (Fecha fecha);
+
+int obtenerHoraValidada();
+
+int obtenerMinutosValidados();

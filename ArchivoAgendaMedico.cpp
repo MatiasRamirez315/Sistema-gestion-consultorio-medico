@@ -77,3 +77,25 @@ bool ArchivoAgendaMedicos::EstaOcupado(
 
     return false;
 }
+
+int ArchivoAgendaMedicos::BuscarPosXID(int id){
+
+    AgendaMedicos aux;
+    int pos=0;
+
+    FILE *p=fopen(_nombre,"rb");
+    if(p==NULL){
+            return -1;
+    }
+
+    while(fread(&aux,sizeof(AgendaMedicos),1,p)){
+        if(aux.getIdAgendaMedico()==id){
+            fclose(p);
+            return pos;
+        }
+        pos++;
+    }
+
+    fclose(p);
+    return -1;
+}

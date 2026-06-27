@@ -14,6 +14,7 @@ public:
 	AgendaMedicos leer(int pos);
 	int getCantRegistros();
 	int getNuevoId();
+    int BuscarPosXID(int id);
 
 	bool EstaOcupado(int idConsultorio, Fecha fecha, Hora hora);
 };

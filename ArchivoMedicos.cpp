@@ -89,3 +89,18 @@ bool ArchivoMedicos::Modificar(Medico medico,int pos){
 int ArchivoMedicos::getNuevoId(){
     return contarRegistros()+1;
 }
+
+bool ArchivoMedicos::Existe(int idMedico){
+    Medico reg;
+
+    int cant = contarRegistros();
+
+    for (int i = 0; i < cant; i++){
+        reg = leer(i);
+
+        if (reg.getIdMedico() == idMedico && reg.getEstado()){
+            return true;
+        }
+    }
+    return false;
+}

@@ -1,11 +1,12 @@
 #include <iostream>
 #include "Validaciones.h"
+#include "Fecha.h"
 using namespace std;
 
 
 bool esPalabraValida(const char* palabra) {
     for (int i = 0; palabra[i] != '\0'; ++i) {
-        // Si no es letra Y no es espacio, es inválido
+        // Si no es letra Y no es espacio, es invï¿½lido
         if (!isalpha(static_cast<unsigned char>(palabra[i])) && !isspace(static_cast<unsigned char>(palabra[i]))) {
             return false;
         }
@@ -30,6 +31,32 @@ int obtenerEnteroValidado(const string& mensaje) {
 
     while(!esEnteroValido(input) || stoi(input) < 0) {
         cout << "Ingrese un numero entero mayor a 0: ";
+        cin >> input;
+    }
+
+    return stoi(input);
+}
+
+int obtenerHoraValidada() {
+    string input;
+    cin >> input;
+
+    while(!esEnteroValido(input) || (stoi(input) < 8 || stoi(input) > 16)) {
+        cout << "Ingrese un horario valido..." << endl;
+        cout << "Ingrese la hora (08 a 16): " << endl;
+        cin >> input;
+    }
+
+    return stoi(input);
+}
+
+int obtenerMinutosValidados() {
+    string input;
+    cin >> input;
+
+    while(!esEnteroValido(input) || ((stoi(input) != 00 || stoi(input) != 0) && stoi(input) != 30)) {
+        cout << "Ingrese un horario valido..." << endl;
+        cout << "Ingrese los minutos (00/30)" << endl;
         cin >> input;
     }
 
@@ -82,7 +109,7 @@ int obtenerEnteroPositivo(const string& mensaje) {
     return stoi(input);
 }
 
-bool  FechaMenorIgualActual (Fecha fecha){
+bool FechaMenorIgualActual (Fecha fecha){
     Fecha hoy;
     hoy.setCurrentDate();
 
@@ -99,5 +126,23 @@ bool  FechaMenorIgualActual (Fecha fecha){
     }
 
     return true;
+}
 
+bool FechaMayorIgualActual (Fecha fecha){
+    Fecha hoy;
+    hoy.setCurrentDate();
+
+    if (fecha.getAnio() < hoy.getAnio()){
+        return false;
+    }
+
+    if(fecha.getMes() < hoy.getMes()){
+        return false;
+    }
+
+    if(fecha.getDia() < hoy.getDia()){
+        return false;
+    }
+
+    return true;
 }

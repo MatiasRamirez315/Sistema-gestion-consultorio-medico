@@ -15,4 +15,5 @@ public:
 	int getNuevoId();
     bool Modificar (Paciente paciente, int pos);
 	int BuscarPosXID(int id);
+	bool Existe(int idPaciente);
 };

@@ -86,3 +86,17 @@ int ArchivoPaciente::getNuevoId()
     return contarRegistros()+1;
 }
 
+bool ArchivoPaciente::Existe(int idPaciente){
+    Paciente reg;
+
+    int cant = contarRegistros();
+
+    for (int i = 0; i < cant; i++){
+        reg = leer(i);
+
+        if (reg.getIdPaciente() == idPaciente && reg.getEstado()){
+            return true;
+        }
+    }
+    return false;
+}

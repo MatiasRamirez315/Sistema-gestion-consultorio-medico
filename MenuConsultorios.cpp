@@ -69,7 +69,6 @@ void MenuConsultorios::menuConsultorios(){
 
             case 1:
                 system("cls");
-                /// LLAMADO FUNC MODIFICAR MED
                 cons.MostrarTodos();
                 system("pause");
                 system("cls");

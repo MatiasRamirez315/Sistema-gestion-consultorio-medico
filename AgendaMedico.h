@@ -26,7 +26,7 @@ public:
 	Hora getHorario();
 	bool getEstado() ;
 
-	void Cargar(); /**hay que desarrollar**/
-	void Mostrar();
+	void Mostrar(int idMedico, Fecha fecha);
+	bool estaOcupado(int idMedico, Fecha fecha, int hora, int minuto);
 };
 

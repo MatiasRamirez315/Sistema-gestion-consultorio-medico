@@ -12,20 +12,18 @@ private:
 
 public:
 	Hora();
-	Hora(int hora, int minutos, int segundos);
+	Hora(int hora, int minutos);
 
 	int getHora();
 	int getMinutos();
-	int getSegundos();
 
 	void setHora (int hora);
 	void setMinutos(int min);
-	void setSegundos (int seg);
 	void Cargar();
-	string toString(string formatoHora = "HH:MM:SS");
+	string toString(string formatoHora = "HH:MM");
 
 	bool operator==(Hora &h){
-	if (h.getSegundos() == _segundos && h.getMinutos() == _minutos && h.getHora() == _hora) {return true;}
+	if (h.getMinutos() == _minutos && h.getHora() == _hora) {return true;}
 	return false;
 	}
 };
