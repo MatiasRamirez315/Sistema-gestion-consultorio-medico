@@ -33,8 +33,9 @@ int Persona::getDNI(){
 void Persona::Cargar(){
     bool ok = false;
     do{
+
     cout << "Ingrese el nombre : ";
-    cin >>_nombre;
+    cin.getline(_nombre,50);
     if (esPalabraValida(_nombre)){
             ok = true;
         }
@@ -46,7 +47,7 @@ void Persona::Cargar(){
     ok = false;
     do{
     cout << "Ingrese el apellido: ";
-    cin>> _apellido;
+    cin.getline(_apellido,50);
         if (esPalabraValida(_apellido)){
             ok = true;
         }

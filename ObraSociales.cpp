@@ -65,14 +65,14 @@ void ObraSociales::Cargar(){
 
     do{
         cout << "Ingrese el nombre de la Obra social: ";
-        cin >> OS._nombre;
+        cin.getline(OS._nombre,50);
         ok = esPalabraValida(OS._nombre);
     }while (ok == false);
 
     ok = false;
      do{
         cout << "Ingrese el nombre del plan: ";
-        cin >> OS._plan;
+        cin.getline(OS._plan,30);
         ok = esPalabraValida(OS._plan);
     }while (ok == false);
 
