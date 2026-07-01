@@ -99,7 +99,7 @@ void Turnos::Cargar(){
     do{
         do{
             cout << "Ingrese el ID del medico: ";
-            cin >> idMedico;
+            idMedico = obtenerEnteroValidado(" ");
 
             if (!archivoMedicos.Existe(idMedico)){
                 cout << "El medico no existe..." << endl;
@@ -108,7 +108,7 @@ void Turnos::Cargar(){
 
         do{
             cout << "Ingrese el ID del consultorio: ";
-            cin >> _idConsultorio;
+            _idConsultorio = obtenerEnteroPositivo(" ");
 
             if (!archivoConsultorios.Existe(_idConsultorio)){
                 cout << "El consultorio no existe..." << endl;
@@ -153,7 +153,7 @@ void Turnos::Cargar(){
 
     do{
         cout << "Ingrese el ID del paciente: ";
-        cin >> _idPaciente;
+        _idPaciente = obtenerEnteroValidado(" ");
 
         if (!archivoPacientes.Existe(_idPaciente)){
             cout << "El paciente no existe..." << endl;

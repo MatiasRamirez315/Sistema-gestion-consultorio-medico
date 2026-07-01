@@ -8,6 +8,7 @@
 #include "AgendaMedico.h"
 #include "ArchivoTurnos.h"
 #include "Turnos.h"
+#include "Validaciones.h"
 using namespace std;
 
 void MenuMedico::menuMedico(){
@@ -125,9 +126,13 @@ void MenuMedico::consultarAgenda(){
         cout << "Medico no encontrado..." << endl;
         return;
     }
-    cout << "Ingrese la fecha: " << endl;
-    fecha.CargarFecha();
-
+    do{
+        cout << "Ingrese la fecha: " << endl;
+        fecha.CargarFecha();
+        if (FechaMayorIgualActual(fecha)== false){
+            cout << "La fecha ingresada no es correcta.."<< endl;
+        }
+    }while (FechaMayorIgualActual(fecha) == false);
     agenda.Mostrar(idMedico, fecha);
 }
 

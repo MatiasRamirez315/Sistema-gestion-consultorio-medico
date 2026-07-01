@@ -132,17 +132,9 @@ bool FechaMayorIgualActual (Fecha fecha){
     Fecha hoy;
     hoy.setCurrentDate();
 
-    if (fecha.getAnio() < hoy.getAnio()){
-        return false;
+    if(fecha >= hoy){
+        return true;
     }
 
-    if(fecha.getMes() < hoy.getMes()){
-        return false;
-    }
-
-    if(fecha.getDia() < hoy.getDia()){
-        return false;
-    }
-
-    return true;
+    return false;
 }

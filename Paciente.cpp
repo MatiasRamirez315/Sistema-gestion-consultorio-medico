@@ -206,7 +206,7 @@ void Paciente::Modificacion(){
         return;
     }
     else{
-
+        cin.ignore();
         paciente = archivo.leer(pos);
 
         cout << "medico hallado: " << endl;
@@ -258,6 +258,7 @@ bool op = false;
     cout << "Ingrese el ID de la obra social: ";
     _idObraSocial = obtenerEnteroValidado("");
 
+    cout << "ingrese la fecha de nacimiento: "<< endl;
     _fechaNacimiento.CargarFecha();
 
     cout << "Desea confirmar sus datos? 1-Si 0-No: ";

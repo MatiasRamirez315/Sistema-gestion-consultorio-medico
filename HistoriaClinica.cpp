@@ -1,5 +1,8 @@
 #include "HistoriaClinica.h"
 #include "ArchivoHistoriaClinica.h"
+#include "Validaciones.h"
+#include "Paciente.h"
+#include "ArchivoPaciente.h"
 #include <string>
 #include <cstring>
 #include <iostream>
@@ -67,17 +70,28 @@ void HistoriaClinica::MostrarTodas(){
 
     ArchivoHistoriaClinica archivo;
     HistoriaClinica HC;
+    Paciente paciente;
+    ArchivoPaciente archivoP;
 
     int cantReg = archivo.contarRegistros();
+    int cantRegPaciente = archivo.contarRegistros();
 
-    for (int i=0;i<cantReg ; i++){
 
-        HC = archivo.leer(i);
+    for (int k = 0;  k<cantRegPaciente ; k++){
+            paciente = archivoP.leer(k);
+        for (int i=0;i<cantReg ; i++){
 
-        cout << "ID de Historia clinica:" << HC.getIdHistorial() << endl;
-        cout << "ID del paciente: " << HC.getIdPaciente() << endl;
-        cout << "Descripcion: " << HC.getDescripcion() << endl;
-        cout << "Estado: " << HC.getEstado() << endl<< endl;
+            HC = archivo.leer(i);
+            if (HC.getIdPaciente() == paciente.getIdPaciente() && HC.getEstado() == true){
+                cout << "ID: " << HC.getIdHistorial() << endl;
+                cout << "ID del paciente: " << HC.getIdPaciente() << endl;
+                cout << "Nombre: " << paciente.getNombre() << endl;
+                cout << "Apellido: " << paciente.getApellido() << endl;
+                cout << "Obra social: " << paciente.getIdObraSocial() << endl;
+                cout << "Descripcion: " << HC.getDescripcion() << endl;
+                cout << "Estado: " << HC.getEstado() << endl << endl;
+            }
+        }
     }
 }
 
@@ -85,22 +99,37 @@ void HistoriaClinica::MostrarTodoPaciente(){
 
     ArchivoHistoriaClinica archivo;
     HistoriaClinica HC;
+    Paciente paciente;
+    ArchivoPaciente archivoP;
+    bool ok = false;
     int id;
     cout << "ingrese el id del paciente: ";
-    cin >> id;
+    id = obtenerEnteroValidado(" ");
 
     cout << endl;
 
+    int cantRegPaciente = archivo.contarRegistros();
     int cantReg = archivo.contarRegistros();
 
-    for (int i=0;i<cantReg ; i++){
+    for (int k = 0;  k<cantRegPaciente ; k++){
+            paciente = archivoP.leer(k);
 
-        HC = archivo.leer(i);
-        if (HC.getIdPaciente() == id && HC.getEstado() == true){
-            cout << "ID " << HC.getIdHistorial() << endl;
-            cout << "ID del paciente " << HC.getIdPaciente() << endl;
-            cout << "Descripcion: " << HC.getDescripcion() << endl;
-            cout << "Estado: " << HC.getEstado() << endl << endl;
+        for (int i=0;i<cantReg ; i++){
+
+            HC = archivo.leer(i);
+            if (HC.getIdPaciente() == id && paciente.getIdPaciente() == id&& HC.getEstado() == true){
+                cout << "ID: " << HC.getIdHistorial() << endl;
+                cout << "ID del paciente: " << HC.getIdPaciente() << endl;
+                cout << "Nombre: " << paciente.getNombre() << endl;
+                cout << "Apellido: " << paciente.getApellido() << endl;
+                cout << "Obra social: " << paciente.getIdObraSocial() << endl;
+                cout << "Descripcion: " << HC.getDescripcion() << endl;
+                cout << "Estado: " << HC.getEstado() << endl << endl;
+                ok =true;
+            }
         }
+    }
+    if (ok == false){
+        cout << "no se encontro historia clinica con ese ID de paciente" << endl;
     }
 }

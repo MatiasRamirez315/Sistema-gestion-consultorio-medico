@@ -92,13 +92,15 @@ bool ArchivoConsultorios::Modificar(Consultorios cons,int pos){
 
 bool ArchivoConsultorios::Existe(int idConsultorio){
     Consultorios reg;
+    ArchivoConsultorios archivo;
 
     int cant = contarRegistros();
 
     for (int i = 0; i < cant; i++){
-        reg = leer(i);
+        reg =archivo.leer(i);
 
-        if (reg.getIDConsultorio() == idConsultorio && reg.getEstado()){
+        if (reg.getIDConsultorio() == idConsultorio && reg.getEstado() == false){
+
             return true;
         }
     }

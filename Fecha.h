@@ -36,5 +36,26 @@ public:
 	     	 return false;
         }
 
+    bool operator >= (Fecha &f){
+    if (_anio > f.getAnio()){
+        return true;
+    }
+
+    if (_anio < f.getAnio()){
+            return false;
+    }
+
+    // Mismo año
+    if (_mes > f.getMes()){
+            return true;
+    }
+
+    if (_mes < f.getMes()){
+            return false;
+    }
+
+    // Mismo mes
+    return _dia >= f.getDia();
+    }
 
 };
