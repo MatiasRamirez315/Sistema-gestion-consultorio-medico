@@ -60,12 +60,24 @@ void Facturas::Cargar(int idTurno){
     bool confirma;
     Facturas factura;
     ArchivoFacturas archivo;
+    bool ok;
+
     cout << "Facturando turno " << idTurno << "..." << endl;
     factura.setIdTurno(idTurno);
     cout << "ID de la factura: ";
     factura._idFactura = archivo.getNuevoId();
     cout << factura._idFactura << endl;
+
+
+    do{
     factura._fecha.CargarFecha();
+    ok = FechaMayorIgualActual(factura._fecha);
+
+    if (ok == false){
+        cout << "ingrese una fecha valida.. " << endl;
+    }
+
+    }while (ok == false);
     cout << "Ingrese el importe: ";
     factura._importe = obtenerEnteroValidado("");
     cout << "Confirme si ya esta pagada. 1-Si 0-No: ";

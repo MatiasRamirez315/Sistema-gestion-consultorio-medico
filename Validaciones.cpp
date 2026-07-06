@@ -113,19 +113,10 @@ bool FechaMenorIgualActual (Fecha fecha){
     Fecha hoy;
     hoy.setCurrentDate();
 
-    if (fecha.getAnio() > hoy.getAnio()){
-        return false;
+    if (hoy >= fecha) {
+        return true;
     }
-
-    if(fecha.getMes() > hoy.getMes()){
-        return false;
-    }
-
-    if(fecha.getDia() > hoy.getDia()){
-        return false;
-    }
-
-    return true;
+    return false;
 }
 
 bool FechaMayorIgualActual (Fecha fecha){
@@ -137,4 +128,40 @@ bool FechaMayorIgualActual (Fecha fecha){
     }
 
     return false;
+}
+
+bool esFloatValido(const string& input) {
+    if (input.empty()) {
+        return false;
+    }
+
+    bool tienePunto = false;
+
+    for (char c : input) {
+        if (c == '.') {
+            if (tienePunto) {
+                return false; // Ya había un punto
+            }
+            tienePunto = true;
+        }
+        else if (!isdigit(c)) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+float obtenerFloatValidado(const string& mensaje) {
+    string input;
+
+    cout << mensaje;
+    cin >> input;
+
+    while (!esFloatValido(input) || stof(input) < 0) {
+        cout << "Ingrese un numero decimal mayor o igual a 0: ";
+        cin >> input;
+    }
+
+    return stof(input);
 }

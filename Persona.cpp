@@ -35,6 +35,7 @@ void Persona::Cargar(){
     do{
 
     cout << "Ingrese el nombre : ";
+    cin.ignore();
     cin.getline(_nombre,50);
     if (esPalabraValida(_nombre)){
             ok = true;

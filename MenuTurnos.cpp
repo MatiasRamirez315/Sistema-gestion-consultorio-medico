@@ -1,5 +1,6 @@
 #include "MenuTurnos.h"
 #include "rlutil.h"
+#include "Validaciones.h"
 #include "showItem.h"
 #include "ArchivoFacturas.h"
 #include <iostream>
@@ -149,7 +150,7 @@ void MenuTurnos::ModificarTurno(){
     int pos;
 
     cout << "ingrese el ID del turno que quiere modificar: ";
-    cin >> id;
+    id = obtenerEnteroValidado(" ");
 
     pos = archivo.BuscarPosXID(id);
 
@@ -189,7 +190,7 @@ void MenuTurnos::EliminarTurno(){
     int id;
     int pos;
     cout << "ingrese el ID del turno que desea eliminar: ";
-    cin >> id;
+    id = obtenerEnteroValidado(" ");
 
     pos = archivo.BuscarPosXID(id);
 
@@ -225,7 +226,7 @@ void MenuTurnos::CargarFactura(){
     int pos;
 
     cout << "Ingrese el ID del turno al que desea crear una factura: " << endl;
-    cin >> id;
+    id = obtenerEnteroValidado(" ");
 
     pos = archivo.BuscarPosXID(id);
 

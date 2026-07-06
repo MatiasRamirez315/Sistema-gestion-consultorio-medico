@@ -94,7 +94,7 @@ bool ArchivoPaciente::Existe(int idPaciente){
     for (int i = 0; i < cant; i++){
         reg = leer(i);
 
-        if (reg.getIdPaciente() == idPaciente && reg.getEstado()){
+        if (reg.getIdPaciente() == idPaciente && reg.getEstado() == true){
             return true;
         }
     }

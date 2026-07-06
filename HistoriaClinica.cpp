@@ -46,15 +46,24 @@ return _estado;
 }
 
 void HistoriaClinica::Cargar(){
+    ArchivoPaciente archivoPac;
     ArchivoHistoriaClinica archivo;
     HistoriaClinica HC;
+    bool existe;
 
     int id = archivo.getNuevoId();
     HC.setIdHistorial(id);
     cout << "ID de la historia clinica: " << HC._idHistorial << endl;
 
-    cout << "Ingrese el ID del paciente: " ;
-    cin >> HC._idPaciente;
+    do{
+        cout << "Ingrese el ID del paciente: " ;
+        HC._idPaciente = obtenerEnteroValidado("");
+        existe = archivoPac.Existe(HC._idPaciente);
+        if (!existe){
+            cout << "ingrese un ID valido.. " << endl;
+        }
+    }while(existe == false);
+
 
     cout << "Ingrese la descripcion de la consulta: ";
     cin.ignore();
@@ -63,7 +72,11 @@ void HistoriaClinica::Cargar(){
 
     HC.setEstado(true);
 
-    archivo.guardar(HC);
+    if (archivo.guardar(HC) == true){
+        cout << "exito al guardar.." << endl;
+    }else{
+    cout << "error al guardar.." << endl;
+    }
 }
 
 void HistoriaClinica::MostrarTodas(){
@@ -74,7 +87,7 @@ void HistoriaClinica::MostrarTodas(){
     ArchivoPaciente archivoP;
 
     int cantReg = archivo.contarRegistros();
-    int cantRegPaciente = archivo.contarRegistros();
+    int cantRegPaciente = archivoP.contarRegistros();
 
 
     for (int k = 0;  k<cantRegPaciente ; k++){
@@ -108,7 +121,7 @@ void HistoriaClinica::MostrarTodoPaciente(){
 
     cout << endl;
 
-    int cantRegPaciente = archivo.contarRegistros();
+    int cantRegPaciente = archivoP.contarRegistros();
     int cantReg = archivo.contarRegistros();
 
     for (int k = 0;  k<cantRegPaciente ; k++){

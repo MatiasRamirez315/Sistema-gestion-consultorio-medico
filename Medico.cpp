@@ -103,7 +103,7 @@ void Medico::Cargar()
         do{
         cout << "ingrese la fecha en que comenzo a trabajar: " << endl;
         medico._fechaIngreso.CargarFecha();
-        fechaOK = FechaMenorIgualActual(_fechaIngreso);
+        fechaOK = FechaMenorIgualActual(medico._fechaIngreso);
         if (fechaOK == false){
             cout << "error en la fecha.. "<< endl ;
         }
@@ -206,7 +206,7 @@ void Medico::Modificacion(){
     int pos;
 
     cout << "ingrese el ID del medico que quiere modificar: ";
-    cin >> id;
+    id = obtenerEnteroValidado(" ");
 
     pos = archivo.BuscarPosXID(id);
 
@@ -249,7 +249,7 @@ void Medico::cargarModificado(){
         Persona::Cargar();
 
         cout << "Ingrese el ID del puesto: ";
-        cin >> _idPuesto;
+         _idPuesto = obtenerEnteroValidado("");
         //agregar opciones de tipos de puesto ej: 1---- odontologo.
 
         _idEspecialidad =  esp.Eleccion();

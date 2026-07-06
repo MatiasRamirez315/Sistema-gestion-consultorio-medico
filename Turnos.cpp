@@ -173,6 +173,8 @@ void Turnos::Cargar(){
 }
 
 void Turnos::Mostrar(){
+
+
     cout << "ID Turno: " << _idTurno << endl;
     cout << "ID Agenda Medica: " << _idAgendaMedicos << endl;
     cout << "ID Paciente: " << _idPaciente << endl;
@@ -196,39 +198,82 @@ void Turnos::cargarModificado(){
 
     ArchivoAgendaMedicos archivoAgenda;
     AgendaMedicos agenda;
+    ArchivoMedicos archivoMedicos;
+    ArchivoConsultorios archivoConsultorios;
+    ArchivoPaciente archivoPacientes;
 
     int idMedico;
     int idConsultorio;
+    bool fechaOk = 0;
+    bool Ocupado;
 
     cout << "----------------------------" << endl;
     cout << "Ingrese el turno modificado: " << endl;
 
-    cout << "Ingrese el ID del medico: ";
-    cin >> idMedico;
+    do{
+        do{
+            cout << "Ingrese el ID del medico: ";
+            idMedico = obtenerEnteroValidado(" ");
 
-    cout << "Ingrese el ID del consultorio: ";
-    cin >> idConsultorio;
+            if (!archivoMedicos.Existe(idMedico)){
+                cout << "El medico no existe..." << endl;
+            }
+        }while(!archivoMedicos.Existe(idMedico));
 
-    _idAgendaMedicos = archivoAgenda.getNuevoId();
+        do{
+            cout << "Ingrese el ID del consultorio: ";
+            _idConsultorio = obtenerEnteroPositivo(" ");
 
-    agenda.setIdAgendaMedico(_idAgendaMedicos);
-    agenda.setIdMedico(idMedico);
-    agenda.setIdConsultorio(idConsultorio);
+            if (!archivoConsultorios.Existe(_idConsultorio)){
+                cout << "El consultorio no existe..." << endl;
+            }
+        }while(!archivoConsultorios.Existe(_idConsultorio));
 
-    cout << "Ingrese la fecha del turno: " << endl;
-    _fechaTurno.CargarFecha();
+        _idAgendaMedicos = archivoAgenda.getNuevoId();
 
-    cout << "Ingrese el horario del turno: " << endl;
-    _horaTurno.Cargar();
+        agenda.setIdAgendaMedico(_idAgendaMedicos);
+        agenda.setIdMedico(idMedico);
+        agenda.setIdConsultorio(_idConsultorio);
 
-    agenda.setFecha(_fechaTurno);
-    agenda.setHorario(_horaTurno);
-    agenda.setEstado(true);
+        do{
+            cout << "Ingrese la fecha del turno: " << endl;
+            _fechaTurno.CargarFecha();
+            fechaOk = FechaMayorIgualActual(_fechaTurno);
+            if (fechaOk == false){
+                cout << "No se puede agendar un turno en el pasado! Intente nuevamente..." << endl;
+            }
+        }while (fechaOk == false);
 
+        cout << "Ingrese el horario del turno: " << endl;
+        _horaTurno.Cargar();
+
+        agenda.setFecha(_fechaTurno);
+        agenda.setHorario(_horaTurno);
+
+        agenda.setEstado(true);
+
+
+
+        Ocupado = archivoAgenda.EstaOcupado(_idConsultorio, _fechaTurno, _horaTurno);
+
+
+        if (Ocupado == true ){
+              cout << "Ese consultorio ya esta ocupado en ese horario." << endl;
+        }
+
+
+    }while (Ocupado == true);
     archivoAgenda.guardar(agenda);
 
-    cout << "Ingrese el ID del paciente: ";
-    cin >> _idPaciente;
+    do{
+        cout << "Ingrese el ID del paciente: ";
+        _idPaciente = obtenerEnteroValidado(" ");
+
+        if (!archivoPacientes.Existe(_idPaciente)){
+            cout << "El paciente no existe..." << endl;
+        }
+    }while(!archivoPacientes.Existe(_idPaciente));
+
 
     char motivo[300];
 

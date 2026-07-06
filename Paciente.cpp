@@ -71,11 +71,13 @@ bool Paciente::getEstado(){
 }
 
 void Paciente::CargarPaciente(){
+
     bool op = false;
     Paciente paciente;
     ArchivoPaciente archivo;
     ObraSociales OS;
     int id;
+    bool ok = false;
 
     do{
     paciente.Persona::Cargar();
@@ -84,8 +86,14 @@ void Paciente::CargarPaciente(){
     paciente.setIdPaciente(id);
     cout << "el ID del paciente es: " << id << endl;
 
-    cout << "ingrese la fecha de nacimiento: ";
-    paciente._fechaNacimiento.CargarFecha();
+    do{
+        cout << "ingrese la fecha de nacimiento: ";
+        paciente._fechaNacimiento.CargarFecha();
+        ok = FechaMenorIgualActual(paciente._fechaNacimiento);
+            if (FechaMenorIgualActual(paciente._fechaNacimiento) == false){
+                cout << "Fecha invalida, ingrese otra.. " << endl;
+            }
+    }while (ok == false);
 
     cout << "Ingrese el telefono: ";
     cin >> paciente._telefono;
@@ -189,7 +197,6 @@ void Paciente::Eliminar(){
 
 void Paciente::Modificacion(){
 
-
     ArchivoPaciente archivo;
     Paciente paciente;
     int id;
@@ -234,6 +241,7 @@ void Paciente::cargarModificado(){
 
 bool op = false;
     Paciente paciente;
+    bool ok;
     do{
     Persona::Cargar();
 
@@ -258,8 +266,14 @@ bool op = false;
     cout << "Ingrese el ID de la obra social: ";
     _idObraSocial = obtenerEnteroValidado("");
 
-    cout << "ingrese la fecha de nacimiento: "<< endl;
-    _fechaNacimiento.CargarFecha();
+    do{
+        cout << "ingrese la fecha de nacimiento: ";
+        _fechaNacimiento.CargarFecha();
+        ok = FechaMenorIgualActual(paciente._fechaNacimiento);
+            if (FechaMenorIgualActual(paciente._fechaNacimiento) == false){
+                cout << "Fecha invalida, ingrese otra.. " << endl;
+            }
+    }while (ok == false);
 
     cout << "Desea confirmar sus datos? 1-Si 0-No: ";
     op = obtenerBooleanoValidado(" ");
