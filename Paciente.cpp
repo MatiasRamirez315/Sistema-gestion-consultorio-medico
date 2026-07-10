@@ -87,7 +87,7 @@ void Paciente::CargarPaciente(){
     cout << "el ID del paciente es: " << id << endl;
 
     do{
-        cout << "ingrese la fecha de nacimiento: ";
+        cout << "ingrese la fecha de nacimiento: " << endl;
         paciente._fechaNacimiento.CargarFecha();
         ok = FechaMenorIgualActual(paciente._fechaNacimiento);
             if (FechaMenorIgualActual(paciente._fechaNacimiento) == false){
@@ -96,10 +96,10 @@ void Paciente::CargarPaciente(){
     }while (ok == false);
 
     cout << "Ingrese el telefono: ";
-    cin >> paciente._telefono;
+    cin.getline(paciente._telefono,15);
 
     cout << "Ingrese el email: ";
-    cin >> paciente._email;
+    cin.getline(paciente._email,70);
 
     cout << "Ingrese el genero (F o M): ";
     do{

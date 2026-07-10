@@ -1,8 +1,8 @@
 #include "Factura.h"
-#include "Validaciones.h"
 #include "ArchivoFacturas.h"
 #include "ArchivoTurnos.h"
 #include "ArchivoPaciente.h"
+#include "Validaciones.h"
 
 using namespace std;
 
@@ -79,7 +79,7 @@ void Facturas::Cargar(int idTurno){
 
     }while (ok == false);
     cout << "Ingrese el importe: ";
-    factura._importe = obtenerEnteroValidado("");
+    factura._importe = obtenerFloatValidado(" ");
     cout << "Confirme si ya esta pagada. 1-Si 0-No: ";
     factura._pagado = obtenerBooleanoValidado("");
     cout << "Desea confirmar los datos? 1-Si 0-No: ";

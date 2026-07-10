@@ -96,7 +96,7 @@ void HistoriaClinica::MostrarTodas(){
 
             HC = archivo.leer(i);
             if (HC.getIdPaciente() == paciente.getIdPaciente() && HC.getEstado() == true){
-                cout << "ID: " << HC.getIdHistorial() << endl;
+                cout << "ID de Historia Clinica: " << HC.getIdHistorial() << endl;
                 cout << "ID del paciente: " << HC.getIdPaciente() << endl;
                 cout << "Nombre: " << paciente.getNombre() << endl;
                 cout << "Apellido: " << paciente.getApellido() << endl;

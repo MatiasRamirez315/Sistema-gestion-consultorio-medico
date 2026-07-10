@@ -27,11 +27,12 @@ int obtenerEnteroValidado(const string& mensaje) {
     string input;
 
     cout << mensaje;
-    cin >> input;
+
+    getline (cin, input);
 
     while(!esEnteroValido(input) || stoi(input) < 0) {
         cout << "Ingrese un numero entero mayor a 0: ";
-        cin >> input;
+        getline (cin, input);
     }
 
     return stoi(input);
@@ -39,12 +40,12 @@ int obtenerEnteroValidado(const string& mensaje) {
 
 int obtenerHoraValidada() {
     string input;
-    cin >> input;
+    getline (cin,input);
 
     while(!esEnteroValido(input) || (stoi(input) < 8 || stoi(input) > 16)) {
         cout << "Ingrese un horario valido..." << endl;
         cout << "Ingrese la hora (08 a 16): " << endl;
-        cin >> input;
+        getline (cin,input);
     }
 
     return stoi(input);
@@ -52,12 +53,12 @@ int obtenerHoraValidada() {
 
 int obtenerMinutosValidados() {
     string input;
-    cin >> input;
+    getline (cin,input);
 
     while(!esEnteroValido(input) || ((stoi(input) != 00 || stoi(input) != 0) && stoi(input) != 30)) {
         cout << "Ingrese un horario valido..." << endl;
         cout << "Ingrese los minutos (00/30)" << endl;
-        cin >> input;
+        getline (cin,input);
     }
 
     return stoi(input);
@@ -71,11 +72,11 @@ bool obtenerBooleanoValidado(const string& mensaje) {
     string input;
 
     cout << mensaje;
-    cin >> input;
+    getline (cin,input);
 
     while (!esBooleanoValido(input)) {
         cout << "Error. Ingrese 0 o 1: ";
-        cin >> input;
+        getline (cin,input);
     }
 
     return input == "1";
@@ -99,11 +100,11 @@ int obtenerEnteroPositivo(const string& mensaje) {
     string input;
 
     cout << mensaje;
-    cin >> input;
+    getline (cin,input);
 
     while (!esEnteroPositivoValido(input)) {
         cout << "Error. Ingrese un numero entero positivo: ";
-        cin >> input;
+       getline (cin,input);
     }
 
     return stoi(input);
@@ -156,11 +157,11 @@ float obtenerFloatValidado(const string& mensaje) {
     string input;
 
     cout << mensaje;
-    cin >> input;
+    getline (cin,input);
 
     while (!esFloatValido(input) || stof(input) < 0) {
         cout << "Ingrese un numero decimal mayor o igual a 0: ";
-        cin >> input;
+        getline (cin,input);
     }
 
     return stof(input);

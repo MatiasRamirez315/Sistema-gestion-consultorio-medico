@@ -92,16 +92,17 @@ void Medico::Cargar()
 
 
         cout << "Ingrese el ID del puesto: ";
-
         medico._idPuesto = obtenerEnteroValidado("");
         //agregar opciones de tipos de puesto ej: 1---- odontologo.
+
         medico._idEspecialidad =  esp.Eleccion();
 
         cout << "Ingrese la matricula: ";
-        cin >>  medico._matriculaProfesional;
+        cin.getline(medico._matriculaProfesional,12) ;
 
         do{
         cout << "ingrese la fecha en que comenzo a trabajar: " << endl;
+
         medico._fechaIngreso.CargarFecha();
         fechaOK = FechaMenorIgualActual(medico._fechaIngreso);
         if (fechaOK == false){
@@ -172,7 +173,7 @@ void Medico::Eliminar()
     int id;
     int pos;
     cout << "ingrese el ID del medico que desea eliminar: ";
-    cin >> id;
+    id = obtenerEnteroValidado(" ");
 
     pos = archivo.BuscarPosXID(id);
 
@@ -255,7 +256,7 @@ void Medico::cargarModificado(){
         _idEspecialidad =  esp.Eleccion();
 
         cout << "Ingrese la matricula: ";
-        cin >>  _matriculaProfesional;
+        cin.getline( _matriculaProfesional,12) ;
 
         do{
         cout << "ingrese la fecha en que comenzo a trabajar: " << endl;

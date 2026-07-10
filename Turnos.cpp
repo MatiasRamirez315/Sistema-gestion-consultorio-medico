@@ -173,23 +173,37 @@ void Turnos::Cargar(){
 }
 
 void Turnos::Mostrar(){
+    ArchivoPaciente archivoP;
+    Paciente paciente;
+    int cantPac = archivoP.contarRegistros();
+
+    for (int i=0;i < cantPac ; i++){
+        paciente = archivoP.leer(i);
+
+        if (paciente.getIdPaciente() == _idPaciente && paciente.getEstado() == true){
+                    cout << "ID Turno: " << _idTurno << endl;
+                    cout << "ID Agenda Medica: " << _idAgendaMedicos << endl;
+                    cout << "ID Paciente: " << _idPaciente << endl;
+                    cout << "Nombre: " << paciente.getNombre() << endl;
+                    cout << "Apellido: " << paciente.getApellido()<< endl;
+                    cout << "Motivo del turno: " << _motivo << endl;
+                    cout << "Fecha del turno: " << _fechaTurno.toString() << endl;
+                    cout << "Hora del turno: " << _horaTurno.toString()<< endl;
+
+                    if(_estado == true){
+                        cout << "Estado del turno: Activo" << endl;
+                    }
+                    else{
+                        cout << "Estado del turno: Inactivo" << endl;
+                    }
+
+                    cout << "-----------------------------" << endl;
 
 
-    cout << "ID Turno: " << _idTurno << endl;
-    cout << "ID Agenda Medica: " << _idAgendaMedicos << endl;
-    cout << "ID Paciente: " << _idPaciente << endl;
-    cout << "Motivo del turno: " << _motivo << endl;
-    cout << "Fecha del turno: " << _fechaTurno.toString() << endl;
-    cout << "Hora del turno: " << _horaTurno.toString()<< endl;
+        }
 
-    if(_estado == true){
-        cout << "Estado del turno: Activo" << endl;
     }
-    else{
-        cout << "Estado del turno: Inactivo" << endl;
-    }
 
-    cout << "-----------------------------" << endl;
 }
 
 

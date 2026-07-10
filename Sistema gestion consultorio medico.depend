@@ -192,8 +192,9 @@
 	"Factura.h"
 	<cstdio>
 
-1781292704 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\factura.h
+1783641431 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\factura.h
 	"Fecha.h"
+	"Validaciones.h"
 
 1781383202 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\archivohistoriaclinica.cpp
 	<string>
@@ -250,7 +251,7 @@
 	<cstdio>
 	<cstring>
 
-1781044018 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\paciente.h
+1783643127 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\paciente.h
 	"Persona.h"
 	<string>
 
@@ -294,12 +295,12 @@
 	<iostream>
 	<cstring>
 
-1782949697 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\factura.cpp
+1783641445 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\factura.cpp
 	"Factura.h"
-	"Validaciones.h"
 	"ArchivoFacturas.h"
 	"ArchivoTurnos.h"
 	"ArchivoPaciente.h"
+	"Validaciones.h"
 
 1782773177 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\fecha.cpp
 	"Fecha.h"
@@ -307,7 +308,7 @@
 	<iostream>
 	<chrono>
 
-1783378331 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\historiaclinica.cpp
+1783640793 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\historiaclinica.cpp
 	"HistoriaClinica.h"
 	"ArchivoHistoriaClinica.h"
 	"Validaciones.h"
@@ -322,7 +323,7 @@
 	"Hora.h"
 	"Validaciones.h"
 
-1782948302 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\medico.cpp
+1783628346 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\medico.cpp
 	"Medico.h"
 	"Persona.h"
 	"Fecha.h"
@@ -333,7 +334,7 @@
 	<cstring>
 	<iostream>
 
-1782517226 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\obrasociales.cpp
+1783629415 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\obrasociales.cpp
 	"ObraSociales.h"
 	"ArchivoObraSociales.h"
 	"Validaciones.h"
@@ -361,7 +362,7 @@
 	<string>
 	<cstring>
 
-1783380947 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\turnos.cpp
+1783638742 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\turnos.cpp
 	<iostream>
 	"Turnos.h"
 	"ArchivoTurnos.h"
@@ -1359,9 +1360,10 @@
 	"ArchivoTurnos.h"
 	"Factura.h"
 
-1782773178 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuturnos.cpp
+1783551893 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuturnos.cpp
 	"MenuTurnos.h"
 	"rlutil.h"
+	"Validaciones.h"
 	"showItem.h"
 	"ArchivoFacturas.h"
 	<iostream>
@@ -1378,12 +1380,12 @@
 	"ArchivoFacturas.h"
 	<iostream>
 
-1782952845 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\validaciones.cpp
+1783641390 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\validaciones.cpp
 	<iostream>
 	"Validaciones.h"
 	"Fecha.h"
 
-1782773178 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\validaciones.h
+1783641595 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\validaciones.h
 	<string>
 	"Fecha.h"
 

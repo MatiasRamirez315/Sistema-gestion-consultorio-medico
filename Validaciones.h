@@ -25,3 +25,9 @@ bool FechaMenorIgualActual (Fecha fecha);
 int obtenerHoraValidada();
 
 int obtenerMinutosValidados();
+
+bool esFloatValido(const std::string& input);
+
+float obtenerFloatValidado(const std::string& mensaje);
+
+

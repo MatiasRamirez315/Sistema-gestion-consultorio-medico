@@ -205,13 +205,13 @@ void ObraSociales::cargarModificado(){
 
         do{
             cout << "Ingrese el nombre de la Obra social: ";
-            cin >> _nombre;
+            cin.getline( _nombre,50);
             ok = esPalabraValida(_nombre);
         }while (ok == false);
 
      do{
         cout << "Ingrese el nombre del plan: ";
-        cin >> _plan;
+        cin.getline( _plan,30);
         ok = esPalabraValida(_plan);
     }while (ok == false);
 
