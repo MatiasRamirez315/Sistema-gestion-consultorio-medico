@@ -1,5 +1,6 @@
 #include "Paciente.h"
 #include "ArchivoPaciente.h"
+#include "ArchivoObraSociales.h"
 #include "ObraSociales.h"
 #include "Validaciones.h"
 #include "Persona.h"
@@ -78,6 +79,7 @@ void Paciente::CargarPaciente(){
     ObraSociales OS;
     int id;
     bool ok = false;
+    string genero;
 
     do{
     paciente.Persona::Cargar();
@@ -101,27 +103,62 @@ void Paciente::CargarPaciente(){
     cout << "Ingrese el email: ";
     cin.getline(paciente._email,70);
 
-    cout << "Ingrese el genero (F o M): ";
-    do{
-    cin >> paciente._genero;
 
-    paciente._genero = toupper(paciente._genero);
 
-    if(paciente._genero != 'F' && paciente._genero != 'M'){
-        cout << "Ingrese un genero valido: ";
+cout << "Ingrese el genero (F o M): ";
+
+do {
+    getline(cin, genero);
+
+    if (genero.length() == 1) {
+        paciente._genero = toupper(genero[0]);
+
+        if (paciente._genero == 'F' || paciente._genero == 'M') {
+            break;
+        }
     }
 
-    }while(paciente._genero != 'F' && paciente._genero != 'M');
+    cout << "Ingrese un genero valido (F o M): ";
+
+} while (true);
 
     OS.MostrarNombreID();
+    ArchivoObraSociales archivoOS;
+    int cantOS = archivoOS.contarRegistros();
 
-    cout << "Ingrese el ID de la obra social: ";
-    paciente._idObraSocial = obtenerEnteroValidado("");;
+    bool existe;
+
+do {
+    existe = false;
+
+    paciente._idObraSocial = obtenerEnteroValidado(
+        "Ingrese el ID de la obra social (0 = Sin obra social): "
+    );
+
+    if (paciente._idObraSocial == 0) {
+        existe = true;
+    } else {
+        for (int i = 0; i < cantOS; i++) {
+            OS = archivoOS.leer(i);
+
+            if (paciente._idObraSocial == OS.getIdObraSocial()) {
+                existe = true;
+                break;
+            }
+        }
+    }
+
+    if (existe == false) {
+        cout << "La obra social ingresada no existe." << endl;
+    }
+
+} while (existe == false);
+
 
 
     cout << "Desea confirmar sus datos? 1-Si 0-No: ";
     op = obtenerBooleanoValidado(" ");
-    if(op == false){cin.ignore();};
+
     }while (op== false);
 
     paciente.setEstado(true);
@@ -213,7 +250,7 @@ void Paciente::Modificacion(){
         return;
     }
     else{
-        cin.ignore();
+
         paciente = archivo.leer(pos);
 
         cout << "medico hallado: " << endl;
@@ -277,9 +314,7 @@ bool op = false;
 
     cout << "Desea confirmar sus datos? 1-Si 0-No: ";
     op = obtenerBooleanoValidado(" ");
-    if(op == false){
-            cin.ignore();
-    }
+
     }while (op== false);
 
     setEstado(true);

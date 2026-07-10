@@ -164,7 +164,6 @@ void Turnos::Cargar(){
     char motivo[300];
 
     cout << "Ingrese el motivo del turno: ";
-    cin.ignore();
     cin.getline(motivo,300);
 
     setMotivo(motivo);
@@ -292,7 +291,6 @@ void Turnos::cargarModificado(){
     char motivo[300];
 
     cout << "Ingrese el motivo del turno: ";
-    cin.ignore();
     cin.getline(motivo,300);
 
     setMotivo(motivo);

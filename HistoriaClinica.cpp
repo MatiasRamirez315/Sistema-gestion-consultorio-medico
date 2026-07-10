@@ -3,6 +3,8 @@
 #include "Validaciones.h"
 #include "Paciente.h"
 #include "ArchivoPaciente.h"
+#include "ObraSociales.h"
+#include "ArchivoObraSociales.h"
 #include <string>
 #include <cstring>
 #include <iostream>
@@ -66,8 +68,6 @@ void HistoriaClinica::Cargar(){
 
 
     cout << "Ingrese la descripcion de la consulta: ";
-    cin.ignore();
-
     cin.getline(HC._descripcion,300);
 
     HC.setEstado(true);
@@ -85,9 +85,12 @@ void HistoriaClinica::MostrarTodas(){
     HistoriaClinica HC;
     Paciente paciente;
     ArchivoPaciente archivoP;
+    ObraSociales OS;
+    ArchivoObraSociales archivoOS;
 
     int cantReg = archivo.contarRegistros();
     int cantRegPaciente = archivoP.contarRegistros();
+     int cantRegOS = archivoOS.contarRegistros();
 
 
     for (int k = 0;  k<cantRegPaciente ; k++){
@@ -100,7 +103,19 @@ void HistoriaClinica::MostrarTodas(){
                 cout << "ID del paciente: " << HC.getIdPaciente() << endl;
                 cout << "Nombre: " << paciente.getNombre() << endl;
                 cout << "Apellido: " << paciente.getApellido() << endl;
-                cout << "Obra social: " << paciente.getIdObraSocial() << endl;
+                cout << "ID Obra social: " << paciente.getIdObraSocial() << endl;
+                for (int j=0;j<cantRegOS; j++){
+                        OS = archivoOS.leer(j);
+                    if (paciente.getIdObraSocial() == 0){
+                        cout << "Nombre de Obra social: " << "No tiene obra social" << endl;
+                        break;
+                    }else{
+                        if (paciente.getIdObraSocial() == OS.getIdObraSocial()){
+                            cout << "Nombre de Obra social: " << OS.getNombre() << endl;
+                            break;
+                        }
+                    }
+                }
                 cout << "Descripcion: " << HC.getDescripcion() << endl;
                 cout << "Estado: " << HC.getEstado() << endl << endl;
             }
@@ -114,6 +129,9 @@ void HistoriaClinica::MostrarTodoPaciente(){
     HistoriaClinica HC;
     Paciente paciente;
     ArchivoPaciente archivoP;
+    ObraSociales OS;
+    ArchivoObraSociales archivoOS;
+
     bool ok = false;
     int id;
     cout << "ingrese el id del paciente: ";
@@ -123,6 +141,7 @@ void HistoriaClinica::MostrarTodoPaciente(){
 
     int cantRegPaciente = archivoP.contarRegistros();
     int cantReg = archivo.contarRegistros();
+    int cantRegOS = archivoOS.contarRegistros();
 
     for (int k = 0;  k<cantRegPaciente ; k++){
             paciente = archivoP.leer(k);
@@ -131,11 +150,23 @@ void HistoriaClinica::MostrarTodoPaciente(){
 
             HC = archivo.leer(i);
             if (HC.getIdPaciente() == id && paciente.getIdPaciente() == id&& HC.getEstado() == true){
-                cout << "ID: " << HC.getIdHistorial() << endl;
+                cout << "ID Historia clinica: " << HC.getIdHistorial() << endl;
                 cout << "ID del paciente: " << HC.getIdPaciente() << endl;
                 cout << "Nombre: " << paciente.getNombre() << endl;
                 cout << "Apellido: " << paciente.getApellido() << endl;
                 cout << "Obra social: " << paciente.getIdObraSocial() << endl;
+                for (int j=0;j<cantRegOS; j++){
+                        OS = archivoOS.leer(j);
+                        if (paciente.getIdObraSocial() == 0){
+                            cout << "Nombre de Obra social: " << "No tiene obra social" << endl;
+                            break;
+                        }else{
+                            if (paciente.getIdObraSocial() == OS.getIdObraSocial()){
+                                cout << "Nombre de Obra social: " << OS.getNombre() << endl;
+                                break;
+                            }
+                        }
+                    }
                 cout << "Descripcion: " << HC.getDescripcion() << endl;
                 cout << "Estado: " << HC.getEstado() << endl << endl;
                 ok =true;

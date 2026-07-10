@@ -114,10 +114,6 @@ void Medico::Cargar()
         cout << "Desea confirmar sus datos? 1-Si 0-No: ";
         op = obtenerBooleanoValidado(" ");
 
-        if (op== false)
-        {
-            cin.ignore();
-        };
     }
     while(op == false);
 
@@ -269,10 +265,6 @@ void Medico::cargarModificado(){
 
         cout << "Desea confirmar sus datos? 1-Si 0-No: ";
         op= obtenerBooleanoValidado(" ");
-        if (op== false)
-        {
-            cin.ignore();
-        };
     }
     while(op == false);
 

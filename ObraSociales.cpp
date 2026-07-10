@@ -102,6 +102,9 @@ void ObraSociales::MostrarTodas(){
     ObraSociales OS;
     int cantReg = archivo.contarRegistros();
 
+     cout << "ID de la Obra social: 0 " << endl;
+     cout << "Nombre: Sin Obra social" << endl << endl;
+
     for (int i=0;i<cantReg ; i++){
         OS = archivo.leer(i);
         if (OS.getEstado() == true){
