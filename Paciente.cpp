@@ -8,6 +8,7 @@
 #include <string>
 #include <cstring>
 #include <cctype>
+#include <limits>
 
 using namespace std;
 
@@ -105,22 +106,27 @@ void Paciente::CargarPaciente(){
 
 
 
-cout << "Ingrese el genero (F o M): ";
+    cout << "Ingrese el genero (F o M): ";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-do {
-    getline(cin, genero);
+    while(true) {
+        getline(cin, genero);
 
-    if (genero.length() == 1) {
-        paciente._genero = toupper(genero[0]);
+        if (genero.length() != 1) {
+            cout << "Debe ingresar una sola letra..." << endl;
+            continue;
+        }
 
-        if (paciente._genero == 'F' || paciente._genero == 'M') {
+        char letra = toupper(genero[0]);
+
+        if (letra == 'F' || letra == 'M') {
+            paciente._genero = letra;
             break;
         }
+
+        cout << "Ingrese un genero valido (F o M): ";
+
     }
-
-    cout << "Ingrese un genero valido (F o M): ";
-
-} while (true);
 
     OS.MostrarNombreID();
     ArchivoObraSociales archivoOS;
@@ -128,31 +134,31 @@ do {
 
     bool existe;
 
-do {
-    existe = false;
+    do {
+        existe = false;
 
-    paciente._idObraSocial = obtenerEnteroValidado(
-        "Ingrese el ID de la obra social (0 = Sin obra social): "
-    );
+        paciente._idObraSocial = obtenerEnteroValidado(
+            "Ingrese el ID de la obra social (0 = Sin obra social): "
+        );
 
-    if (paciente._idObraSocial == 0) {
-        existe = true;
-    } else {
-        for (int i = 0; i < cantOS; i++) {
-            OS = archivoOS.leer(i);
+        if (paciente._idObraSocial == 0) {
+            existe = true;
+        } else {
+            for (int i = 0; i < cantOS; i++) {
+                OS = archivoOS.leer(i);
 
-            if (paciente._idObraSocial == OS.getIdObraSocial()) {
-                existe = true;
-                break;
+                if (paciente._idObraSocial == OS.getIdObraSocial()) {
+                    existe = true;
+                    break;
+                }
             }
         }
-    }
 
-    if (existe == false) {
-        cout << "La obra social ingresada no existe." << endl;
-    }
+        if (existe == false) {
+            cout << "La obra social ingresada no existe." << endl;
+        }
 
-} while (existe == false);
+    } while (existe == false);
 
 
 
@@ -273,14 +279,25 @@ void Paciente::Modificacion(){
 }
 
 void Paciente::cargarModificado(){
-        cout << "----------------------------" << endl;
-        cout << "ingrese el nuevo paciente: " << endl;
+    cout << "----------------------------" << endl;
+    cout << "ingrese el nuevo paciente: " << endl;
 
-bool op = false;
+    bool op = false;
     Paciente paciente;
+    ObraSociales OS;
     bool ok;
     do{
     Persona::Cargar();
+    string genero;
+
+    do{
+        cout << "ingrese la fecha de nacimiento: " << endl;
+        paciente._fechaNacimiento.CargarFecha();
+        ok = FechaMenorIgualActual(paciente._fechaNacimiento);
+            if (FechaMenorIgualActual(paciente._fechaNacimiento) == false){
+                cout << "Fecha invalida, ingrese otra.. " << endl;
+            }
+    }while (ok == false);
 
     cout << "Ingrese el telefono: ";
     cin >> _telefono;
@@ -289,28 +306,58 @@ bool op = false;
     cin >> _email;
 
     cout << "Ingrese el genero (F o M): ";
-        do{
-    cin >> _genero;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-    _genero = toupper(_genero);
+    while(true) {
+        getline(cin, genero);
 
-    if(_genero != 'F' && _genero != 'M'){
-        cout << "Ingrese un genero valido: ";
+        if (genero.length() != 1) {
+            cout << "Debe ingresar una sola letra..." << endl;
+            continue;
+        }
+
+        char letra = toupper(genero[0]);
+
+        if (letra == 'F' || letra == 'M') {
+            paciente._genero = letra;
+            break;
+        }
+
+        cout << "Ingrese un genero valido (F o M): ";
+
     }
 
-    }while(_genero != 'F' && _genero != 'M');
+    OS.MostrarNombreID();
+    ArchivoObraSociales archivoOS;
+    int cantOS = archivoOS.contarRegistros();
 
-    cout << "Ingrese el ID de la obra social: ";
-    _idObraSocial = obtenerEnteroValidado("");
+    bool existe;
 
-    do{
-        cout << "ingrese la fecha de nacimiento: ";
-        _fechaNacimiento.CargarFecha();
-        ok = FechaMenorIgualActual(paciente._fechaNacimiento);
-            if (FechaMenorIgualActual(paciente._fechaNacimiento) == false){
-                cout << "Fecha invalida, ingrese otra.. " << endl;
+    do {
+        existe = false;
+
+        paciente._idObraSocial = obtenerEnteroValidado(
+            "Ingrese el ID de la obra social (0 = Sin obra social): "
+        );
+
+        if (paciente._idObraSocial == 0) {
+            existe = true;
+        } else {
+            for (int i = 0; i < cantOS; i++) {
+                OS = archivoOS.leer(i);
+
+                if (paciente._idObraSocial == OS.getIdObraSocial()) {
+                    existe = true;
+                    break;
+                }
             }
-    }while (ok == false);
+        }
+
+        if (existe == false) {
+            cout << "La obra social ingresada no existe." << endl;
+        }
+
+    } while (existe == false);
 
     cout << "Desea confirmar sus datos? 1-Si 0-No: ";
     op = obtenerBooleanoValidado(" ");
