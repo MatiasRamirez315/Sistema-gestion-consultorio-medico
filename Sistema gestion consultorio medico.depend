@@ -1066,50 +1066,57 @@
 1780876582 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\managerpaciente.h
 	"ArchivoPaciente.h"
 
-1780372138 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\agendamedico.cpp
+1782687535 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\agendamedico.cpp
 	"AgendaMedico.h"
+	"Medico.h"
+	"ArchivoMedicos.h"
+	"ArchivoTurnos.h"
+	"ArchivoAgendaMedico.h"
+	<iostream>
 
-1780372138 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\agendamedico.h
+1782687535 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\agendamedico.h
 	"Hora.h"
 	"Fecha.h"
 
-1780372138 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\hora.h
+1782687535 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\hora.h
 	<iostream>
 
-1780372138 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\fecha.h
+1783641638 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\fecha.h
 	<iostream>
 
-1780969379 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoagendamedico.cpp
+1782687535 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoagendamedico.cpp
 	<string>
 	<cstring>
 	"ArchivoAgendaMedico.h"
 
-1780969379 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoagendamedico.h
+1782687535 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoagendamedico.h
 	"AgendaMedico.h"
 	<string>
 	<cstdio>
 
-1780969379 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoconsultorios.cpp
+1783641638 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoconsultorios.cpp
 	<cstring>
 	<cstdio>
 	"ArchivoConsultorios.h"
 
-1780969379 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoconsultorios.h
+1782687535 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoconsultorios.h
 	"Consultorios.h"
 	<cstring>
 
-1780372138 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\consultorios.h
+1781564409 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\consultorios.h
+	"Fecha.h"
+	"Hora.h"
 
-1780969379 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoespecialidades.cpp
+1781303655 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoespecialidades.cpp
 	<string>
 	<cstring>
 	"ArchivoEspecialidades.h"
 
-1780969379 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoespecialidades.h
+1781303655 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoespecialidades.h
 	"Especialidades.h"
 	<cstdio>
 
-1780969379 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\especialidades.h
+1781303655 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\especialidades.h
 
 1780969379 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivofacturas.cpp
 	<string>
@@ -1120,28 +1127,28 @@
 	"Factura.h"
 	<cstdio>
 
-1780372138 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\factura.h
+1783644476 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\factura.h
 	"Fecha.h"
+	"Validaciones.h"
 
-1780969379 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivohistoriaclinica.cpp
+1781388975 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivohistoriaclinica.cpp
 	<string>
 	<cstring>
 	"ArchivoHistoriaClinica.h"
 
-1780969379 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivohistoriaclinica.h
+1781388976 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivohistoriaclinica.h
 	"HistoriaClinica.h"
 	<cstdio>
 	<string>
 
-1780969379 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\historiaclinica.h
-	<string>
+1781388976 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\historiaclinica.h
 
-1781043390 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivomedicos.cpp
+1782687535 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivomedicos.cpp
 	<string>
 	<cstring>
 	"ArchivoMedicos.h"
 
-1780969379 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivomedicos.h
+1782687535 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivomedicos.h
 	"Medico.h"
 	<cstdio>
 	<cstring>
@@ -1165,16 +1172,16 @@
 	<cstdio>
 	<cstring>
 
-1781058796 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\obrasociales.h
+1781640517 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\obrasociales.h
 	<iostream>
 	<string>
 
-1781043390 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivopaciente.cpp
+1783641638 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivopaciente.cpp
 	<string>
 	<cstring>
 	"ArchivoPaciente.h"
 
-1780969379 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivopaciente.h
+1782687535 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivopaciente.h
 	"Paciente.h"
 	<cstdio>
 	<cstring>
@@ -1196,61 +1203,86 @@
 	<cstring>
 	<string>
 
-1781043390 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoturnos.cpp
+1781303655 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoturnos.cpp
 	<string>
 	<cstring>
 	"ArchivoTurnos.h"
 	<cstring>
 
-1780969379 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoturnos.h
+1781303655 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoturnos.h
 	"Turnos.h"
 	<cstdio>
 
-1780969379 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\turnos.h
+1781564409 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\turnos.h
+	"Fecha.h"
+	"Hora.h"
 	<string>
 
-1780969379 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\consultorios.cpp
+1781564409 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\consultorios.cpp
 	"Consultorios.h"
+	"ArchivoConsultorios.h"
+	<iostream>
 
-1780969379 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\especialidades.cpp
+1781579681 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\especialidades.cpp
 	"Especialidades.h"
+	"ArchivoEspecialidades.h"
+	"Validaciones.h"
+	<iostream>
 	<cstring>
 
-1780971312 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\factura.cpp
+1783644476 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\factura.cpp
 	"Factura.h"
+	"ArchivoFacturas.h"
+	"ArchivoTurnos.h"
+	"ArchivoPaciente.h"
+	"Validaciones.h"
 
-1780862836 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\fecha.cpp
+1782687535 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\fecha.cpp
 	"Fecha.h"
+	"Validaciones.h"
 	<iostream>
 	<chrono>
 
-1780969379 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\historiaclinica.cpp
+1783872812 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\historiaclinica.cpp
 	"HistoriaClinica.h"
+	"ArchivoHistoriaClinica.h"
+	"Validaciones.h"
+	"Paciente.h"
+	"ArchivoPaciente.h"
+	"ObraSociales.h"
+	"ArchivoObraSociales.h"
 	<string>
 	<cstring>
+	<iostream>
+	<cstdio>
 
-1780372138 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\hora.cpp
+1782687535 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\hora.cpp
 	"Hora.h"
+	"Validaciones.h"
 
 1780969375 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\main.cpp
 	<iostream>
 	"Menu.h"
 
-1781063576 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menu.h
+1781307642 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menu.h
 	"MenuMedico.h"
 	"MenuPaciente.h"
 	"MenuObrasSociales.h"
 	"MenuTurnos.h"
+	"MenuEspecialidades.h"
+	"MenuConsultorios.h"
+	"MenuHistoriaClinica.h"
 
-1780862836 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menumedico.h
+1783878458 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menumedico.h
 
 1780862836 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menupaciente.h
 
 1780862836 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menuobrassociales.h
 
-1781064605 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menuturnos.h
+1781303655 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menuturnos.h
 	"Turnos.h"
 	"ArchivoTurnos.h"
+	"Factura.h"
 
 1780969379 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\managermedico.cpp
 	<iostream>
@@ -1287,56 +1319,72 @@
 1780969379 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\managerpaciente.h
 	"ArchivoPaciente.h"
 
-1781043390 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\medico.cpp
+1783872812 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\medico.cpp
 	"Medico.h"
 	"Persona.h"
 	"Fecha.h"
 	"ArchivoMedicos.h"
+	"Especialidades.h"
+	"Validaciones.h"
 	<string>
 	<cstring>
 	<iostream>
 
-1781043390 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menumedico.cpp
+1783879023 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menumedico.cpp
 	<iostream>
 	"rlutil.h"
 	"showItem.h"
 	"MenuMedico.h"
 	"Medico.h"
 	"ArchivoMedicos.h"
+	"ArchivoAgendaMedico.h"
+	"AgendaMedico.h"
+	"ArchivoTurnos.h"
+	"Turnos.h"
+	"Validaciones.h"
+	"ArchivoConsultorios.h"
 
 1780862836 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\showitem.h
 
-1781058796 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menuobrassociales.cpp
+1781303655 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menuobrassociales.cpp
 	<iostream>
 	"rlutil.h"
 	"showItem.h"
 	"MenuObrasSociales.h"
 	"ObraSociales.h"
 
-1781058796 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menupaciente.cpp
+1781564409 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menupaciente.cpp
 	<iostream>
 	"rlutil.h"
 	"showItem.h"
 	"Paciente.h"
 	"MenuPaciente.h"
 	"ArchivoPaciente.h"
+	"HistoriaClinica.h"
 
-1781058796 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\obrasociales.cpp
+1783872812 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\obrasociales.cpp
 	"ObraSociales.h"
 	"ArchivoObraSociales.h"
+	"Validaciones.h"
 	<cstring>
 	<iostream>
 
-1781058796 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\paciente.cpp
+1783872812 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\paciente.cpp
 	"Paciente.h"
 	"ArchivoPaciente.h"
+	"ArchivoObraSociales.h"
+	"ObraSociales.h"
+	"Validaciones.h"
 	"Persona.h"
 	"Fecha.h"
 	<string>
 	<cstring>
+	<cctype>
+	<limits>
 
-1780969379 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\persona.cpp
+1783872812 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\persona.cpp
 	"Persona.h"
+	"Validaciones.h"
 	<cstring>
 
 1780969379 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\puestos.cpp
@@ -1349,22 +1397,32 @@
 	"rlutil.h"
 	"showItem.h"
 
-1781067387 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\turnos.cpp
+1783872812 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\turnos.cpp
 	<iostream>
 	"Turnos.h"
+	"ArchivoTurnos.h"
 	<cstring>
 	<cstdio>
+	"ArchivoAgendaMedico.h"
+	"AgendaMedico.h"
+	"Consultorios.h"
+	"Validaciones.h"
+	"ArchivoMedicos.h"
+	"ArchivoPaciente.h"
+	"ArchivoConsultorios.h"
 
-1781063809 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menu.cpp
+1781388976 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menu.cpp
 	"Menu.h"
 	"rlutil.h"
 	"showItem.h"
 	<iostream>
 
-1781064605 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menuturnos.cpp
+1783641638 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menuturnos.cpp
 	"MenuTurnos.h"
 	"rlutil.h"
+	"Validaciones.h"
 	"showItem.h"
+	"ArchivoFacturas.h"
 	<iostream>
 
 1781292704 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuturnos.h
@@ -1467,6 +1525,45 @@
 	"ArchivoHistoriaClinica.h"
 
 1783796463 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\validaciones.cpp
+	<iostream>
+	"Validaciones.h"
+	"Fecha.h"
+
+1783644476 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\validaciones.h
+	<string>
+	"Fecha.h"
+
+1781303655 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menuespecialidades.h
+
+1781307642 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menuconsultorios.h
+
+1781307642 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menuhistoriaclinica.h
+
+1782687535 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menuconsultorios.cpp
+	<iostream>
+	"rlutil.h"
+	"showItem.h"
+	"MenuConsultorios.h"
+	"Consultorios.h"
+	"ArchivoConsultorios.h"
+
+1781303655 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menuespecialidades.cpp
+	<iostream>
+	"rlutil.h"
+	"showItem.h"
+	"MenuEspecialidades.h"
+	"Especialidades.h"
+	"ArchivoEspecialidades.h"
+
+1781388976 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\menuhistoriaclinica.cpp
+	<iostream>
+	"rlutil.h"
+	"showItem.h"
+	"MenuHistoriaClinica.h"
+	"HistoriaClinica.h"
+	"ArchivoHistoriaClinica.h"
+
+1783644476 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\validaciones.cpp
 	<iostream>
 	"Validaciones.h"
 	"Fecha.h"
