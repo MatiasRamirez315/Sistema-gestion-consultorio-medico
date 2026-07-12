@@ -15,4 +15,7 @@ public:
 	int getNuevoId();
 	bool Modificar (Turnos turno, int pos);
     int BuscarPosXID(int id);
+    // Devuelve true si existe un turno activo
+    // asociado al ID de agenda recibido.
+    bool ExisteTurnoActivoPorAgenda(int idAgenda);
 };

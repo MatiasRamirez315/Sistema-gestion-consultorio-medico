@@ -1066,7 +1066,7 @@
 1780876582 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\managerpaciente.h
 	"ArchivoPaciente.h"
 
-1782687535 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\agendamedico.cpp
+1783884533 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\agendamedico.cpp
 	"AgendaMedico.h"
 	"Medico.h"
 	"ArchivoMedicos.h"
@@ -1074,7 +1074,7 @@
 	"ArchivoAgendaMedico.h"
 	<iostream>
 
-1782687535 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\agendamedico.h
+1783884262 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\agendamedico.h
 	"Hora.h"
 	"Fecha.h"
 
@@ -1203,13 +1203,12 @@
 	<cstring>
 	<string>
 
-1781303655 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoturnos.cpp
+1783882703 source:c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoturnos.cpp
 	<string>
 	<cstring>
 	"ArchivoTurnos.h"
-	<cstring>
 
-1781303655 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoturnos.h
+1783882703 c:\users\feder\onedrive\escritorio\prog. 2\sistema-gestion-consultorio-medico - 3\sistema-gestion-consultorio-medico - 2\sistema-gestion-consultorio-medico\archivoturnos.h
 	"Turnos.h"
 	<cstdio>
 

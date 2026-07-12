@@ -27,6 +27,5 @@ public:
 	bool getEstado() ;
 
 	void Mostrar(int idMedico, Fecha fecha);
-	bool estaOcupado(int idMedico, Fecha fecha, int hora, int minuto);
 };
 

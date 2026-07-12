@@ -61,11 +61,14 @@ return _estado;
 void AgendaMedicos::Mostrar(int idMedico, Fecha fecha){
     Medico med;
     ArchivoMedicos arcMed;
-    int pos = 0;
+    ArchivoAgendaMedicos arcAgenda;
+    ArchivoTurnos arcTurnos;
 
-    pos = arcMed.BuscarPosXID(idMedico);
-    if(pos == -1)
-    {
+    AgendaMedicos agenda;
+
+    int pos = arcMed.BuscarPosXID(idMedico);
+
+    if(pos == -1){
         cout << "Medico no encontrado..." << endl;
         return;
     }
@@ -73,58 +76,47 @@ void AgendaMedicos::Mostrar(int idMedico, Fecha fecha){
     med = arcMed.leer(pos);
 
     cout << "==================================" << endl;
-    cout << "DR. " << med.getNombre() << " " <<  med.getApellido() << endl;
-    cout << fecha.toString() << endl;
+    cout << "DR. " << med.getNombre() << " " << med.getApellido() << endl;
+    cout << "Fecha: " << fecha.toString() << endl;
     cout << "==================================" << endl;
 
-    for(int bloque=0; bloque<18; bloque++)
-    {
-        int hora = 8 + bloque/2;
-        int minuto = (bloque%2)*30;
+    int cantidad = arcAgenda.getCantRegistros();
+    bool encontro = false;
 
-        cout << hora << ":";
+    for(int i = 0; i < cantidad; i++){
 
-        if(minuto==0){
-            cout << "00";
+        agenda = arcAgenda.leer(i);
+
+        if(
+            agenda.getEstado() &&
+            agenda.getIdMedico() == idMedico &&
+            agenda.getFecha() == fecha &&
+            !arcTurnos.ExisteTurnoActivoPorAgenda(
+                agenda.getIdAgendaMedico())
+        ){
+
+            encontro = true;
+
+            cout << "ID Agenda: "
+                 << agenda.getIdAgendaMedico()
+                 << endl;
+
+            cout << "Consultorio: "
+                 << agenda.getIdConsultorio()
+                 << endl;
+
+            cout << "Hora: "
+                 << agenda.getHorario().toString()
+                 << endl;
+
+            cout << "-----------------------------"
+                 << endl;
         }
-        else{
-            cout << "30";
-        }
 
-        if(estaOcupado(idMedico, fecha, hora, minuto)){
-            cout << "   Ocupado";
-        }
-        else{
-            cout << "   Disponible";
-        }
-
-        cout << endl;
-    }
-}
-
-bool AgendaMedicos::estaOcupado(int idMedico, Fecha fecha, int hora, int minuto){
-    ArchivoTurnos arcTurno;
-    Turnos turno;
-    AgendaMedicos agenda;
-    ArchivoAgendaMedicos arcAgenda;
-    int pos = 0;
-
-    int cantidad = arcTurno.contarRegistros();
-
-    for(int i=0; i<cantidad; i++)
-    {
-        turno = arcTurno.leer(i);
-        pos = arcAgenda.BuscarPosXID(turno.getIdAgendaMedico());
-        agenda = arcAgenda.leer(pos);
-
-        if(agenda.getEstado() &&
-           agenda.getIdMedico() == idMedico &&
-           agenda.getFecha() == fecha &&
-           agenda.getHorario().getHora() == hora &&
-           agenda.getHorario().getMinutos() == minuto){
-            return true;
-        }
     }
 
-    return false;
+    if(!encontro){
+        cout << "No existen horarios disponibles para ese medico."
+             << endl;
+    }
 }
