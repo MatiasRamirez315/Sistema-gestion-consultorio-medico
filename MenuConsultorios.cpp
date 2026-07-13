@@ -107,7 +107,7 @@ void MenuConsultorios::ConsultarDisponibilidad(){
     ArchivoConsultorios arcCons;
 
     cout << "Ingrese el ID del consultorio: ";
-    cin >> idConsultorio;
+    idConsultorio = obtenerEnteroValidado(" ");
 
     if(!arcCons.Existe(idConsultorio))
     {

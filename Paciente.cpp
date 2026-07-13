@@ -107,20 +107,15 @@ void Paciente::CargarPaciente(){
 
 
     cout << "Ingrese el genero (F o M): ";
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
     while(true) {
         getline(cin, genero);
 
-        if (genero.length() != 1) {
-            cout << "Debe ingresar una sola letra..." << endl;
-            continue;
+        if (genero.length() == 1) {
+            paciente._genero = toupper(genero[0]);
         }
 
-        char letra = toupper(genero[0]);
-
-        if (letra == 'F' || letra == 'M') {
-            paciente._genero = letra;
+        if (paciente._genero == 'F' || paciente._genero == 'M') {
             break;
         }
 
@@ -300,26 +295,21 @@ void Paciente::cargarModificado(){
     }while (ok == false);
 
     cout << "Ingrese el telefono: ";
-    cin >> _telefono;
+    cin.getline(_telefono,15);
 
     cout << "Ingrese el email: ";
-    cin >> _email;
+    cin.getline( _email,70);
 
     cout << "Ingrese el genero (F o M): ";
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
     while(true) {
         getline(cin, genero);
 
-        if (genero.length() != 1) {
-            cout << "Debe ingresar una sola letra..." << endl;
-            continue;
+        if (genero.length() == 1) {
+            paciente._genero = toupper(genero[0]);
         }
 
-        char letra = toupper(genero[0]);
-
-        if (letra == 'F' || letra == 'M') {
-            paciente._genero = letra;
+        if (paciente._genero == 'F' || paciente._genero == 'M') {
             break;
         }
 

@@ -159,7 +159,7 @@
 	<string>
 	<cstdio>
 
-1782860067 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\archivoconsultorios.cpp
+1783902348 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\archivoconsultorios.cpp
 	<cstring>
 	<cstdio>
 	"ArchivoConsultorios.h"
@@ -168,7 +168,7 @@
 	"Consultorios.h"
 	<cstring>
 
-1781562825 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\consultorios.h
+1783902348 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\consultorios.h
 	"Fecha.h"
 	"Hora.h"
 
@@ -283,9 +283,13 @@
 	"Hora.h"
 	<string>
 
-1781642595 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\consultorios.cpp
+1783902348 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\consultorios.cpp
 	"Consultorios.h"
 	"ArchivoConsultorios.h"
+	"Validaciones.h"
+	"ArchivoAgendaMedico.h"
+	"ArchivoTurnos.h"
+	"Turnos.h"
 	<iostream>
 
 1782251836 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\especialidades.cpp
@@ -343,7 +347,7 @@
 	<cstring>
 	<iostream>
 
-1783723050 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\paciente.cpp
+1783978165 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\paciente.cpp
 	"Paciente.h"
 	"ArchivoPaciente.h"
 	"ArchivoObraSociales.h"
@@ -354,6 +358,7 @@
 	<string>
 	<cstring>
 	<cctype>
+	<limits>
 
 1783719627 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\persona.cpp
 	"Persona.h"
@@ -365,7 +370,7 @@
 	<string>
 	<cstring>
 
-1783723050 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\turnos.cpp
+1783902348 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\turnos.cpp
 	<iostream>
 	"Turnos.h"
 	"ArchivoTurnos.h"
@@ -1416,15 +1421,16 @@
 	"Especialidades.h"
 	"ArchivoEspecialidades.h"
 
-1781295595 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuconsultorios.h
+1783902348 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuconsultorios.h
 
-1782773177 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuconsultorios.cpp
+1783902916 source:c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuconsultorios.cpp
 	<iostream>
 	"rlutil.h"
 	"showItem.h"
 	"MenuConsultorios.h"
 	"Consultorios.h"
 	"ArchivoConsultorios.h"
+	"Validaciones.h"
 
 1781307131 c:\users\matii\desktop\utn\prog 2\sistema gestion consultorio medico\sistema gestion consultorio medico.zip\sistema gestion consultorio medico\menuhistoriaclinica.h
 
