@@ -1,6 +1,7 @@
 #include <string>
 #include <cstring>
 #include "ArchivoTurnos.h"
+#include <cstring>
 
 using namespace std;
 
@@ -82,35 +83,9 @@ bool ArchivoTurnos::Modificar(Turnos turno,int pos){
     return pudoModificar;
 }
 
+
 int ArchivoTurnos::getNuevoId()
 {
     return contarRegistros()+1;
 }
 
-// Busca si existe un turno activo asociado
-// a una agenda determinada.
-bool ArchivoTurnos::ExisteTurnoActivoPorAgenda(int idAgenda)
-{
-    Turnos turno;
-    int cantidad;
-    cantidad = contarRegistros();
-
-    for(int i = 0; i < cantidad; i++)
-    {
-        turno = leer(i);
-        /*
-            La agenda se considera ocupada únicamente si:
-
-            1. El turno usa ese ID de agenda.
-            2. El turno está activo.
-
-            Si el turno fue cancelado, su estado es false
-            y la agenda vuelve a considerarse disponible.
-        */
-        if(turno.getIdAgendaMedico()==idAgenda&&turno.getEstado())
-        {
-            return true;
-        }
-    }
-    return false;
-}
