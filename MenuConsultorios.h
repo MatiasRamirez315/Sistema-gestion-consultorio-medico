@@ -4,6 +4,6 @@
 class MenuConsultorios{
 
 public:
-        void menuConsultorios();
-
+    void menuConsultorios();
+    void ConsultarDisponibilidad();
 };

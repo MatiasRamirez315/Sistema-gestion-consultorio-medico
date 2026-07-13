@@ -234,7 +234,7 @@ void Turnos::cargarModificado(){
         }while(!archivoMedicos.Existe(idMedico));
 
         do{
-            cout << "Ingrese el ID del consultorio: ";
+            cout << "Ingrese el ID del consultorio (1 a 7): ";
             _idConsultorio = obtenerEnteroPositivo(" ");
 
             if (!archivoConsultorios.Existe(_idConsultorio)){

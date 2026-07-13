@@ -4,10 +4,16 @@
 #include "MenuConsultorios.h"
 #include "Consultorios.h"
 #include "ArchivoConsultorios.h"
+#include "Validaciones.h"
 
 void MenuConsultorios::menuConsultorios(){
     ArchivoConsultorios archivo;
     Consultorios cons;
+
+    if (archivo.contarRegistros() == 0){
+        cons.Inicializar();
+    }
+
     int op = 1, y = 0;
 
     do
@@ -23,12 +29,13 @@ void MenuConsultorios::menuConsultorios(){
         std::cout << "||         MENU CONSULTORIOS         ||" << std::endl;
         rlutil::locate(40, 12);
         std::cout << "+=====================================+" << std::endl;
-        showItem("           AGREGAR CONSULTORIO         ", 40, 13, y == 0);
-        showItem("           MOSTRAR CONSULTORIOS        ", 40, 14, y == 1);
+        showItem("           LISTAR CONSULTORIOS         ", 40, 13, y == 0);
+        showItem("   HABILITAR/INHABILITAR CONSULTORIO   ", 40, 14, y == 1);
+        showItem("         CONSULTAR DISPONIBILIDAD      ", 40, 15, y == 2);
 
-        rlutil::locate(40, 15);
+        rlutil::locate(40, 16);
         std::cout << "---------------------------------------" << std::endl;
-        showItem("               VOLVER                  ", 40, 16, y == 2);
+        showItem("               VOLVER                  ", 40, 17, y == 3);
 
         int key = rlutil::getkey();
 
@@ -50,9 +57,9 @@ void MenuConsultorios::menuConsultorios(){
             std::cout << " " << std::endl;
             y++;
 
-            if(y > 2)
+            if(y > 3)
             {
-                y = 2;
+                y = 3;
             }
             break;
 
@@ -62,19 +69,26 @@ void MenuConsultorios::menuConsultorios(){
             {
             case 0:
                 system("cls");
-                cons.Cargar();
+                cons.MostrarTodos();
                 system("pause");
                 system("cls");
                 break;
 
             case 1:
                 system("cls");
-                cons.MostrarTodos();
+                cons.HabilitarInhabilitar();
                 system("pause");
                 system("cls");
                 break;
 
             case 2:
+                system("cls");
+                ConsultarDisponibilidad();
+                system("pause");
+                system("cls");
+                break;
+
+            case 3:
                 op = 0;
                 break;
             }
@@ -84,4 +98,29 @@ void MenuConsultorios::menuConsultorios(){
 
     system("cls");
     return;
+}
+
+void MenuConsultorios::ConsultarDisponibilidad(){
+    int idConsultorio;
+    Fecha fecha;
+    Consultorios cons;
+    ArchivoConsultorios arcCons;
+
+    cout << "Ingrese el ID del consultorio: ";
+    cin >> idConsultorio;
+
+    if(!arcCons.Existe(idConsultorio))
+    {
+        cout << "Consultorio no encontrado..." << endl;
+        return;
+    }
+
+    do{
+        cout << "Ingrese la fecha: " << endl;
+        fecha.CargarFecha();
+        if (FechaMayorIgualActual(fecha) == false){
+            cout << "La fecha ingresada no es correcta.."<< endl;
+        }
+    }while (FechaMayorIgualActual(fecha) == false);
+    cons.MostrarDisponibilidad(idConsultorio, fecha);
 }
