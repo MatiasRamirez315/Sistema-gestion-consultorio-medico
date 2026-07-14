@@ -5,6 +5,8 @@
 #include "ArchivoPaciente.h"
 #include "ObraSociales.h"
 #include "ArchivoObraSociales.h"
+#include "ArchivoTurnos.h"
+#include "Turnos.h"
 #include <string>
 #include <cstring>
 #include <iostream>
@@ -51,6 +53,11 @@ void HistoriaClinica::Cargar(){
     ArchivoPaciente archivoPac;
     ArchivoHistoriaClinica archivo;
     HistoriaClinica HC;
+    Turnos turno;
+    ArchivoTurnos archivoT;
+
+    int cantTurnos = archivoT.contarRegistros();
+
     bool existe;
 
     int id = archivo.getNuevoId();
@@ -65,6 +72,14 @@ void HistoriaClinica::Cargar(){
             cout << "ingrese un ID valido.. " << endl;
         }
     }while(existe == false);
+
+    for (int i=0;i<cantTurnos;i++){
+        turno = archivoT.leer(i);
+        if (turno.getIdPaciente() == HC._idPaciente){
+            turno.Mostrar();
+            cout << endl;
+        }
+    }
 
 
     cout << "Ingrese la descripcion de la consulta: ";

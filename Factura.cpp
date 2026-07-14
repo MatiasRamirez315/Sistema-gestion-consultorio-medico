@@ -61,12 +61,25 @@ void Facturas::Cargar(int idTurno){
     Facturas factura;
     ArchivoFacturas archivo;
     bool ok;
+    Turnos turno;
+    ArchivoTurnos archivoT;
+
+    int cantTurnos = archivoT.contarRegistros();
 
     cout << "Facturando turno " << idTurno << "..." << endl;
     factura.setIdTurno(idTurno);
     cout << "ID de la factura: ";
     factura._idFactura = archivo.getNuevoId();
     cout << factura._idFactura << endl;
+
+    for (int i=0; i<cantTurnos ; i++){
+            turno = archivoT.leer(i);
+
+            if (turno.getIdTurno() == idTurno){
+                turno.Mostrar();
+            }
+    }
+
 
 
     do{

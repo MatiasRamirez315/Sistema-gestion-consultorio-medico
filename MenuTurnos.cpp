@@ -271,6 +271,7 @@ void MenuTurnos::ListarFacturas(){
         factura = archivoF.leer(i);
         if(factura.getEstado()){
             pos = archivoT.BuscarPosXID(factura.getIdTurno());
+            cout << "informacion de la Factura:" << endl << endl;
             factura.Mostrar();
             turno = archivoT.leer(pos);
             cout << "Informacion del Turno facturado:" << endl;

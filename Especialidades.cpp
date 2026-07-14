@@ -54,7 +54,11 @@ void Especialidades::Cargar(){
 
     esp.setEstado(true);
 
-    archivo.guardar(esp);
+    if (archivo.guardar(esp)){
+        cout << "exito al guardar.." << endl;
+    }else{
+        cout << "error al guardar.." << endl;
+        }
 }
 
 void Especialidades::Mostrar(){
