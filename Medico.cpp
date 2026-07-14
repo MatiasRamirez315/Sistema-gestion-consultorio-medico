@@ -183,15 +183,27 @@ void Medico::Eliminar()
 
         medico = archivo.leer(pos);
 
-        medico.setEstado(false);
+        medico.Mostrar();
 
-        if (archivo.Modificar (medico,pos)){
+        bool op;
 
-            cout << "medico eliminado con exito.." << endl;
-        }
-        else{
-            cout << "error al eliminar el medico.." << endl;
-        }
+        cout << "esta seguro que quiere eliminar este medico? 1-Si 0-No: ";
+        op =obtenerBooleanoValidado("");
+
+        if (op == true){
+
+            medico.setEstado(false);
+
+            if (archivo.Modificar (medico,pos)){
+
+                cout << "medico eliminado con exito.." << endl;
+            }
+            else{
+                cout << "error al eliminar el medico.." << endl;
+            }
+        }else{
+            cout << "no se elimino el medico.. " << endl;
+            }
     }
 }
 

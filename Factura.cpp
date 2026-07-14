@@ -85,9 +85,15 @@ void Facturas::Cargar(int idTurno){
     cout << "Desea confirmar los datos? 1-Si 0-No: ";
     confirma = obtenerBooleanoValidado(" ");
 
-    factura.setEstado(true);
+    if (confirma == 1){
+            factura.setEstado(true);
+            archivo.guardar(factura);
+            cout << "factura guardada con exito.. " << endl;
+    }
+    else{
+        cout << "no se guardo la factura.." << endl;
+    }
 
-    archivo.guardar(factura);
 }
 
 bool Facturas::TurnoYaFacturado(int idTurno){
@@ -110,10 +116,10 @@ void Facturas::Mostrar(){
     cout << "Fecha de la factura: " << _fecha.toString() << endl;
     cout << "Importe de la factura: " << _importe << endl;
     if (_pagado == true){
-        cout << "Factura pagada." << endl;
+        cout << "Factura pagada." << endl << endl;
     }
     else{
-        cout << "Factura no pagada." << endl;
+        cout << "Factura no pagada." << endl<< endl;
     }
     if(_estado == true){
         cout << "Estado de la factura: Activa" << endl;

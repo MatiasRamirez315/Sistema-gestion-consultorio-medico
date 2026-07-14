@@ -104,11 +104,10 @@ void Paciente::CargarPaciente(){
     cout << "Ingrese el email: ";
     cin.getline(paciente._email,70);
 
-
-
     cout << "Ingrese el genero (F o M): ";
 
     while(true) {
+        paciente.setGenero('n');
         getline(cin, genero);
 
         if (genero.length() == 1) {
@@ -122,6 +121,8 @@ void Paciente::CargarPaciente(){
         cout << "Ingrese un genero valido (F o M): ";
 
     }
+    cout << "Obras sociales: " << endl;
+    cout << "--------------------------------------" << endl;
 
     OS.MostrarNombreID();
     ArchivoObraSociales archivoOS;
@@ -222,15 +223,28 @@ void Paciente::Eliminar(){
 
     paciente = archivo.leer(pos);
 
-    paciente.setEstado(false);
+    paciente.Mostrar();
 
-    if (archivo.Modificar (paciente,pos)){
+    bool op;
+    cout << "esta seguro que desea eliminar este paciente? 1-Si 0-No : " ;
+    op = obtenerBooleanoValidado("");
 
-        cout << "Paciente eliminado con exito..." << endl;
+    if (op == true){
+
+        paciente.setEstado(false);
+
+        if (archivo.Modificar (paciente,pos)){
+
+            cout << "Paciente eliminado con exito..." << endl;
+        }
+        else{
+            cout << "Error al eliminar paciente..." << endl;
+        }
+    }else{
+    cout << "no se elimino el paciente.." << endl;
     }
-    else{
-        cout << "Error al eliminar paciente..." << endl;
-    }
+
+
 }
 
 void Paciente::Modificacion(){
@@ -303,6 +317,7 @@ void Paciente::cargarModificado(){
     cout << "Ingrese el genero (F o M): ";
 
     while(true) {
+        paciente.setGenero('n');
         getline(cin, genero);
 
         if (genero.length() == 1) {
@@ -317,6 +332,8 @@ void Paciente::cargarModificado(){
 
     }
 
+    cout << "Obras sociales: " << endl;
+    cout << "--------------------------------------" << endl;
     OS.MostrarNombreID();
     ArchivoObraSociales archivoOS;
     int cantOS = archivoOS.contarRegistros();

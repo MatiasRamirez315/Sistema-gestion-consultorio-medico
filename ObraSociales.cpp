@@ -128,7 +128,8 @@ void ObraSociales::MostrarNombreID(){
         if (OS.getEstado() == true){
             cout << "ID de la Obra social: " << OS.getIdObraSocial()<< endl;
             cout << "Nombre: " << OS.getNombre() << endl;
-            cout << "Estado: " << OS.getEstado() << endl << endl;
+            cout << "Estado: " << OS.getEstado() << endl;
+            cout << "--------------------------------------" << endl;
         }
     }
 }
@@ -152,13 +153,24 @@ void ObraSociales::Eliminar(){
 
         OS = archivo.leer(pos);
 
-        OS.setEstado(false);
+        OS.Mostrar();
 
-        if (archivo.Modificar (OS,pos)){
-            cout << "Obra social eliminada con exito..." << endl;
-        }
-        else{
-            cout << "Error al eliminar la Obra social..." << endl;
+        bool op;
+        cout << "esta seguro que desea eliminar esa obra social? 1-Si 0-No: ";
+        op =obtenerBooleanoValidado("");
+
+        if (op == true){
+
+            OS.setEstado(false);
+
+            if (archivo.Modificar (OS,pos)){
+                cout << "Obra social eliminada con exito..." << endl;
+            }
+            else{
+                cout << "Error al eliminar la Obra social..." << endl;
+            }
+        }else{
+            cout << "no se elimino la obra social.." << endl;
         }
     }
 }

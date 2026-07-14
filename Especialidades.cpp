@@ -44,7 +44,7 @@ void Especialidades::Cargar(){
     Especialidades esp;
     esp._idEspecialidad = archivo.getNuevoId();
     cout << "ID : " << esp._idEspecialidad << endl;
-    cout << "ingrese el nombre: " ;
+    cout << "ingrese el nombre de la especialidad: " ;
 
     cin.getline(esp._nombre,30);
 

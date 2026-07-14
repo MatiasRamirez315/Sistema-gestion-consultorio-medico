@@ -119,8 +119,8 @@ void MenuMedico::consultarAgenda(){
     AgendaMedicos agenda;
     ArchivoMedicos arcMed;
     int pos = 0;
-    cout << "Ingrese el ID del Medico: " << endl;
-    cin >> idMedico;
+    cout << "Ingrese el ID del Medico: ";
+    idMedico = obtenerEnteroValidado("");
     pos = arcMed.BuscarPosXID(idMedico);
     if(pos == -1){
         cout << "Medico no encontrado..." << endl;

@@ -204,19 +204,29 @@ void MenuTurnos::EliminarTurno(){
 
         turno = archivo.leer(pos);
 
-        turno.setEstado(false);
+        turno.Mostrar();
 
-        if (archivo.Modificar (turno,pos)){
+        bool op;
 
-            cout << "Turno eliminado con exito.." << endl;
-        }
-        else{
-            cout << "error al eliminar el turno.." << endl;
+        cout << "esta seguro que desea dar de baja el turno? 1-Si 0-No: ";
+        op=obtenerBooleanoValidado("");
+
+        if (op == true){
+            turno.setEstado(false);
+
+            if (archivo.Modificar (turno,pos)){
+
+                cout << "Turno eliminado con exito.." << endl;
+            }
+            else{
+                cout << "error al eliminar el turno.." << endl;
+            }
+
+        }else{
+            cout << "no se dio de baja el turno.. " << endl;
+            }
         }
     }
-
-
-}
 
 void MenuTurnos::CargarFactura(){
     ArchivoTurnos archivo;
