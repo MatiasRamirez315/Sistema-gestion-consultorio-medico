@@ -34,5 +34,6 @@ public:
 	void MostrarTodos();
 	void Eliminar();
 	void Modificacion();
+	void MostrarTodosParaTurnos();
 
 };

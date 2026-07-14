@@ -191,6 +191,58 @@ void Medico::MostrarTodos()
 
 }
 
+void Medico::MostrarTodosParaTurnos()
+{
+    ArchivoMedicos archivo;
+    Medico medico;
+
+    int cantReg = archivo.contarRegistros();
+
+    if (cantReg == 0){
+        cout << "No hay medicos..." << endl;
+        return;
+    }
+
+    for (int i=0; i<cantReg ; i++)
+    {
+        medico = archivo.leer(i);
+        if (medico.getEstado() == true){
+        medico.Persona::Mostrar();
+        cout << "ID del medico :"  << medico._idMedico << endl;
+        if (medico._idEspecialidad == 1){
+            cout << "Especialidad : Clinico"<< endl;
+        }else{
+                    if (medico._idEspecialidad == 2){
+                        cout << "Especialidad : Oftalmologo" << endl;
+                    }else{
+                                if (medico._idEspecialidad == 3){
+                                cout << "Especialidad : Odontologo" << endl;
+                            }else{
+                                        if (medico._idEspecialidad == 4){
+                                            cout << "Especialidad : Pediatra" << endl;
+                                        }else{
+                                                    if (medico._idEspecialidad == 5){
+                                                    cout << "Especialidad : Traumatologo" << endl;
+                                                    }else{
+                                                                if (medico._idEspecialidad == 6){
+                                                                    cout << "Especialidad : Dermatologo" << endl;
+                                                                }else{
+                                                                            if (medico._idEspecialidad == 7){
+                                                                            cout << "Especialidad : Cardiologo" << endl;
+
+                                                                            }
+                                                                        }
+                                                                }
+                                                        }
+                                                }
+                                    }
+                        }
+        }
+        cout << endl;
+    }
+
+}
+
 void Medico::Eliminar()
 {
     Medico medico;

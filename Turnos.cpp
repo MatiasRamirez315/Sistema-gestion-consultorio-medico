@@ -98,7 +98,9 @@ void Turnos::Cargar(){
     bool fechaOk = 0;
 
     _idTurno = archivoTurnos.getNuevoId();
-    med.MostrarTodos();
+    cout << "MEDICOS:"<< endl;
+    cout << "----------------------------" << endl << endl;
+    med.MostrarTodosParaTurnos();
     do{
         do{
             cout << "Ingrese el ID del medico: ";
@@ -222,7 +224,7 @@ void Turnos::Mostrar(){
 
 
 bool Turnos::cargarModificado(){
-
+    Medico med;
     ArchivoAgendaMedicos archivoAgenda;
     AgendaMedicos agenda;
     ArchivoMedicos archivoMedicos;
@@ -238,6 +240,11 @@ bool Turnos::cargarModificado(){
 
     cout << "----------------------------" << endl;
     cout << "Ingrese el turno modificado: " << endl;
+    cout << "----------------------------" << endl;
+    cout << "MEDICOS:" << endl ;
+    cout << "----------------------------" << endl << endl;
+
+    med.MostrarTodosParaTurnos();
 
     do{
         do{
