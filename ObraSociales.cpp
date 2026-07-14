@@ -85,7 +85,12 @@ void ObraSociales::Cargar(){
     OS._estado = true;
 
 
-    archivo.guardar(OS);
+    if(archivo.guardar(OS)){
+            cout << "exito al guardar.. " << endl;
+    }
+    else{
+        cout << "error al guardar.."  << endl;
+    }
 }
 
 void ObraSociales::Mostrar(){

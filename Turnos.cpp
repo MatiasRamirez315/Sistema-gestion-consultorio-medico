@@ -89,6 +89,7 @@ void Turnos::Cargar(){
     ArchivoAgendaMedicos archivoAgenda;
     AgendaMedicos agenda;
     ArchivoMedicos archivoMedicos;
+    Medico med;
     ArchivoConsultorios archivoConsultorios;
     ArchivoPaciente archivoPacientes;
     bool Ocupado;
@@ -97,6 +98,7 @@ void Turnos::Cargar(){
 
     _idTurno = archivoTurnos.getNuevoId();
     do{
+            med.MostrarTodos();
         do{
             cout << "Ingrese el ID del medico: ";
             idMedico = obtenerEnteroValidado(" ");

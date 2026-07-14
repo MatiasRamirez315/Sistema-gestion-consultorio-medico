@@ -139,6 +139,7 @@ void Medico::MostrarTodos()
 {
     ArchivoMedicos archivo;
     Medico medico;
+
     int cantReg = archivo.contarRegistros();
 
     if (cantReg == 0){
@@ -153,6 +154,34 @@ void Medico::MostrarTodos()
         medico.Persona::Mostrar();
         cout << "ID del medico :"  << medico._idMedico << endl;
         cout << "ID del puesto: " << medico._idPuesto << endl ;
+        if (medico._idEspecialidad == 1){
+            cout << "Especialidad : Clinico"<< endl;
+        }else{
+                    if (medico._idEspecialidad == 2){
+                        cout << "Especialidad : Oftalmologo" << endl;
+                    }else{
+                                if (medico._idEspecialidad == 3){
+                                cout << "Especialidad : Odontologo" << endl;
+                            }else{
+                                        if (medico._idEspecialidad == 4){
+                                            cout << "Especialidad : Pediatra" << endl;
+                                        }else{
+                                                    if (medico._idEspecialidad == 5){
+                                                    cout << "Especialidad : Traumatologo" << endl;
+                                                    }else{
+                                                                if (medico._idEspecialidad == 6){
+                                                                    cout << "Especialidad : Dermatologo" << endl;
+                                                                }else{
+                                                                            if (medico._idEspecialidad == 7){
+                                                                            cout << "Especialidad : Cardiologo" << endl;
+
+                                                                            }
+                                                                        }
+                                                                }
+                                                        }
+                                                }
+                                    }
+                        }
         cout << "ID de la especialidad: " << medico._idEspecialidad << endl;
         cout << "Matricula: " << medico._matriculaProfesional << endl;
         cout << "Fecha de ingreso: " << medico._fechaIngreso.toString() << endl;
