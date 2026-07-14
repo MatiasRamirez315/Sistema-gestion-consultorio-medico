@@ -98,8 +98,8 @@ void Turnos::Cargar(){
     bool fechaOk = 0;
 
     _idTurno = archivoTurnos.getNuevoId();
+    med.MostrarTodos();
     do{
-            med.MostrarTodos();
         do{
             cout << "Ingrese el ID del medico: ";
             idMedico = obtenerEnteroValidado(" ");
@@ -144,12 +144,21 @@ void Turnos::Cargar(){
         OcupadoConsultorio = archivoAgenda.EstaOcupadoConsultorio(_idConsultorio, _fechaTurno, _horaTurno);
         OcupadoMedico = archivoAgenda.EstaOcupadoMedico(idMedico, _fechaTurno, _horaTurno);
 
-        if (OcupadoConsultorio == true ){
-            cout << "Ese consultorio ya esta ocupado en ese horario. Intente nuevamente..." << endl << endl;
+        if(OcupadoConsultorio && OcupadoMedico){
+            cout << endl;
+            cout << "No se pudo reservar el turno." << endl;
+            cout << "El medico y el consultorio ya estan ocupados "<< "en esa fecha y horario." << endl;
+            cout << "Intente nuevamente..." << endl << endl;
         }
-
-        if (OcupadoMedico == true){
-            cout << "Ese medico ya esta ocupado en ese horario. Intente nuevamente..." << endl << endl;
+        else if(OcupadoConsultorio){
+            cout << endl;
+            cout << "Ese consultorio ya esta ocupado en ese horario." << endl;
+            cout << "Intente nuevamente..." << endl << endl;
+        }
+        else if(OcupadoMedico){
+            cout << endl;
+            cout << "Ese medico ya esta ocupado en ese horario." << endl;
+            cout << "Intente nuevamente..." << endl << endl;
         }
 
     }while (OcupadoConsultorio == true || OcupadoMedico == true);
