@@ -416,17 +416,18 @@
 1783796463 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\fecha.h
 	<iostream>
 
-1782582646 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoagendamedico.cpp
+1783997515 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoagendamedico.cpp
 	<string>
 	<cstring>
 	"ArchivoAgendaMedico.h"
+	"AgendaMedico.h"
 
-1782582646 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoagendamedico.h
+1783996907 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoagendamedico.h
 	"AgendaMedico.h"
 	<string>
 	<cstdio>
 
-1783883142 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoconsultorios.cpp
+1783902217 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\archivoconsultorios.cpp
 	<cstring>
 	<cstdio>
 	"ArchivoConsultorios.h"
@@ -435,7 +436,7 @@
 	"Consultorios.h"
 	<cstring>
 
-1783884393 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\consultorios.h
+1783902217 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\consultorios.h
 	"Fecha.h"
 	"Hora.h"
 
@@ -545,12 +546,12 @@
 	"Turnos.h"
 	<cstdio>
 
-1781643802 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\turnos.h
+1783998262 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\turnos.h
 	"Fecha.h"
 	"Hora.h"
 	<string>
 
-1783885027 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\consultorios.cpp
+1783902217 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\consultorios.cpp
 	"Consultorios.h"
 	"ArchivoConsultorios.h"
 	"Validaciones.h"
@@ -598,7 +599,7 @@
 	<string>
 	<cstring>
 
-1783882385 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\turnos.cpp
+1783997441 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\turnos.cpp
 	<iostream>
 	"Turnos.h"
 	"ArchivoTurnos.h"
@@ -642,7 +643,7 @@
 	"Validaciones.h"
 	<cstring>
 
-1783797991 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\paciente.cpp
+1783980959 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\paciente.cpp
 	"Paciente.h"
 	"ArchivoPaciente.h"
 	"ArchivoObraSociales.h"
@@ -1448,11 +1449,11 @@
 
 1781234009 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\menuespecialidades.h
 
-1783884853 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\menuconsultorios.h
+1783902217 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\menuconsultorios.h
 
 1781643802 c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\menuhistoriaclinica.h
 
-1783884890 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\menuconsultorios.cpp
+1783980959 source:c:\users\german\onedrive\documentos\utn\plan 2024\programación ii\tpi\sistema-gestion-consultorio-medico\menuconsultorios.cpp
 	<iostream>
 	"rlutil.h"
 	"showItem.h"

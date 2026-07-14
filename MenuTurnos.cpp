@@ -167,19 +167,16 @@ void MenuTurnos::ModificarTurno(){
         turno.Mostrar();
 
 
-        turno.cargarModificado();
+        if (turno.cargarModificado()){
+            if (archivo.Modificar (turno,pos)){
 
-        if (archivo.Modificar (turno,pos)){
-
-            cout << "turno modificado con exito.." << endl;
+                cout << "turno modificado con exito.." << endl;
+            }
+            else{
+                cout << "error al modificar el turno.." << endl;
+            }
         }
-        else{
-            cout << "error al modificar el turno.." << endl;
-        }
-
     }
-
-
 }
 
 void MenuTurnos::EliminarTurno(){

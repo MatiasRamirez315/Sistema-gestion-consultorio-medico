@@ -15,6 +15,8 @@ public:
 	int getCantRegistros();
 	int getNuevoId();
     int BuscarPosXID(int id);
+    bool Modificar(AgendaMedicos agenda, int pos);
 
-	bool EstaOcupado(int idConsultorio, Fecha fecha, Hora hora);
+	bool EstaOcupadoConsultorio(int idConsultorio, Fecha fecha, Hora hora, int idAgendaExcluir = -1);
+	bool EstaOcupadoMedico(int idMedico, Fecha fecha, Hora hora, int idAgendaExcluir = -1);
 };

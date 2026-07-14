@@ -34,7 +34,7 @@ public:
 	bool getEstado();
 
 	void Cargar();
-	void cargarModificado();
+	bool cargarModificado();
 	void Mostrar();
 	void Modificar();
 	void Eliminar();

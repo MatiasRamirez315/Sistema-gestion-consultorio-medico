@@ -92,7 +92,8 @@ void Turnos::Cargar(){
     Medico med;
     ArchivoConsultorios archivoConsultorios;
     ArchivoPaciente archivoPacientes;
-    bool Ocupado;
+    bool OcupadoConsultorio;
+    bool OcupadoMedico;
     int idMedico;
     bool fechaOk = 0;
 
@@ -140,17 +141,18 @@ void Turnos::Cargar(){
 
         agenda.setEstado(true);
 
+        OcupadoConsultorio = archivoAgenda.EstaOcupadoConsultorio(_idConsultorio, _fechaTurno, _horaTurno);
+        OcupadoMedico = archivoAgenda.EstaOcupadoMedico(idMedico, _fechaTurno, _horaTurno);
 
-
-        Ocupado = archivoAgenda.EstaOcupado(_idConsultorio, _fechaTurno, _horaTurno);
-
-
-        if (Ocupado == true ){
-              cout << "Ese consultorio ya esta ocupado en ese horario." << endl;
+        if (OcupadoConsultorio == true ){
+            cout << "Ese consultorio ya esta ocupado en ese horario. Intente nuevamente..." << endl << endl;
         }
 
+        if (OcupadoMedico == true){
+            cout << "Ese medico ya esta ocupado en ese horario. Intente nuevamente..." << endl << endl;
+        }
 
-    }while (Ocupado == true);
+    }while (OcupadoConsultorio == true || OcupadoMedico == true);
     archivoAgenda.guardar(agenda);
 
     do{
@@ -187,6 +189,7 @@ void Turnos::Mostrar(){
                     cout << "ID Paciente: " << _idPaciente << endl;
                     cout << "Nombre: " << paciente.getNombre() << endl;
                     cout << "Apellido: " << paciente.getApellido()<< endl;
+                    cout << "ID Consultorio: " << _idConsultorio << endl;
                     cout << "Motivo del turno: " << _motivo << endl;
                     cout << "Fecha del turno: " << _fechaTurno.toString() << endl;
                     cout << "Hora del turno: " << _horaTurno.toString()<< endl;
@@ -209,7 +212,7 @@ void Turnos::Mostrar(){
 
 
 
-void Turnos::cargarModificado(){
+bool Turnos::cargarModificado(){
 
     ArchivoAgendaMedicos archivoAgenda;
     AgendaMedicos agenda;
@@ -220,7 +223,9 @@ void Turnos::cargarModificado(){
     int idMedico;
     int idConsultorio;
     bool fechaOk = 0;
-    bool Ocupado;
+    bool OcupadoConsultorio;
+    bool OcupadoMedico;
+    int posAgenda;
 
     cout << "----------------------------" << endl;
     cout << "Ingrese el turno modificado: " << endl;
@@ -244,12 +249,6 @@ void Turnos::cargarModificado(){
             }
         }while(!archivoConsultorios.Existe(_idConsultorio));
 
-        _idAgendaMedicos = archivoAgenda.getNuevoId();
-
-        agenda.setIdAgendaMedico(_idAgendaMedicos);
-        agenda.setIdMedico(idMedico);
-        agenda.setIdConsultorio(_idConsultorio);
-
         do{
             cout << "Ingrese la fecha del turno: " << endl;
             _fechaTurno.CargarFecha();
@@ -262,23 +261,35 @@ void Turnos::cargarModificado(){
         cout << "Ingrese el horario del turno: " << endl;
         _horaTurno.Cargar();
 
-        agenda.setFecha(_fechaTurno);
-        agenda.setHorario(_horaTurno);
+        posAgenda = archivoAgenda.BuscarPosXID(_idAgendaMedicos);
 
-        agenda.setEstado(true);
-
-
-
-        Ocupado = archivoAgenda.EstaOcupado(_idConsultorio, _fechaTurno, _horaTurno);
-
-
-        if (Ocupado == true ){
-              cout << "Ese consultorio ya esta ocupado en ese horario." << endl;
+        if(posAgenda == -1)
+        {
+            cout << "Error: no se encontro la agenda del turno." << endl;
+            return false;
         }
 
+        agenda = archivoAgenda.leer(posAgenda);
 
-    }while (Ocupado == true);
-    archivoAgenda.guardar(agenda);
+        agenda.setIdMedico(idMedico);
+        agenda.setIdConsultorio(_idConsultorio);
+        agenda.setFecha(_fechaTurno);
+        agenda.setHorario(_horaTurno);
+        agenda.setEstado(true);
+
+        OcupadoConsultorio = archivoAgenda.EstaOcupadoConsultorio(_idConsultorio, _fechaTurno, _horaTurno, _idAgendaMedicos);
+        OcupadoMedico = archivoAgenda.EstaOcupadoMedico(idMedico, _fechaTurno, _horaTurno, _idAgendaMedicos);
+
+        if (OcupadoConsultorio == true ){
+            cout << "Ese consultorio ya esta ocupado en ese horario." << endl;
+        }
+
+        if (OcupadoMedico == true){
+            cout << "Ese medico ya esta ocupado en ese horario." << endl;
+        }
+
+    }while (OcupadoConsultorio == true || OcupadoMedico == true);
+    archivoAgenda.Modificar(agenda, posAgenda);
 
     do{
         cout << "Ingrese el ID del paciente: ";
@@ -298,4 +309,6 @@ void Turnos::cargarModificado(){
     setMotivo(motivo);
 
     _estado = true;
+
+    return true;
 }

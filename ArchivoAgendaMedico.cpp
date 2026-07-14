@@ -1,6 +1,7 @@
 #include <string>
 #include <cstring>
 #include "ArchivoAgendaMedico.h"
+#include "AgendaMedico.h"
 
 using namespace std;
 
@@ -54,10 +55,11 @@ int ArchivoAgendaMedicos::getNuevoId()
     return getCantRegistros()+1;
 }
 
-bool ArchivoAgendaMedicos::EstaOcupado(
+bool ArchivoAgendaMedicos::EstaOcupadoConsultorio(
     int idConsultorio,
     Fecha fecha,
-    Hora hora)
+    Hora hora,
+    int idAgendaExcluir)
 {
     AgendaMedicos agenda;
 
@@ -67,7 +69,36 @@ bool ArchivoAgendaMedicos::EstaOcupado(
 
         agenda = leer(i);
 
-        if(agenda.getIdConsultorio() == idConsultorio &&
+        if(agenda.getIdAgendaMedico() != idAgendaExcluir &&
+           agenda.getEstado() &&
+           agenda.getIdConsultorio() == idConsultorio &&
+           agenda.getFecha() == fecha &&
+           agenda.getHorario() == hora)
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+bool ArchivoAgendaMedicos::EstaOcupadoMedico(
+    int idMedico,
+    Fecha fecha,
+    Hora hora,
+    int idAgendaExcluir){
+
+    AgendaMedicos agenda;
+
+    int cantReg = getCantRegistros();
+
+    for(int i=0; i<cantReg; i++){
+
+        agenda = leer(i);
+
+        if(agenda.getIdAgendaMedico() != idAgendaExcluir &&
+           agenda.getEstado() &&
+           agenda.getIdMedico() == idMedico &&
            agenda.getFecha() == fecha &&
            agenda.getHorario() == hora)
         {
@@ -99,3 +130,19 @@ int ArchivoAgendaMedicos::BuscarPosXID(int id){
     fclose(p);
     return -1;
 }
+
+bool ArchivoAgendaMedicos::Modificar(AgendaMedicos agenda, int pos){
+    FILE *p = fopen(_nombre, "rb+");
+    if(p == NULL){
+        return false;
+    }
+
+    fseek(p, pos * sizeof(AgendaMedicos), SEEK_SET);
+
+    bool ok = fwrite(&agenda, sizeof(AgendaMedicos), 1, p);
+
+    fclose(p);
+
+    return ok;
+}
+
